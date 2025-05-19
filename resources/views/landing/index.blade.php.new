@@ -1,0 +1,431 @@
+@extends('landing.layout.master')
+
+@section('content')
+<!-- Start Main Banner Area -->
+<div class="main-banner-area-three">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="banner-text">
+                    <h1>PT Industri Teknologi Torsi</h1>
+                    <p>Specialized manufacturer of automation components and valves for industries such as oil & gas, refinery, petrochemical, and power plant.</p>
+
+                    <div class="banner-btn">
+                        <a href="{{ route('home.about') }}" class="default-btn">
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 pr-0">
+                <div class="banner-main-img banner-one-main-img">
+                    <img src="{{asset('vendor/landing')}}/assets/img/home-three/main-img.jpg" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="banner-shape">
+            <div class="shape-1">
+                <img src="{{asset('vendor/landing')}}/assets/img/shape/shape1.png" alt="Image">
+            </div>
+            <div class="shape-2">
+                <img src="{{asset('vendor/landing')}}/assets/img/shape/shape2.png" alt="Image">
+            </div>
+            <div class="shape-3">
+                <img src="{{asset('vendor/landing')}}/assets/img/shape/shape3.png" alt="Image">
+            </div>
+            <div class="shape-4">
+                <img src="{{asset('vendor/landing')}}/assets/img/shape/shape4.png" alt="Image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Banner Area -->
+
+<!-- Start About Area -->
+<section class="about-area-three pt-100 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <span>About Us</span>
+                    <h2>PT Industri Teknologi Torsi</h2>
+                    <p>PT Industri Teknologi Torsi is a specialized manufacturer of automation components and valves that provides high-quality products to meet the needs of industries, such as oil & gas, refinery, petrochemical, and power plant. With a focus on innovation and reliability, we are committed to providing efficient and safe solutions for our customers.</p>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <ul class="about-list">
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    High-quality products
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    Innovative solutions
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    Reliable service
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <ul class="about-list about-list-2">
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    Customer-focused
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    Industry expertise
+                                </li>
+                                <li>
+                                    <i class="flaticon-checked"></i>
+                                    Local content
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about-btn">
+                        <a href="{{ route('home.about') }}" class="default-btn">
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="{{asset('vendor/landing')}}/assets/img/about-img.jpg" alt="Image">
+
+                    <div class="about-shape">
+                        <div class="shape-1">
+                            <img src="{{asset('vendor/landing')}}/assets/img/shape/shape1.png" alt="Image">
+                        </div>
+                        <div class="shape-2">
+                            <img src="{{asset('vendor/landing')}}/assets/img/shape/shape2.png" alt="Image">
+                        </div>
+                        <div class="shape-3">
+                            <img src="{{asset('vendor/landing')}}/assets/img/shape/shape3.png" alt="Image">
+                        </div>
+                        <div class="shape-4">
+                            <img src="{{asset('vendor/landing')}}/assets/img/shape/shape4.png" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Area -->
+
+<!-- Start Services Area -->
+<section class="services-area services-area-three pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>Our Services</span>
+            <h2>Our Valve Automation Solutions</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-services">
+                    <div class="services-img">
+                        <a href="#">
+                            <img src="{{asset('vendor/landing')}}/assets/img/services/services-1.jpg" alt="Image">
+                        </a>
+                    </div>
+
+                    <div class="services-content">
+                        <h3><a href="#">Valve Automation</a></h3>
+                        <p>We provide comprehensive valve automation solutions for various industries, ensuring efficient and reliable operation.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-services">
+                    <div class="services-img">
+                        <a href="#">
+                            <img src="{{asset('vendor/landing')}}/assets/img/services/services-2.jpg" alt="Image">
+                        </a>
+                    </div>
+
+                    <div class="services-content">
+                        <h3><a href="#">Control Systems</a></h3>
+                        <p>Our control systems are designed to provide precise control and monitoring of your industrial processes.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
+                <div class="single-services">
+                    <div class="services-img">
+                        <a href="#">
+                            <img src="{{asset('vendor/landing')}}/assets/img/services/services-3.jpg" alt="Image">
+                        </a>
+                    </div>
+
+                    <div class="services-content">
+                        <h3><a href="#">Maintenance & Support</a></h3>
+                        <p>We provide comprehensive maintenance and support services to ensure the longevity and reliability of your systems.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Services Area -->
+
+<!-- Start Featured Projects Area -->
+@if(isset($featuredProjects) && $featuredProjects->count() > 0)
+<section class="services-area services-area-three pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>Featured Projects</span>
+            <h2>Our Recent Work</h2>
+        </div>
+
+        <div class="row">
+            @foreach($featuredProjects as $project)
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-services">
+                    <div class="services-img">
+                        <a href="{{ route('home.projects.show', $project->slug) }}">
+                            @if($project->project_main_image)
+                            <img src="{{ asset('storage/' . $project->project_main_image) }}" alt="{{ $project->project_name }}">
+                            @else
+                            <img src="{{asset('vendor/landing')}}/assets/img/services/services-1.jpg" alt="{{ $project->project_name }}">
+                            @endif
+                        </a>
+                    </div>
+
+                    <div class="services-content">
+                        <h3><a href="{{ route('home.projects.show', $project->slug) }}">{{ $project->project_name }}</a></h3>
+                        <p><strong>Client:</strong> {{ $project->client_name }}</p>
+                        <p>{{ Str::limit(strip_tags($project->project_description), 100) }}</p>
+                        <a href="{{ route('home.projects.show', $project->slug) }}" class="read-more">
+                            View Project
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ route('home.projects') }}" class="default-btn">
+                <span>View All Projects</span>
+            </a>
+        </div>
+    </div>
+</section>
+@endif
+<!-- End Featured Projects Area -->
+
+<!-- Start Featured Products Area -->
+@if(isset($featuredProducts) && $featuredProducts->count() > 0)
+<section class="product-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>Featured Products</span>
+            <h2>Our Top Products</h2>
+        </div>
+
+        <div class="row">
+            @foreach($featuredProducts as $product)
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-product">
+                    <div class="product-img">
+                        @if($product->image)
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}">
+                        @else
+                        <img src="{{asset('vendor/landing')}}/assets/img/product/product-1.jpg" alt="{{ $product->title }}">
+                        @endif
+
+                        <ul>
+                            <li>
+                                <a href="{{ route('home.products.show', $product->slug) }}">
+                                    <i class="bx bx-show-alt"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="{{ route('home.products.show', $product->slug) }}">
+                        <h3>{{ $product->title }}</h3>
+                    </a>
+
+                    @if($product->price > 0)
+                    <span>${{ number_format($product->price, 2) }}</span>
+                    @endif
+
+                    <a href="{{ route('home.products.show', $product->slug) }}" class="default-btn">
+                        <span>View Details</span>
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="{{ route('home.products') }}" class="default-btn">
+                <span>View All Products</span>
+            </a>
+        </div>
+    </div>
+</section>
+@endif
+<!-- End Featured Products Area -->
+
+<!-- Start Blog Area -->
+<section class="blog-area blog-area-three white-bg pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>Latest News</span>
+            <h2>Read The Latest Articles From Us</h2>
+        </div>
+
+        <div class="row">
+            @if(isset($featuredBlogs) && $featuredBlogs->count() > 0)
+                @foreach($featuredBlogs as $blog)
+                <div class="col-lg-4 col-md-6 {{ $loop->index > 1 && $loop->index % 3 == 0 ? 'offset-md-3 offset-lg-0' : '' }}">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="{{ route('home.blog.post', $blog->slug) }}">
+                                @if($blog->featured_image)
+                                <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="{{ $blog->title }}">
+                                @else
+                                <img src="{{asset('vendor/landing')}}/assets/img/blog/blog-{{ ($loop->index % 3) + 4 }}.jpg" alt="{{ $blog->title }}">
+                                @endif
+                            </a>
+                        </div>
+
+                        <div class="blog-content">
+                            @if($blog->category)
+                            <span class="category">{{ $blog->category->name }}</span>
+                            @endif
+                            <span>{{ $blog->published_at->format('F d, Y') }}</span>
+                            <h3><a href="{{ route('home.blog.post', $blog->slug) }}">{{ $blog->title }}</a></h3>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            @else
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="#">
+                                <img src="{{asset('vendor/landing')}}/assets/img/blog/blog-4.jpg" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="blog-content">
+                            <span>January 20, 2024</span>
+                            <h3><a href="#">The security risks of changing package owners</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="#">
+                                <img src="{{asset('vendor/landing')}}/assets/img/blog/blog-5.jpg" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="blog-content">
+                            <span>January 19, 2024</span>
+                            <h3><a href="#">Tips to Protecting Your Business and Family</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="#">
+                                <img src="{{asset('vendor/landing')}}/assets/img/blog/blog-6.jpg" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="blog-content">
+                            <span>January 18, 2024</span>
+                            <h3><a href="#">Protect Your Workplace from Cyber Attacks</a></h3>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{{ route('home.blog') }}" class="default-btn">
+                <span>View All Articles</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="blog-left-shape shape-three">
+        <img src="{{asset('vendor/landing')}}/assets/img/blog-left-shape.png" alt="Image">
+    </div>
+</section>
+<!-- End Blog Area -->
+
+<!-- Start Partner Area -->
+<div class="partner-area bg-color ptb-70">
+    <div class="container">
+        <div class="partner-slider owl-theme owl-carousel">
+            <div class="partner-item">
+                <a href="#">
+                    <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-1.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-2.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-3.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-4.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-5.png" alt="Image">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Partner Area -->
+
+@endsection

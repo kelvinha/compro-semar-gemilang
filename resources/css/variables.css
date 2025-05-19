@@ -1,0 +1,368 @@
+/* Dynamic color variables */
+:root {
+    /* Primary color for backgrounds and buttons */
+    --primary-color: var(--primary-color, #4361ee);
+    --primary-color-dark: var(--primary-color-dark, #364f9a);
+    --primary-color-light: var(--primary-color-light, rgba(67, 97, 238, 0.1));
+    --primary-color-focus: var(--primary-color-focus, rgba(67, 97, 238, 0.25));
+    --primary-text-color: #ffffff;
+    
+    /* Secondary color for backgrounds and buttons */
+    --secondary-color: var(--secondary-color, #7239ea);
+    --secondary-color-dark: var(--secondary-color-dark, #5a2e8a);
+    --secondary-color-light: var(--secondary-color-light, rgba(114, 57, 234, 0.1));
+    --secondary-color-focus: var(--secondary-color-focus, rgba(114, 57, 234, 0.25));
+    --secondary-text-color: #ffffff;
+    
+    /* Danger color for critical actions */
+    --danger-color: var(--danger-color, #dc3545);
+    --danger-color-dark: var(--danger-color-dark, #bd2130);
+    --danger-color-light: var(--danger-color-light, #f1b0b7);
+    --danger-color-focus: var(--danger-color-focus, rgba(220, 53, 69, 0.25));
+    --danger-text-color: #ffffff;
+    
+    /* Text colors */
+    --text-color: var(--text-color, #495057);
+    --text-color-light: var(--text-color-light, #6c757d);
+    --text-color-dark: var(--text-color-dark, #212529);
+    --text-color-muted: var(--text-color-muted, #868e96);
+    
+    /* Border colors */
+    --border-color: var(--border-color, #dee2e6);
+    --border-color-light: var(--border-color-light, #e9ecef);
+    --border-color-dark: var(--border-color-dark, #ced4da);
+    
+    /* Theme colors */
+    --theme-color: var(--primary-color);
+    --theme-color-dark: var(--primary-color-dark);
+    --theme-color-light: var(--primary-color-light);
+    --theme-text-color: var(--primary-text-color);
+    
+    /* Color shades */
+    --primary-50: hsl(var(--primary-hue), var(--primary-sat), 98%);
+    --primary-100: hsl(var(--primary-hue), var(--primary-sat), 96%);
+    --primary-200: hsl(var(--primary-hue), var(--primary-sat), 92%);
+    --primary-300: hsl(var(--primary-hue), var(--primary-sat), 88%);
+    --primary-400: hsl(var(--primary-hue), var(--primary-sat), 84%);
+    --primary-500: var(--primary-color);
+    --primary-600: hsl(var(--primary-hue), var(--primary-sat), 76%);
+    --primary-700: hsl(var(--primary-hue), var(--primary-sat), 72%);
+    --primary-800: hsl(var(--primary-hue), var(--primary-sat), 68%);
+    --primary-900: hsl(var(--primary-hue), var(--primary-sat), 64%);
+    
+    --secondary-50: hsl(var(--secondary-hue), var(--secondary-sat), 98%);
+    --secondary-100: hsl(var(--secondary-hue), var(--secondary-sat), 96%);
+    --secondary-200: hsl(var(--secondary-hue), var(--secondary-sat), 92%);
+    --secondary-300: hsl(var(--secondary-hue), var(--secondary-sat), 88%);
+    --secondary-400: hsl(var(--secondary-hue), var(--secondary-sat), 84%);
+    --secondary-500: var(--secondary-color);
+    --secondary-600: hsl(var(--secondary-hue), var(--secondary-sat), 76%);
+    --secondary-700: hsl(var(--secondary-hue), var(--secondary-sat), 72%);
+    --secondary-800: hsl(var(--secondary-hue), var(--secondary-sat), 68%);
+    --secondary-900: hsl(var(--secondary-hue), var(--secondary-sat), 64%);
+    
+    /* Sidebar colors */
+    --pc-sidebar-active-color: var(--primary-color);
+    --pc-sidebar-active-text: var(--primary-text-color);
+    --pc-sidebar-menu-active-color: var(--primary-color);
+    --pc-sidebar-menu-active-text: var(--primary-text-color);
+    --pc-sidebar-menu-active-icon: var(--primary-text-color);
+    
+    /* Card colors */
+    --pc-card-border-color: var(--border-color);
+    --pc-heading-color: var(--text-color-dark);
+    --pc-link-color: var(--primary-color);
+    --pc-link-hover-color: var(--secondary-color);
+    --pc-link-text-color: var(--text-color);
+}
+
+/* Update colors based on data attributes */
+[data-primary-color] {
+    --primary-color: attr(data-primary-color);
+    --primary-color-dark: hsl(var(--primary-hue), var(--primary-sat), 68%);
+    --primary-color-light: rgba(var(--primary-rgb), 0.1);
+    --primary-color-focus: rgba(var(--primary-rgb), 0.25);
+    --primary-text-color: #ffffff;
+    --theme-color: attr(data-primary-color);
+    --theme-color-dark: hsl(var(--primary-hue), var(--primary-sat), 68%);
+    --theme-color-light: rgba(var(--primary-rgb), 0.1);
+    --theme-text-color: #ffffff;
+}
+
+[data-secondary-color] {
+    --secondary-color: attr(data-secondary-color);
+    --secondary-color-dark: hsl(var(--secondary-hue), var(--secondary-sat), 68%);
+    --secondary-color-light: rgba(var(--secondary-rgb), 0.1);
+    --secondary-color-focus: rgba(var(--secondary-rgb), 0.25);
+    --secondary-text-color: #ffffff;
+}
+
+/* Helper classes for colors */
+.text-primary,
+.text-theme {
+    color: var(--primary-text-color);
+}
+
+.bg-primary,
+.bg-theme {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+.border-primary,
+.border-theme {
+    border-color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-text-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+.border-secondary {
+    border-color: var(--secondary-color);
+}
+
+.text-danger {
+    color: var(--danger-text-color);
+}
+
+.bg-danger {
+    background-color: var(--danger-color);
+    color: var(--danger-text-color);
+}
+
+.border-danger {
+    border-color: var(--danger-color);
+}
+
+/* Button variants */
+.btn-primary,
+.btn-theme {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    color: var(--primary-text-color);
+}
+
+.btn-primary:focus,
+.btn-theme:focus {
+    box-shadow: 0 0 0 0.25rem var(--primary-color-focus);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: var(--secondary-color-dark);
+    border-color: var(--secondary-color-dark);
+    color: var(--secondary-text-color);
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.25rem var(--secondary-color-focus);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: var(--danger-text-color);
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+    background-color: var(--danger-color-dark);
+    border-color: var(--danger-color-dark);
+    color: var(--danger-text-color);
+}
+
+.btn-danger:focus {
+    box-shadow: 0 0 0 0.25rem var(--danger-color-focus);
+}
+
+/* Action buttons */
+.btn-action-primary,
+.btn-action-theme {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+.btn-action-primary:hover,
+.btn-action-primary:focus,
+.btn-action-primary:active,
+.btn-action-theme:hover,
+.btn-action-theme:focus,
+.btn-action-theme:active {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    color: var(--primary-text-color);
+}
+
+.btn-action-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+.btn-action-secondary:hover,
+.btn-action-secondary:focus,
+.btn-action-secondary:active {
+    background-color: var(--secondary-color-dark);
+    border-color: var(--secondary-color-dark);
+    color: var(--secondary-text-color);
+}
+
+.btn-action-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: var(--danger-text-color);
+}
+
+.btn-action-danger:hover,
+.btn-action-danger:focus,
+.btn-action-danger:active {
+    background-color: var(--danger-color-dark);
+    border-color: var(--danger-color-dark);
+    color: var(--danger-text-color);
+}
+
+/* Active states */
+.active {
+    color: var(--primary-text-color);
+}
+
+.nav-link.active {
+    color: var(--primary-text-color);
+}
+
+/* Text helpers */
+.text-muted {
+    color: var(--text-color-muted);
+}
+
+.text-light {
+    color: var(--text-color-light);
+}
+
+.text-dark {
+    color: var(--text-color-dark);
+}
+
+/* Card helpers */
+.card-header {
+    background-color: var(--primary-50);
+    color: var(--text-color-dark);
+}
+
+.card-footer {
+    background-color: var(--primary-50);
+    color: var(--text-color-dark);
+}
+
+/* Form controls */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem var(--primary-color-focus);
+    color: var(--text-color-dark);
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color-dark);
+    text-decoration: underline;
+}
+
+/* Tables */
+.table th {
+    color: var(--text-color-dark);
+    font-weight: 600;
+}
+
+.table td {
+    color: var(--text-color);
+}
+
+/* Alerts */
+.alert-primary {
+    color: var(--primary-text-color);
+    background-color: var(--primary-color-light);
+    border-color: var(--primary-color);
+}
+
+.alert-secondary {
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color-light);
+    border-color: var(--secondary-color);
+}
+
+/* Badges */
+.badge-primary {
+    color: var(--primary-text-color);
+    background-color: var(--primary-color);
+}
+
+.badge-secondary {
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color);
+}
+
+/* Lists */
+.list-group-item.active {
+    color: var(--primary-text-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Switches */
+.form-switch .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Progress bars */
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Toasts */
+.toast-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+.toast-secondary {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+/* Tooltips */
+.tooltip {
+    background-color: var(--text-color-dark);
+    color: var(--primary-text-color);
+}
