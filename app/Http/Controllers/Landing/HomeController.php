@@ -40,6 +40,24 @@ class HomeController extends Controller
         return view('landing.index', compact('featuredBlogs', 'featuredProjects', 'featuredProducts'));
     }
 
+    public function indexBBM()
+    {
+        // Get featured blogs
+        $featuredBlogs = Blog::where('status', 'published')
+            ->where('featured', true)
+            ->orderBy('published_at', 'desc')
+            ->take(3)
+            ->get();
+
+        // Get featured projects
+        $featuredProjects = ProjectHelper::getFeatured(3);
+
+        // Get featured products
+        $featuredProducts = ProductHelper::getFeatured(3);
+
+        return view('landing.index2', compact('featuredBlogs', 'featuredProjects', 'featuredProducts'));
+    }
+
     /**
      * Display a page.
      *
