@@ -77,7 +77,7 @@ class ProductController extends Controller
 
         // Get featured products
         $featuredProducts = ProductHelper::getFeatured(3);
-        return view('landing.product', compact('productsPage', 'products', 'featuredProducts', 'categories', 'category', 'sort'));
+        return view('landing.product2', compact('productsPage', 'products', 'featuredProducts', 'categories', 'category', 'sort'));
     }
 
     /**

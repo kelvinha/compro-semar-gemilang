@@ -112,14 +112,6 @@
         }
     @endphp
 
-    @if($customCss)
-        <style>
-            {
-                ! ! $customCss  ! !
-            }
-        </style>
-    @endif
-
     <!-- Custom colors -->
     @php
         $primaryColor = null;
@@ -207,8 +199,8 @@
     <link rel="icon" href="{{asset('vendor/landing2')}}/assets/images/favicon.png" sizes="32x32" type="image/png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="{{asset('vendor/landing2')}}/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS Link -->
     <link rel="stylesheet" href="{{asset('vendor/landing2')}}/assets/css/bootstrap.min.css">
     <!-- Swiper Slider CSS Link -->

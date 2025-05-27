@@ -1,36 +1,25 @@
-<!doctype html>
-<html lang="zxx">
+﻿<!DOCTYPE html>
+<html lang="en">
 
-@include('landing.partials.head')
+@include('landing.partials.head2')
 
-<body class="body-color-three">
+<body class="fixed @yield('classBody')">
 
-    @include('landing.partials.preloader')
+    @include('landing.partials.preloader2')
 
-    <!-- Theme Switcher Start -->
-    {{-- <div class="switch-theme-mode">
-        <label id="switch" class="switch">
-            <input type="checkbox" onchange="toggleTheme()" id="slider">
-            <span class="slider round"></span>
-        </label>
-    </div> --}}
-    <!-- Theme Switcher End -->
-
-    @include('landing.partials.header')
+    @include('landing.partials.header2')
 
     @yield('content')
 
-    @include('landing.partials.footer')
+    @include('landing.partials.footer2')
 
-    <!-- Start Go Top Area -->
-    <div class="go-top">
-        <i class="bx bx-chevrons-up"></i>
-        <i class="bx bx-chevrons-up"></i>
-    </div>
-    <!-- End Go Top Area -->
+    <!-- SCROLL TO TOP Start -->
+    <a href="javascript:void(0);" id="scroll-to-top" class="scroll-to-top" title="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- SCROLL TO TOP End -->
 
-
-    @include('landing.partials.scripts')
+    @include('landing.partials.scripts2')
 </body>
 
 </html>

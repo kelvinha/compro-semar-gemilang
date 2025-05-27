@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Route;
 // Landing page routes (with tracking and locale)
 Route::middleware(['web.tracking', 'web.locale'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
-    Route::get('/bbm', [HomeController::class, 'indexBBM'])->name('home.index');
     Route::get('/page/{slug}', [HomeController::class, 'page'])->name('home.page');
 
     // About routes

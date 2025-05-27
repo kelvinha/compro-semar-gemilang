@@ -18,7 +18,7 @@ class AboutController extends Controller
     {
         // Get about page from CMS
         $aboutPage = PageHelper::getAboutPage();
-        
+
         // If about page doesn't exist, create a fallback
         if (!$aboutPage) {
             $aboutPage = PageHelper::createFallbackPage(
@@ -27,18 +27,18 @@ class AboutController extends Controller
                 'about us, company, history, mission, vision, values, team'
             );
         }
-        
+
         // Load SEO settings for the about page
         if ($aboutPage->seo) {
             $aboutPage->load('seo');
         }
-        
+
         // Get testimonials
         $testimonials = Testimonial::where('status', 'active')
             ->orderBy('order')
             ->orderBy('created_at', 'desc')
             ->get();
-            
+
         return view('landing.about', compact('aboutPage', 'testimonials'));
     }
 }

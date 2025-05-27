@@ -1,0 +1,565 @@
+@extends('landing.layout.master-temp')
+
+@section('content')
+    @php
+        // Load home page content directly in the view
+        $homePage = \App\Helpers\PageHelper::getHomePage();
+
+        // If home page doesn't exist, create a fallback
+        if (!$homePage) {
+        $homePage = \App\Helpers\PageHelper::createFallbackPage(
+        'Home',
+        'Welcome to our website. Discover our products and services.',
+        'home, welcome, products, services'
+        );
+        }
+    @endphp
+            <!-- Start Banner Area -->
+    <section class="banner-area banner-area-three">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="banner-content">
+                            <span class="top-title wow animate__animated animate__fadeInDown"
+                                  data-wow-delay="1s">Reliable Valve Automation Solutions</span>
+                                <h1 class="wow animate__animated animate__fadeInDown" data-wow-delay="1s">High-Quality
+                                    Electro-Pneumatic-Hydraulic Systems</h1>
+                                <p class="wow animate__animated animate__fadeInUp" data-wow-delay="1s">PT. Industri
+                                    Teknologi Torsi (ITT) specializes in providing cutting-edge solutions for the oil
+                                    and
+                                    gas industry, including Wellhead Control Panels, Hydraulic Control Panel Systems,
+                                    Shut
+                                    Down Valves, and Motor Operated Valves. We are committed to delivering products that
+                                    meet national and international standards.</p>
+                                <div class="banner-btn wow animate__animated animate__fadeInUp" data-wow-delay="1s">
+                                    <a href="contact.html" class="default-btn">
+                                        <span>Contact Us</span>
+                                    </a>
+                                    <a href="company-profile.html" class="default-btn">
+                                        <span>View Profile</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="banner-img wow animate__animated animate__fadeInDown" data-wow-delay="1s">
+                                <img src="{{asset('vendor/landing')}}/assets/img/banner/banner-img.png" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+
+    <!-- Start Feature Area -->
+    <section class="feature-area feature-area-three pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-feature overly-one">
+                        <div class="overly-two">
+                            <div class="title">
+                                <i class="flaticon-testing"></i>
+                                <h3>Certified Quality</h3>
+                            </div>
+                            <p>Our products are certified with ISO 9001, ISO 14001, API 6D, and API 607, ensuring
+                                top-notch
+                                quality and reliability.</p>
+                            <div class="feature-shape">
+                                <img src="{{asset('vendor/landing')}}/assets/img/feature-shape-2.png" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-feature overly-one">
+                        <div class="overly-two">
+                            <div class="title">
+                                <i class="flaticon-cybercrime"></i>
+                                <h3>Innovative Solutions</h3>
+                            </div>
+                            <p>We provide advanced solutions such as MOV Packages, SDV Packages, and Wellhead Control
+                                Panels
+                                tailored for the oil and gas industry.</p>
+                            <div class="feature-shape">
+                                <img src="{{asset('vendor/landing')}}/assets/img/feature-shape-2.png" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
+                    <div class="single-feature overly-one">
+                        <div class="overly-two">
+                            <div class="title">
+                                <i class="flaticon-cyber-security"></i>
+                                <h3>Trusted by Industry Leaders</h3>
+                            </div>
+                            <p>Our clients include Pertamina, Total Indonesia, BP, and Gading Digstar Karya Abadi,
+                                showcasing our reputation in the industry.</p>
+                            <div class="feature-shape">
+                                <img src="{{asset('vendor/landing')}}/assets/img/feature-shape-2.png" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Feature Area -->
+
+    <!-- Start Counter Area -->
+    <section class="counter-area counter-area-three pt-100 pb-70">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="counter-img">
+                        <img src="{{asset('vendor/landing')}}/assets/img/counter-img.png" alt="Image">
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="counter-max-wide">
+                        <div class="section-title">
+                            <span>Why Choose ITT</span>
+                            <h2>We Excel in Valve Automation and Control Systems</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="single-counter overly-one">
+                                    <div class="overly-two">
+                                        <i class="flaticon-authentication"></i>
+                                        <h2>
+                                            <span class="odometer" data-count="365">00</span>
+                                        </h2>
+                                        <h3>Projects Delivered</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="single-counter overly-one">
+                                    <div class="overly-two">
+                                        <i class="flaticon-reliability"></i>
+                                        <h2>
+                                            <span class="odometer" data-count="1000">00</span>
+                                        </h2>
+                                        <h3>Happy Clients</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="single-counter overly-one">
+                                    <div class="overly-two">
+                                        <i class="flaticon-web-protection"></i>
+                                        <h2>
+                                            <span class="odometer" data-count="567">00</span>
+                                        </h2>
+                                        <h3>Systems Secured</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="single-counter overly-one">
+                                    <div class="overly-two">
+                                        <i class="flaticon-innovation"></i>
+                                        <h2>
+                                            <span class="odometer" data-count="100">00</span>
+                                            <span class="target">%</span>
+                                        </h2>
+                                        <h3>Customer Satisfaction</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Counter Area -->
+
+
+    <!-- Start Protect Area -->
+    <section class="protect-area protect-area-three pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span>Industrial Protection</span>
+                <h2>Secure Your Operations with Reliable Valve Automation</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-challenges overly-one">
+                        <div class="overly-two">
+                            <i class="flaticon-database"></i>
+                            <h3>System Reliability</h3>
+                            <p>Ensure consistent performance with our robust automation solutions.</p>
+                            <span class="flaticon-database"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-challenges overly-one">
+                        <div class="overly-two">
+                            <i class="flaticon-application"></i>
+                            <h3>Custom Solutions</h3>
+                            <p>Tailored systems designed to meet your specific industrial needs.</p>
+                            <span class="flaticon-application"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-challenges overly-one">
+                        <div class="overly-two">
+                            <i class="flaticon-security"></i>
+                            <h3>Operational Safety</h3>
+                            <p>Protect your workforce and assets with advanced safety features.</p>
+                            <span class="flaticon-security"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-challenges overly-one">
+                        <div class="overly-two">
+                            <i class="flaticon-security-1"></i>
+                            <h3>Global Standards</h3>
+                            <p>Our products comply with international certifications and standards.</p>
+                            <span class="flaticon-security-1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="protect-left-shape shape-three">
+            <img src="{{asset('vendor/landing')}}/assets/img/protect-left-shape.png" alt="Image">
+        </div>
+    </section>
+    <!-- End Protect Area -->
+
+    <!-- Start FAQ Area -->
+    <section class="faq-area white-bg ptb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="faq-img">
+                        <img src="{{asset('vendor/landing')}}/assets/img/faq-img.png" alt="Image">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="faq-accordion">
+                        <div class="faq-title">
+                            <h2>Frequently Asked Questions</h2>
+                            <span>Find Your Answers Below</span>
+                        </div>
+
+                        <ul class="accordion">
+                            <li class="accordion-item">
+                                <a class="accordion-title active" href="javascript:void(0)">
+                                    <i class="bx bx-plus"></i>
+                                    What industries do you serve?
+                                </a>
+
+                                <div class="accordion-content show">
+                                    <p>We specialize in serving the oil and gas industry, providing solutions for valve
+                                        automation, control systems, and safety mechanisms.</p>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item">
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="bx bx-plus"></i>
+                                    Why choose ITT for valve automation?
+                                </a>
+
+                                <div class="accordion-content">
+                                    <p>Our expertise, certifications, and commitment to quality make us a trusted
+                                        partner
+                                        for reliable and innovative solutions.</p>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item">
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="bx bx-plus"></i>
+                                    Do you offer custom solutions?
+                                </a>
+
+                                <div class="accordion-content">
+                                    <p>Yes, we design and deliver tailored systems to meet the unique requirements of
+                                        your
+                                        operations.</p>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item">
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="bx bx-plus"></i>
+                                    How do you ensure product quality?
+                                </a>
+
+                                <div class="accordion-content">
+                                    <p>Our products are certified with ISO 9001, ISO 14001, API 6D, and API 607,
+                                        ensuring
+                                        adherence to global standards.</p>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item">
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="bx bx-plus"></i>
+                                    What support services do you provide?
+                                </a>
+
+                                <div class="accordion-content">
+                                    <p>We offer comprehensive support, including installation, maintenance, and
+                                        troubleshooting for all our systems.</p>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item">
+                                <a class="accordion-title" href="javascript:void(0)">
+                                    <i class="bx bx-plus"></i>
+                                    How can I get a quote?
+                                </a>
+
+                                <div class="accordion-content">
+                                    <p>Contact us through our website or email, and our team will provide a detailed
+                                        quote
+                                        based on your requirements.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-right-shape shape-three">
+            <img src="{{asset('vendor/landing')}}/assets/img/faq-right-shape.png" alt="Image">
+        </div>
+    </section>
+    <!-- End FAQ Area -->
+
+    <!-- Start Featured Projects Area -->
+    @if($featuredProjects->count() > 0)
+        <section class="services-area services-area-three pt-100 pb-70">
+            <div class="container">
+                <div class="section-title">
+                    <span>Featured Projects</span>
+                    <h2>Our Recent Work</h2>
+                </div>
+
+                <div class="row">
+                    @foreach($featuredProjects as $project)
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-services">
+                                <div class="services-img">
+                                    <a href="{{ route('home.projects.show', $project->slug) }}">
+                                        @if($project->project_main_image)
+                                            <img src="{{ asset('storage/' . $project->project_main_image) }}"
+                                                 alt="{{ $project->project_name }}">
+                                        @else
+                                            <img src="{{asset('vendor/landing')}}/assets/img/services/services-1.jpg"
+                                                 alt="{{ $project->project_name }}">
+                                        @endif
+                                    </a>
+                                </div>
+
+                                <div class="services-content">
+                                    <h3>
+                                        <a href="{{ route('home.projects.show', $project->slug) }}">{{ $project->project_name }}</a>
+                                    </h3>
+                                    <p><strong>Client:</strong> {{ $project->client_name }}</p>
+                                    <p>{{ Str::limit(strip_tags($project->project_description), 100) }}</p>
+                                    <a href="{{ route('home.projects.show', $project->slug) }}" class="read-more">
+                                        View Project
+                                        <i class="flaticon-right-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ route('home.projects') }}" class="default-btn">
+                        <span>View All Projects</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    @endif
+    <!-- End Featured Projects Area -->
+
+    <!-- Start Featured Products Area -->
+    @if(isset($featuredProducts) && $featuredProducts->count() > 0)
+        <section class="product-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title">
+                    <span>Featured Products</span>
+                    <h2>Our Top Products</h2>
+                </div>
+
+                <div class="row">
+                    @foreach($featuredProducts as $product)
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-product">
+                                <div class="product-img">
+                                    @if($product->image)
+                                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
+                                    @else
+                                        <img src="{{asset('vendor/landing')}}/assets/img/product/product-1.jpg"
+                                             alt="{{ $product->name }}">
+                                    @endif
+
+                                    <ul>
+                                        <li>
+                                            <a href="{{ route('home.products.show', $product->slug) }}">
+                                                <i class="bx bx-show-alt"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <a href="{{ route('home.products.show', $product->slug) }}">
+                                    <h3>{{ $product->name }}</h3>
+                                </a>
+
+                                @if($product->price > 0)
+                                    <span>${{ number_format($product->price, 2) }}</span>
+                                @endif
+
+                                <a href="{{ route('home.products.show', $product->slug) }}" class="default-btn">
+                                    <span>View Details</span>
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ route('home.products') }}" class="default-btn">
+                        <span>View All Products</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    @endif
+    <!-- End Featured Products Area -->
+
+    <!-- Start Blog Area -->
+    <section class="blog-area blog-area-three white-bg pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span>Latest News</span>
+                <h2>Read The Latest Articles From Us</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="{{asset('vendor/landing')}}/assets/img/blog/blog-4.jpg" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="blog-content">
+                            <span>January 20, 2024</span>
+                            <h3><a href="blog-details.html">The security risks of changing package owners</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="{{asset('vendor/landing')}}/assets/img/blog/blog-5.jpg" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="blog-content">
+                            <span>January 19, 2024</span>
+                            <h3><a href="blog-details.html">Tips to Protecting Your Business and Family</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="{{asset('vendor/landing')}}/assets/img/blog/blog-6.jpg" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="blog-content">
+                            <span>January 18, 2024</span>
+                            <h3><a href="blog-details.html">Protect Your Workplace from Cyber Attacks</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-left-shape shape-three">
+            <img src="{{asset('vendor/landing')}}/assets/img/blog-left-shape.png" alt="Image">
+        </div>
+    </section>
+    <!-- End Blog Area -->
+
+    <!-- Start Partner Area -->
+    <div class="partner-area bg-color ptb-70">
+        <div class="container">
+            <div class="partner-slider owl-theme owl-carousel">
+                <div class="partner-item">
+                    <a href="#">
+                        <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-1.png" alt="Image">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#">
+                        <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-2.png" alt="Image">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#">
+                        <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-3.png" alt="Image">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#">
+                        <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-4.png" alt="Image">
+                    </a>
+                </div>
+
+                <div class="partner-item">
+                    <a href="#">
+                        <img src="{{asset('vendor/landing')}}/assets/img/partner/partner-5.png" alt="Image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Partner Area -->
+
+@endsection
