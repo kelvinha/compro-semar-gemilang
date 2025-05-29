@@ -2650,11 +2650,13 @@ body.compensate-for-scrollbar {
 }
 
 .main-banner-2 span.stripe, .inner-banner span.stripe {
-    background: linear-gradient(-45deg, #FF5E15, transparent 80%);
+    background: linear-gradient(-45deg, #FF3232, transparent 80%);
+    /*background: linear-gradient(-45deg, #FF5E15, transparent 80%);*/
 }
 
 .main-banner-2 .stripe.stripe-secondary, .inner-banner .stripe.stripe-secondary {
-    background: linear-gradient(-45deg, #FF5E15, transparent 95%);
+    background: linear-gradient(-45deg, #FF3232, transparent 95%);
+    /*background: linear-gradient(-45deg, #FF5E15, transparent 95%);*/
     height: 62px;
 }
 

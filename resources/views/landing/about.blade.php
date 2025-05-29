@@ -3,7 +3,8 @@
 @section('content')
     <main class="site-main">
         <!-- START OF INNER BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/inner_banner_image.jpg');">
+        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/banner.jpg');">
+{{--        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/inner_banner_image.jpg');">--}}
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
