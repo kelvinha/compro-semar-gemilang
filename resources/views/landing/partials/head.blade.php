@@ -85,7 +85,7 @@
         }
     @endphp
 
-    <!-- SEO Meta Tags -->
+        <!-- SEO Meta Tags -->
     <meta name="description" content="@yield('meta_description', $pageDescription)">
     <meta name="keywords" content="@yield('meta_keywords', $pageKeywords)">
     <title>@yield('title', $pageTitle) - {{ $websiteName }}</title>
@@ -112,7 +112,7 @@
         }
     @endphp
 
-    <!-- Custom colors -->
+        <!-- Custom colors -->
     @php
         $primaryColor = null;
         $secondaryColor = null;
@@ -126,7 +126,7 @@
         }
     @endphp
 
-    <!-- Favicons -->
+        <!-- Favicons -->
     @php
         $websiteFavicon = null;
         $websiteFaviconApple = null;
@@ -135,17 +135,17 @@
         $websiteManifest = null;
 
         foreach($settings as $setting) {
-        if($setting->key === 'website_favicon') {
-        $websiteFavicon = $setting->value;
-        } elseif($setting->key === 'website_favicon_apple') {
-        $websiteFaviconApple = $setting->value;
-        } elseif($setting->key === 'website_favicon_32') {
-        $websiteFavicon32 = $setting->value;
-        } elseif($setting->key === 'website_favicon_16') {
-        $websiteFavicon16 = $setting->value;
-        } elseif($setting->key === 'website_manifest') {
-        $websiteManifest = $setting->value;
-        }
+            if($setting->key === 'website_favicon') {
+                $websiteFavicon = $setting->value;
+                } elseif($setting->key === 'website_favicon_apple') {
+                $websiteFaviconApple = $setting->value;
+                } elseif($setting->key === 'website_favicon_32') {
+                $websiteFavicon32 = $setting->value;
+                } elseif($setting->key === 'website_favicon_16') {
+                $websiteFavicon16 = $setting->value;
+                } elseif($setting->key === 'website_manifest') {
+                $websiteManifest = $setting->value;
+            }
         }
     @endphp
 
@@ -158,6 +158,8 @@
     @else
         <link rel="icon" type="image/png" href="{{ asset('vendor/landing2/assets/img/favicon.png') }}">
         <link rel="apple-touch-icon" href="{{ asset('vendor/landing2/assets/img/favicon.png') }}">
+        <!-- FavIcon Link -->
+        <link rel="icon" href="{{asset('vendor/landing2')}}/assets/images/favicon.png" sizes="32x32" type="image/png">
     @endif
 
     @if($websiteFavicon32)
@@ -172,12 +174,12 @@
         <link rel="manifest" href="{{ asset('storage/' . $websiteManifest) }}">
     @endif
 
-    <!-- FavIcon Link -->
-    <link rel="icon" href="{{asset('vendor/landing2')}}/assets/images/favicon.png" sizes="32x32" type="image/png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap CSS Link -->
     <link rel="stylesheet" href="{{asset('vendor/landing2')}}/assets/css/bootstrap.min.css">
     <!-- Swiper Slider CSS Link -->
@@ -191,29 +193,14 @@
     @if($primaryColor || $secondaryColor)
         <style>
             :root {
-                @if($primaryColor) --primary-color: {
-                {
-                    $primaryColor
-                }
-                }
+                @if($primaryColor)
+                --primary-color: {{ $primaryColor }} !important;
+                @endif
 
-            ;
-
-                @endif @if($secondaryColor) --secondary-color: {
-                {
-                    $secondaryColor
-                }
-                }
-
-            ;
-            @endif
+                @if($secondaryColor)
+                --secondary-color: {{ $secondaryColor }} !important;
+                @endif
         }
         </style>
     @endif
-    <style>
-        :root {
-            --primary-color: #40424f;
-            --secondary-color: #FF3232;
-        }
-    </style>
 </head>
