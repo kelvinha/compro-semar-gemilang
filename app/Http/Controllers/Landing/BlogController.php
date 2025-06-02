@@ -27,40 +27,40 @@ class BlogController extends Controller
                 'blog, news, articles, insights, updates'
             );
         }
-        
-        
+
+
         // Get category filter
         $categoryId = $request->input('category');
         $category = null;
-        
+
         if ($categoryId) {
             $category = BlogCategory::find($categoryId);
         }
-        
+
         // Get published blogs
         $query = Blog::where('status', 'published')
             ->orderBy('published_at', 'desc');
-            
+
         // Apply category filter
         if ($category) {
             $query->where('category_id', $category->id);
         }
-        
+
         $blogs = $query->paginate(9);
-        
+
         // Get featured blogs for sidebar
         $featuredBlogs = Blog::where('status', 'published')
             ->where('featured', true)
             ->orderBy('published_at', 'desc')
             ->take(3)
             ->get();
-            
+
         // Get categories with post count
         $categories = BlogCategory::withCount(['blogs' => function($query) {
             $query->where('status', 'published');
         }])->having('blogs_count', '>', 0)->get();
 
-        return view('landing.blog', compact('blogPage', 'blogs', 'featuredBlogs', 'categories', 'category'));
+        return view('landing.blog2', compact('blogPage', 'blogs', 'featuredBlogs', 'categories', 'category'));
     }
 
     /**
@@ -75,10 +75,10 @@ class BlogController extends Controller
         $blog = Blog::where('slug', $slug)
             ->where('status', 'published')
             ->firstOrFail();
-            
+
         // Load SEO settings for the blog post
         $blog->load('seo');
-        
+
         // Get related blogs
         $relatedBlogs = Blog::where('status', 'published')
             ->where('id', '!=', $blog->id)
@@ -90,10 +90,10 @@ class BlogController extends Controller
             ->orderBy('published_at', 'desc')
             ->take(3)
             ->get();
-            
+
         // Get blog page from CMS for breadcrumb
         $blogPage = PageHelper::getBlogPage();
-        
+
         // If blog page doesn't exist, create a fallback
         if (!$blogPage) {
             $blogPage = PageHelper::createFallbackPage('Our Blog');
@@ -101,7 +101,7 @@ class BlogController extends Controller
 
         return view('landing.blog-post', compact('blog', 'relatedBlogs', 'blogPage'));
     }
-    
+
     /**
      * Display blogs by category.
      *
@@ -114,10 +114,10 @@ class BlogController extends Controller
         $category = BlogCategory::where('slug', $slug)
             ->where('active', true)
             ->firstOrFail();
-            
+
         // Get blog page from CMS
         $blogPage = PageHelper::getBlogPage();
-        
+
         // If blog page doesn't exist, create a fallback
         if (!$blogPage) {
             $blogPage = PageHelper::createFallbackPage(
@@ -126,25 +126,25 @@ class BlogController extends Controller
                 'blog, news, articles, insights, updates'
             );
         }
-        
+
         // Load SEO settings for the blog page
         if ($blogPage->seo) {
             $blogPage->load('seo');
         }
-        
+
         // Get published blogs in this category
         $blogs = Blog::where('status', 'published')
             ->where('category_id', $category->id)
             ->orderBy('published_at', 'desc')
             ->paginate(9);
-            
+
         // Get featured blogs for sidebar
         $featuredBlogs = Blog::where('status', 'published')
             ->where('featured', true)
             ->orderBy('published_at', 'desc')
             ->take(3)
             ->get();
-            
+
         // Get categories with post count
         $categories = BlogCategory::withCount(['blogs' => function($query) {
             $query->where('status', 'published');

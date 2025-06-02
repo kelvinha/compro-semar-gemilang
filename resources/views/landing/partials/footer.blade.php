@@ -1,218 +1,180 @@
-<!-- Start Footer Area -->
-<footer class="footer-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}'>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget">
-                    <a href="{{ route('home.index') }}" class="logo">
-                        @php
-                        $websiteLogo = null;
-                        $websiteLogoFooter = null;
-                        $websiteName = 'PT Industri Teknologi Torsi';
-
-                        foreach($settings as $setting) {
-                        if($setting->key === 'website_logo') {
-                        $websiteLogo = $setting->value;
-                        } elseif($setting->key === 'website_logo_footer') {
-                        $websiteLogoFooter = $setting->value;
-                        } elseif($setting->key === 'website_name') {
-                        $websiteName = $setting->value;
-                        }
-                        }
-                        @endphp
-
-                        @if($websiteLogoFooter)
-                        <img src="{{ asset('storage/' . $websiteLogoFooter) }}" alt="{{ $websiteName }}">
-                        @elseif($websiteLogo)
-                        <img src="{{ asset('storage/' . $websiteLogo) }}" alt="{{ $websiteName }}">
-                        @else
-                        <img src="{{ asset('vendor/landing/assets/img/logo.png') }}" alt="{{ $websiteName }}">
-                        @endif
-                    </a>
-
-                    <p>PT Industri Teknologi Torsi adalah produsen khusus komponen otomasi dan katup yang menyediakan
-                        produk berkualitas tinggi untuk memenuhi kebutuhan industri, seperti pada minyak & gas, kilang,
-                        petrokimia, dan pembangkit listrik.</p>
-
-                    <ul class="social-icon">
-                        @if(isset($settings['social_facebook']))
-                        <li>
-                            <a href="{{ $settings['social_facebook'] }}" target="_blank">
-                                <i class="bx bxl-facebook"></i>
+<!-- START OF FOOTER -->
+<footer class="site-footer white-text">
+    <div class="top-footer">
+        <div class="banner-shape">
+            <span class="stripe"></span>
+            <span class="stripe stripe-secondary"></span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-left">
+                        <div class="footer-branding">
+                            <a href="index.html" title="Induris">
+                                <img src="{{asset('vendor/landing2')}}/assets/images/logo.svg" width="152" height="35" alt="Induris Logo">
                             </a>
-                        </li>
-                        @endif
-                        @if(isset($settings['social_instagram']))
-                        <li>
-                            <a href="{{ $settings['social_instagram'] }}" target="_blank">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-                        </li>
-                        @endif
-                        @if(isset($settings['social_linkedin']))
-                        <li>
-                            <a href="{{ $settings['social_linkedin'] }}" target="_blank">
-                                <i class="bx bxl-linkedin-square"></i>
-                            </a>
-                        </li>
-                        @endif
-                        @if(isset($settings['social_twitter']))
-                        <li>
-                            <a href="{{ $settings['social_twitter'] }}" target="_blank">
-                                <i class="bx bxl-twitter"></i>
-                            </a>
-                        </li>
-                        @endif
-                    </ul>
+                            <p>We leverage cutting-edge technologies to manufacture</p>
+                        </div>
+                        <div class="mail-form">
+                            <form>
+                                <input type="email" placeholder="Email Address" required="">
+                                <button type="submit" class="sec-btn icon-lg"></button>
+                            </form>
+                        </div>
+                        <div class="footer-socials">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/" title="Follow on Facebook" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" title="Follow on Instagram" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/" title="Follow on Linkedin" target="_blank">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget">
-                    <h3>{{ $settings['footer_address_title'] ?? 'Address' }}</h3>
-
-                    <ul class="address">
-                        @if(isset($settings['company_address']))
-                        <li class="location">
-                            <i class="bx bxs-location-plus"></i>
-                            {{ $settings['company_address'] }}
-                        </li>
-                        @endif
-                        <li>
-                            <i class="bx bxs-envelope"></i>
-                            @if(isset($settings['company_email']))
-                            <a href="mailto:{{ $settings['company_email'] }}">{{ $settings['company_email'] }}</a>
-                            @endif
-                            @if(isset($settings['company_skype']))
-                            <a href="skype:{{ $settings['company_skype'] }}?call">skype: {{ $settings['company_skype']
-                                }}</a>
-                            @endif
-                        </li>
-                        <li>
-                            <i class="bx bxs-phone-call"></i>
-                            @if(isset($settings['company_phone']))
-                            <a href="tel:{{ $settings['company_phone'] }}">{{ $settings['company_phone'] }}</a>
-                            @endif
-                            @if(isset($settings['company_phone_secondary']))
-                            <a href="tel:{{ $settings['company_phone_secondary'] }}">{{
-                                $settings['company_phone_secondary'] }}</a>
-                            @endif
-                        </li>
-                    </ul>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-links">
+                        <h4 class="h4-title">Our Links</h4>
+                        <ul>
+                            <li class="active-footer-menu">
+                                <a href="index.html" title="Home">Home</a>
+                            </li>
+                            <li>
+                                <a href="about-us.html" title="About Us">About Us</a>
+                            </li>
+                            <li>
+                                <a href="services.html" title="Services">Services</a>
+                            </li>
+                            <li>
+                                <a href="portfolio.html" title="Portfolio">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="blog-grid.html" title="Blog">Blog</a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html" title="Contact Us">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget">
-                    <h3>Produk & Layanan</h3>
-
-                    <ul class="import-link">
-                        @php
-                        // Load footer menu directly in the footer
-                        $footerMenu = \App\Helpers\MenuHelper::getFooterMenu();
-                        @endphp
-
-                        @if($footerMenu && $footerMenu->submenus && $footerMenu->submenus->count() > 0)
-                        @foreach($footerMenu->submenus->take(6) as $menu)
-                        <li>
-                            <a href="{{ $menu->url }}">{{ $menu->name }}</a>
-                        </li>
-                        @endforeach
-                        @else
-                        <li>
-                            <a href="#">Aktuator Pneumatik</a>
-                        </li>
-                        <li>
-                            <a href="#">Aktuator Elektrik</a>
-                        </li>
-                        <li>
-                            <a href="#">Aktuator Hidrolik</a>
-                        </li>
-                        <li>
-                            <a href="#">Katup Kontrol</a>
-                        </li>
-                        <li>
-                            <a href="#">Sistem Otomasi</a>
-                        </li>
-                        <li>
-                            <a href="#">Layanan Purna Jual</a>
-                        </li>
-                        @endif
-                    </ul>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-contact">
+                        <h4 class="h4-title">Contact Us</h4>
+                        <ul>
+                            <li>
+                                <div class="contact-item">
+                                        <span class="contact-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                    <div class="contact-link">
+                                        <a href="https://maps.app.goo.gl/ZwA6bivb8dijZNoAA" title="145 45j Street Office 789 De14563, Western Australia" target="_blank">Perkantoran Menara Era,
+                                            10th Floor, Room 03
+                                            Jl. Raya Senen Kav 135-137
+                                            Jakarta 10410
+                                            Indonesia</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-item">
+                                        <span class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    <div class="contact-link">
+                                        <a href="mailto:marketing_official@sadikun.com"
+                                           title="Mail on marketing_official@sadikun.com">marketing_official@sadikun.com</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-item">
+                                        <span class="contact-icon">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </span>
+                                    <div class="contact-link">
+                                        <a href="tel:+6221-3864386" title="Call on +62 213 864 386">
+                                            +62 213 864 386
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-footer-widget">
-                    <h3>Informasi</h3>
-
-                    <ul class="import-link">
-                        @php
-                        // Load secondary footer menu directly in the footer
-                        $footerMenuSecondary = \App\Helpers\MenuHelper::getFooterMenuSecondary();
-                        @endphp
-
-                        @if($footerMenuSecondary && $footerMenuSecondary->submenus &&
-                        $footerMenuSecondary->submenus->count() > 0)
-                        @foreach($footerMenuSecondary->submenus->take(6) as $menu)
-                        <li>
-                            <a href="{{ $menu->url }}">{{ $menu->name }}</a>
-                        </li>
-                        @endforeach
-                        @else
-                        <li>
-                            <a href="{{ route('home.about') }}">Tentang Kami</a>
-                        </li>
-                        <li>
-                            <a href="#">Industri & Aplikasi</a>
-                        </li>
-                        <li>
-                            <a href="#">Proyek & Referensi</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('home.blog') }}">Berita & Artikel</a>
-                        </li>
-                        <li>
-                            <a href="#">Karir</a>
-                        </li>
-                        <li>
-                            <a href="#">Hubungi Kami</a>
-                        </li>
-                        @endif
-                    </ul>
+                <div class="col-lg-3">
+                    <h4 class="h4-title">Gallery</h4>
+                    <div class="footer-gallery">
+                        <ul>
+                            <li>
+                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-1-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-1-min.jpg');">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-2-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-2-min.jpg');">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-3-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-3-min.jpg');">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-4-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-4-min.jpg');">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-5-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-5-min.jpg');">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-6-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('assets/images/footer-gallery-6-min.jpg');">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</footer>
-<!-- End Footer Area -->
-<!-- Start Copy Right Area -->
-<div class="copy-right-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6">
-                <p>© {{ date('Y') }} PT Industri Teknologi Torsi. All Rights Reserved.</p>
-            </div>
-
-            <div class="col-lg-6 col-md-6">
-                <ul class="footer-menu">
-                    @if(isset($settings['privacy_policy_url']))
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="bottom-footer-content">
+                <p class="bottom-footer-text m-0">
+                    Copyright © <span id="copy-right-year">2025</span>
+                    <a href="https://themeforest.net/user/geekcodelab" title="Geekcodelab" target="_blank">Geekcodelab.</a>
+                    All rights reserved.
+                </p>
+                <ul>
                     <li>
-                        <a href="{{ $settings['privacy_policy_url'] }}" target="_blank">
-                            {{ $settings['privacy_policy_text'] ?? 'Privacy Policy' }}
-                        </a>
+                        <a href="javascript:void(0)" title="Privacy Policy">Privacy Policy</a>
                     </li>
-                    @endif
-                    @if(isset($settings['terms_conditions_url']))
                     <li>
-                        <a href="{{ $settings['terms_conditions_url'] }}" target="_blank">
-                            {{ $settings['terms_conditions_text'] ?? 'Terms & Conditions' }}
-                        </a>
+                        <a href="javascript:void(0)" title="Terms Of Service">Terms Of Service</a>
                     </li>
-                    @endif
                 </ul>
             </div>
         </div>
     </div>
-</div>
-<!-- End Copy Right Area -->
+</footer>
+<!-- END OF FOOTER -->

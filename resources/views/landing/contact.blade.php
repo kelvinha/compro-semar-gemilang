@@ -1,266 +1,168 @@
 @extends('landing.layout.master')
-
-@section('title', $contactPage->seo->title ?? $contactPage->title ?? 'Contact Us')
-@section('meta_description', $contactPage->seo->description ?? $contactPage->subtitle ?? 'Get in touch with our team.
-We\'re here to help and answer any questions you might have.')
-@section('meta_keywords', $contactPage->seo->keywords ?? 'contact, get in touch, help, support, message, email, phone,
-address')
-
-@section('og_title', $contactPage->seo->og_title ?? $contactPage->seo->title ?? 'Contact Us')
-@section('og_description', $contactPage->seo->og_description ?? $contactPage->seo->description ?? 'Get in touch with our
-team. We\'re here to help and answer any questions you might have.')
-@section('og_image', asset('storage/' . ($contactPage->seo->og_image ?? '')))
-
+@section('classBody', 'contact_us_page')
 @section('content')
-<!-- Start Page Title Area -->
-<div class="page-title-area page-title-style-two">
-    <div class="container">
-        <div class="page-title-content">
-            <h2>{{ $contactPage->title ?? 'Contact Us' }}</h2>
-            <ul>
-                <li>
-                    <a href="{{ route('home.index') }}">
-                        <i class="bx bx-home"></i>
-                        Home
-                    </a>
-                </li>
-                <li class="active">{{ $contactPage->title ?? 'Contact' }}</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- End Page Title Area -->
+    @php
+        // Load home page content directly in the view
+        $homePage = \App\Helpers\PageHelper::getHomePage();
 
-<!-- Start Contact Area -->
-<section class="main-contact-area ptb-100">
-    <div class="container">
-        @if($contactPage->content)
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="about-content">
-                    {!! $contactPage->content !!}
+        // If home page doesn't exist, create a fallback
+        if (!$homePage) {
+        $homePage = \App\Helpers\PageHelper::createFallbackPage(
+        'Home',
+        'Welcome to our website. Discover our products and services.',
+        'home, welcome, products, services'
+        );
+        }
+    @endphp
+    <main class="site-main">
+        <!-- START OF MAIN BANNER -->
+        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/inner_banner_image.jpg');">
+            <div class="banner-stripes">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="banner-shape-wp wow fadeInRight for-des" data-wow-duration=".8s">
+                <div class="banner-shape">
+                    <span class="stripe"></span>
+                    <span class="stripe stripe-secondary"></span>
                 </div>
             </div>
-        </div>
-        @endif
-
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <div class="contact-wrap">
-                    <div class="contact-form">
-                        <div class="contact-title">
-                            <h2>Write Us</h2>
-                        </div>
-
-                        <form id="contactMessageForm" method="POST" action="{{ route('home.contact.store') }}">
-                            @csrf
-                            <div class="row">
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="mb-2">Name</label>
-                                        <input type="text" name="name" id="name"
-                                            class="form-control @error('name') is-invalid @enderror" required
-                                            data-error="Please enter your name" value="{{ old('name') }}">
-                                        <div class="help-block with-errors">
-                                            @error('name')
-                                            <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="mb-2">Email Address</label>
-                                        <input type="email" name="email" id="email"
-                                            class="form-control @error('email') is-invalid @enderror" required
-                                            data-error="Please enter your email" value="{{ old('email') }}">
-                                        <div class="help-block with-errors">
-                                            @error('email')
-                                            <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="mb-2">Subject</label>
-                                        <input type="text" name="subject" id="subject"
-                                            class="form-control @error('subject') is-invalid @enderror" required
-                                            data-error="Please enter your subject" value="{{ old('subject') }}">
-                                        <div class="help-block with-errors">
-                                            @error('subject')
-                                            <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="mb-2">Message</label>
-                                        <textarea name="message"
-                                            class="form-control @error('message') is-invalid @enderror" id="message"
-                                            cols="30" rows="10" required
-                                            data-error="Write your message">{{ old('message') }}</textarea>
-                                        <div class="help-block with-errors">
-                                            @error('message')
-                                            <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn btn-two">
-                                        <span>Send Message</span>
-                                    </button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
-                                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="inner-banner-content-wp white-text text-center">
+                            <div class="inner-banner-content wow fadeInUp" data-wow-duration=".8s">
+                                <h2 class="h1-title">Contact Us</h2>
                             </div>
-                        </form>
+                            <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+                                <ul>
+                                    <li>
+                                        <a href="index.html" title="Home">Home</a>
+                                    </li>
+                                    <li>
+                                        <span>Contact Us</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4">
-                <div class="contact-info">
-                    <h3>Our contact details</h3>
-                    @if($contactPage->subtitle)
-                    <p>{{ $contactPage->subtitle }}</p>
-                    @endif
-
-                    <ul class="address">
-                        @if($contactInfo['address'])
-                        <li class="location">
-                            <i class="bx bxs-location-plus"></i>
-                            <span>Address</span>
-                            {{ $contactInfo['address'] }}
-                        </li>
-                        @endif
-
-                        @if($contactInfo['phone'] || $contactInfo['phone_secondary'])
-                        <li>
-                            <i class="bx bxs-phone-call"></i>
-                            <span>Phone</span>
-                            @if($contactInfo['phone'])
-                            <a href="tel:{{ $contactInfo['phone'] }}">{{ $contactInfo['phone'] }}</a>
-                            @endif
-                            @if($contactInfo['phone_secondary'])
-                            <a href="tel:{{ $contactInfo['phone_secondary'] }}">{{ $contactInfo['phone_secondary']
-                                }}</a>
-                            @endif
-                        </li>
-                        @endif
-
-                        @if($contactInfo['email'] || $contactInfo['email_secondary'])
-                        <li>
-                            <i class="bx bxs-envelope"></i>
-                            <span>Email</span>
-                            @if($contactInfo['email'])
-                            <a href="mailto:{{ $contactInfo['email'] }}">{{ $contactInfo['email'] }}</a>
-                            @endif
-                            @if($contactInfo['email_secondary'])
-                            <a href="mailto:{{ $contactInfo['email_secondary'] }}">{{ $contactInfo['email_secondary']
-                                }}</a>
-                            @endif
-                        </li>
-                        @endif
-                    </ul>
-
-                    <div class="sidebar-follow-us">
-                        <h3>Follow us:</h3>
-
-                        <ul class="social-wrap">
-                            @if($contactInfo['social_twitter'])
-                            <li>
-                                <a href="{{ $contactInfo['social_twitter'] }}" target="_blank">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </li>
-                            @endif
-                            @if($contactInfo['social_instagram'])
-                            <li>
-                                <a href="{{ $contactInfo['social_instagram'] }}" target="_blank">
-                                    <i class="bx bxl-instagram"></i>
-                                </a>
-                            </li>
-                            @endif
-                            @if($contactInfo['social_facebook'])
-                            <li>
-                                <a href="{{ $contactInfo['social_facebook'] }}" target="_blank">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                            </li>
-                            @endif
-                            @if($contactInfo['social_youtube'])
-                            <li>
-                                <a href="{{ $contactInfo['social_youtube'] }}" target="_blank">
-                                    <i class="bx bxl-youtube"></i>
-                                </a>
-                            </li>
-                            @endif
-                            @if($contactInfo['social_linkedin'])
-                            <li>
-                                <a href="{{ $contactInfo['social_linkedin'] }}" target="_blank">
-                                    <i class="bx bxl-linkedin"></i>
-                                </a>
-                            </li>
-                            @endif
-                        </ul>
+        </section>
+        <!-- END OF MAIN BANNER -->
+        <section class="contact-main">
+            <div class="contact-offices">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="contact-office wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+                                <h4 class="h4-title">Main Office</h4>
+                                <ul>
+                                    <li>
+                                        <a href="tel:+6221-3864386" title="Call on +62 213 864 386">
+                                            <img src="{{asset('vendor/landing2')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
+                                            <span>+62 213 864 386</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:marketing_official@sadikun.com"
+                                           title="Mail on marketing_official@sadikun.com">
+                                            <img src="{{asset('vendor/landing2')}}/assets/images/mail-icon.svg" width="18" height="13"
+                                                 alt="Mail Icon">
+                                            <span>marketing_official@sadikun.com</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://maps.app.goo.gl/ybuuJrh7x4fdod3w9" title="8/05 Mozilla Golden" target="_blank">
+                                            <img src="{{asset('vendor/landing2')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
+                                            <span>Central Jakarta, Senen</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-office wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+                                <h4 class="h4-title">Our Retail Office</h4>
+                                <ul>
+                                    <li>
+                                        <a href="tel:+62214351375" title="Call on 0214351375">
+                                            <img src="{{asset('vendor/landing2')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
+                                            <span>+62 214 351 375</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:marketing_official@sadikun.com"
+                                           title="Mail on marketing_official@sadikun.com">
+                                            <img src="{{asset('vendor/landing2')}}/assets/images/mail-icon.svg" width="18" height="13"
+                                                 alt="Mail Icon">
+                                            <span>marketing_official@sadikun.com</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://maps.app.goo.gl/JbiawARPtpBphF5eA" title="North Jakarta, Koja" target="_blank">
+                                            <img src="{{asset('vendor/landing2')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
+                                            <span>North Jakarta, Koja</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- End Contact Area -->
-
-<!-- Start Map Area -->
-@if($contactInfo['map_embed'])
-<div class="map-area">
-    {!! $contactInfo['map_embed'] !!}
-</div>
-@endif
-<!-- End Map Area -->
-@endsection
-
-@section('scripts')
-<script>
-    $(document).ready(function() {
-        // Check for flash messages
-        @if(session('success'))
-            Swal.fire({
-                title: 'Success!',
-                text: "{{ session('success') }}",
-                icon: 'success',
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#0d6efd'
-            });
-        @endif
-
-        @if(session('error'))
-            Swal.fire({
-                title: 'Error!',
-                text: "{{ session('error') }}",
-                icon: 'error',
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#0d6efd'
-            });
-        @endif
-
-        // Display validation errors with SweetAlert if they exist
-        @if($errors->any())
-            Swal.fire({
-                title: 'Validation Error',
-                text: 'Please correct the errors in the form.',
-                icon: 'error',
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#0d6efd'
-            });
-        @endif
-    });
-</script>
+            <div class="main-contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 order-lg-1 order-2">
+                            <div class="main-contact-map wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.686441261886!2d106.83749607498997!3d-6.172719993814645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5ca63fc59bf%3A0x9fba725575f2db77!2sEra%20Tower!5e0!3m2!1sen!2sid!4v1748449635484!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-2 order-1">
+                            <div class="main-contact-form wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="sec-title">
+                                    <span class="sub-title">
+                                        <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                        CONTACT US
+                                    </span>
+                                    <h2 class="h2-title">Let Start The Smart Work !</h2>
+                                </div>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-field">
+                                                <input type="text" class="input-field" placeholder="Full Name" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-field">
+                                                <input type="email" class="input-field" placeholder="Email Address" required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-field">
+                                                <input type="number" class="input-field" placeholder="Phone No." required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-field">
+                                                <textarea name="message" class="input-field" placeholder="Message..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-field form-submit-btn">
+                                                <button type="submit" class="sec-btn">Submit now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 @endsection
