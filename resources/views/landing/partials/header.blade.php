@@ -5,21 +5,25 @@
             <div class="top-hader-main-box white-text">
                 <p class="m-0">Welcome To Sadikun Niagamas Raya</p>
                 <ul class="header-social">
+                    @if(isset($settings[0]))
                     <li>
-                        <a href="mailto:marketing_official@sadikun.com"
-                           title="Mail on marketing_official@sadikun.com">
-                            <img src="{{asset('vendor/landing2')}}/assets/images/mail-icon.svg" width="18" height="13"
+                        <a href="mailto:{{ $settings['contact_email'] }}"
+                           title="Mail on {{ $settings['contact_email'] }}">
+                            <img src="{{asset('vendor/landing')}}/assets/images/mail-icon.svg" width="18" height="13"
                                  alt="Mail Icon">
-                            <span>marketing_official@sadikun.com</span>
+                            <span>{{ $settings['contact_email'] }}</span>
                         </a>
                     </li>
+                    @endif
+                    @if(isset($settings['contact_phone']))
                     <li>
-                        <a href="tel:+6221-3864386" title="Call on +62 213 864 386">
-                            <img src="{{asset('vendor/landing2')}}/assets/images/phone-icon.svg"  width="18" height="18"
+                        <a href="tel:{{$settings['contact_phone']}}" title="Call on {{$settings['contact_phone']}}">
+                            <img src="{{asset('vendor/landing')}}/assets/images/phone-icon.svg"  width="18" height="18"
                                  alt="Phone Icon">
-                            <span>+62 213 864 386</span>
+                            <span>{{$settings['contact_phone']}}</span>
                         </a>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -30,7 +34,7 @@
                 <div class="col-lg-2">
                     <div class="site-branding">
                         <a href="{{ route('home.index') }}" title="PT Sadikun BBM">
-                            <img src="{{asset('vendor/landing2')}}/assets/images/sadikun-logo.png" width="152" height="35"
+                            <img src="{{asset('vendor/landing')}}/assets/images/sadikun-logo.png" width="152" height="35"
                                  alt="Induris Logo">
                         </a>
                     </div>
@@ -64,11 +68,11 @@
                                 <div class="header-cta">
                                     <div class="header-search-button">
                                         <button type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
-                                            <img src="{{asset('vendor/landing2')}}/assets/images/search-icon.svg"
+                                            <img src="{{asset('vendor/landing')}}/assets/images/search-icon.svg"
                                                  width="20" height="20" alt="Search Icon">
                                         </button>
                                     </div>
-                                    <a href="{{asset('vendor/landing2')}}/contact-us.html" class="sec-btn"
+                                    <a href="{{asset('vendor/landing')}}/contact-us.html" class="sec-btn"
                                        title="Get a Quote">Get a Quote</a>
                                 </div>
                             </div>

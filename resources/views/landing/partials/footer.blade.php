@@ -11,7 +11,7 @@
                     <div class="footer-left">
                         <div class="footer-branding">
                             <a href="index.html" title="Induris">
-                                <img src="{{asset('vendor/landing2')}}/assets/images/logo.svg" width="152" height="35" alt="Induris Logo">
+                                <img src="{{asset('vendor/landing')}}/assets/images/logo.svg" width="152" height="35" alt="Induris Logo">
                             </a>
                             <p>We leverage cutting-edge technologies to manufacture</p>
                         </div>
@@ -116,37 +116,37 @@
                     <div class="footer-gallery">
                         <ul>
                             <li>
-                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-1-min.jpg" class="popup-image" title="Gallery Image">
-                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-1-min.jpg');">
+                                <a href="{{asset('vendor/landing')}}/assets/images/footer-gallery-1-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/footer-gallery-1-min.jpg');">
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-2-min.jpg" class="popup-image" title="Gallery Image">
-                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-2-min.jpg');">
+                                <a href="{{asset('vendor/landing')}}/assets/images/footer-gallery-2-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/footer-gallery-2-min.jpg');">
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-3-min.jpg" class="popup-image" title="Gallery Image">
-                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-3-min.jpg');">
+                                <a href="{{asset('vendor/landing')}}/assets/images/footer-gallery-3-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/footer-gallery-3-min.jpg');">
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-4-min.jpg" class="popup-image" title="Gallery Image">
-                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-4-min.jpg');">
+                                <a href="{{asset('vendor/landing')}}/assets/images/footer-gallery-4-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/footer-gallery-4-min.jpg');">
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-5-min.jpg" class="popup-image" title="Gallery Image">
-                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/footer-gallery-5-min.jpg');">
+                                <a href="{{asset('vendor/landing')}}/assets/images/footer-gallery-5-min.jpg" class="popup-image" title="Gallery Image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/footer-gallery-5-min.jpg');">
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{asset('vendor/landing2')}}/assets/images/footer-gallery-6-min.jpg" class="popup-image" title="Gallery Image">
+                                <a href="{{asset('vendor/landing')}}/assets/images/footer-gallery-6-min.jpg" class="popup-image" title="Gallery Image">
                                     <div class="back-img" style="background-image: url('assets/images/footer-gallery-6-min.jpg');">
                                     </div>
                                 </a>

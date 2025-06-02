@@ -16,7 +16,7 @@
     @endphp
     <main class="site-main">
         <!-- START OF MAIN BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/inner_banner_image.jpg');">
+        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -59,7 +59,7 @@
                         <div class="blog-listing-box wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="blog-box">
                                 <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/new-machine-details.jpg');" title="New machine will efficient big factory"></a>
+                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/new-machine-details.jpg');" title="New machine will efficient big factory"></a>
                                     <p class="blog-published">7 June, 2024</p>
                                 </div>
                                 <div class="blog-box-content">
@@ -74,7 +74,7 @@
                             </div>
                             <div class="blog-box">
                                 <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/how-to-build-details.jpg');" title="How to build for best new machinery industry"></a>
+                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/how-to-build-details.jpg');" title="How to build for best new machinery industry"></a>
                                     <p class="blog-published">7 June, 2024</p>
                                 </div>
                                 <div class="blog-box-content">
@@ -89,7 +89,7 @@
                             </div>
                             <div class="blog-box">
                                 <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/we-are-best-details.jpg');" title="We are best any industrial & business solution"></a>
+                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/we-are-best-details.jpg');" title="We are best any industrial & business solution"></a>
                                     <p class="blog-published">7 June, 2024</p>
                                 </div>
                                 <div class="blog-box-content">
@@ -104,7 +104,7 @@
                             </div>
                             <div class="blog-box">
                                 <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/industry-companies-details.jpg');" title="We are best any industrial & business solution"></a>
+                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/industry-companies-details.jpg');" title="We are best any industrial & business solution"></a>
                                     <p class="blog-published">7 June, 2024</p>
                                 </div>
                                 <div class="blog-box-content">
@@ -153,7 +153,7 @@
                                         <div class="blog-search-bar">
                                             <input type="text" placeholder="Search..." required="">
                                             <button type="submit">
-                                                <img src="{{asset('vendor/landing2')}}/assets/images/search-icon.svg" width="20" height="20" alt="Search Icon">
+                                                <img src="{{asset('vendor/landing')}}/assets/images/search-icon.svg" width="20" height="20" alt="Search Icon">
                                             </button>
                                         </div>
                                     </form>
@@ -187,7 +187,7 @@
                                 <div class="blog-recent-post-wp">
                                     <div class="blog-recent-post">
                                         <div class="recent-post-img">
-                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/off-grid-solar-solution.jpg');" title="Off-grid solar solution energy independence"></a>
+                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing')}}/assets/images/off-grid-solar-solution.jpg');" title="Off-grid solar solution energy independence"></a>
                                         </div>
                                         <div class="recent-post-content">
                                             <p class="recent-post-text">
@@ -199,7 +199,7 @@
                                     </div>
                                     <div class="blog-recent-post">
                                         <div class="recent-post-img">
-                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/solar-battery-storage.jpg');" title="Solar battery storage power resilience for your home"></a>
+                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing')}}/assets/images/solar-battery-storage.jpg');" title="Solar battery storage power resilience for your home"></a>
                                         </div>
                                         <div class="recent-post-content">
                                             <p class="recent-post-text">
@@ -211,7 +211,7 @@
                                     </div>
                                     <div class="blog-recent-post">
                                         <div class="recent-post-img">
-                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/benefits-of-solar-power.jpg');" title="The benefits of switching to solar power"></a>
+                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing')}}/assets/images/benefits-of-solar-power.jpg');" title="The benefits of switching to solar power"></a>
                                         </div>
                                         <div class="recent-post-content">
                                             <p class="recent-post-text">
@@ -223,7 +223,7 @@
                                     </div>
                                     <div class="blog-recent-post">
                                         <div class="recent-post-img">
-                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/recent-best-in-production.jpg');" title="We are best any industrial & business solution"></a>
+                                            <a class="back-img" href="blog-detail.html" style="background-image: url('{{asset('vendor/landing')}}/assets/images/recent-best-in-production.jpg');" title="We are best any industrial & business solution"></a>
                                         </div>
                                         <div class="recent-post-content">
                                             <p class="recent-post-text">

@@ -85,7 +85,7 @@
         }
     @endphp
 
-        <!-- SEO Meta Tags -->
+            <!-- SEO Meta Tags -->
     <meta name="description" content="@yield('meta_description', $pageDescription)">
     <meta name="keywords" content="@yield('meta_keywords', $pageKeywords)">
     <title>@yield('title', $pageTitle) - {{ $websiteName }}</title>
@@ -112,7 +112,7 @@
         }
     @endphp
 
-        <!-- Custom colors -->
+            <!-- Custom colors -->
     @php
         $primaryColor = null;
         $secondaryColor = null;
@@ -126,7 +126,7 @@
         }
     @endphp
 
-        <!-- Favicons -->
+            <!-- Favicons -->
     @php
         $websiteFavicon = null;
         $websiteFaviconApple = null;
@@ -154,12 +154,12 @@
         <link rel="apple-touch-icon" href="{{ asset('storage/' . $websiteFavicon) }}">
     @elseif($websiteFaviconApple)
         <link rel="apple-touch-icon" href="{{ asset('storage/' . $websiteFaviconApple) }}">
-        <link rel="icon" type="image/png" href="{{ asset('vendor/landing2/assets/img/favicon.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('vendor/landing/assets/img/favicon.png') }}">
     @else
-        <link rel="icon" type="image/png" href="{{ asset('vendor/landing2/assets/img/favicon.png') }}">
-        <link rel="apple-touch-icon" href="{{ asset('vendor/landing2/assets/img/favicon.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('vendor/landing/assets/img/favicon.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('vendor/landing/assets/img/favicon.png') }}">
         <!-- FavIcon Link -->
-        <link rel="icon" href="{{asset('vendor/landing2')}}/assets/images/favicon.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="{{asset('vendor/landing')}}/assets/images/favicon.png" sizes="32x32" type="image/png">
     @endif
 
     @if($websiteFavicon32)
@@ -177,30 +177,28 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing2')}}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/bootstrap.min.css">
     <!-- Swiper Slider CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing2')}}/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/swiper-bundle.min.css">
     <!-- Magnific Popup CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing2')}}/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/magnific-popup.min.css">
     <!-- Animate CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing2')}}/assets/css/animate.min.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/animate.min.css">
     <!-- Main Style CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing2')}}/assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/style.css">
     @if($primaryColor || $secondaryColor)
         <style>
             :root {
                 @if($primaryColor)
-                --primary-color: {{ $primaryColor }} !important;
+                    --primary-color: {{ $primaryColor }} !important;
                 @endif
 
                 @if($secondaryColor)
-                --secondary-color: {{ $secondaryColor }} !important;
-                @endif
-        }
+                    --secondary-color: {{ $secondaryColor }} !important;
+               @endif
+            }
         </style>
     @endif
 </head>

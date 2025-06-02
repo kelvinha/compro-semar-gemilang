@@ -3,8 +3,8 @@
 @section('content')
     <main class="site-main">
         <!-- START OF INNER BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/banner.jpg');">
-{{--        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/inner_banner_image.jpg');">--}}
+        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/banner.jpg');">
+{{--        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">--}}
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -45,19 +45,19 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-images wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="about-top-image back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/about-us-1.jpg');">
+                            <div class="about-top-image back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-1.jpg');">
                                 <span class="logo-icon">
-                                    <img src="{{asset('vendor/landing2')}}/assets/images/logo-icon.svg" width="48" height="48" alt="Logo Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/logo-icon.svg" width="48" height="48" alt="Logo Icon">
                                 </span>
                             </div>
-                            <div class="about-bottom-image back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/about-us-2.jpg');"></div>
+                            <div class="about-bottom-image back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-2.jpg');"></div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="about-us-content wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
                                     ABOUT US
                                 </span>
                                 <h2 class="h2-title">We Renovate New Innovation</h2>
@@ -68,7 +68,7 @@
                             <div class="engineer-list">
                                 <div class="engineer-list-item">
                                     <span class="engineer-list-icon">
-                                        <img src="{{asset('vendor/landing2')}}/assets/images/expert-engineer.svg" width="35" height="43" alt="Expert Engineer Logo">
+                                        <img src="{{asset('vendor/landing')}}/assets/images/expert-engineer.svg" width="35" height="43" alt="Expert Engineer Logo">
                                     </span>
                                     <div class="engineer-list-content">
                                         <h4 class="h4-title">Expert Engineer</h4>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="engineer-list-item">
                                     <span class="engineer-list-icon">
-                                        <img src="{{asset('vendor/landing2')}}/assets/images/certified-engineer.svg" width="33" height="45" alt="Certified Engineer Logo">
+                                        <img src="{{asset('vendor/landing')}}/assets/images/certified-engineer.svg" width="33" height="45" alt="Certified Engineer Logo">
                                     </span>
                                     <div class="engineer-list-content">
                                         <h4 class="h4-title">Certified Engineer</h4>
@@ -110,7 +110,7 @@
             <div class="container">
                 <div class="sec-title text-center wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                     <span class="sub-title">
-                        <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
                         OUR PROCESS
                     </span>
                     <h2 class="h2-title">See How We Work</h2>
@@ -152,12 +152,12 @@
                         <div class="join-us-content dark-bg">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
                                     JOIN NOW
                                 </span>
                                 <h3 class="h3-title">Join The Future Of Industry Now</h3>
                             </div>
-                            <img src="{{asset('vendor/landing2')}}/assets/images/join-our-team.png" width="271" height="271" alt="Join our team image">
+                            <img src="{{asset('vendor/landing')}}/assets/images/join-our-team.png" width="271" height="271" alt="Join our team image">
                             <a href="contact-us.html" class="sec-btn" title="Get a Quote">Get a Quote</a>
                             <div class="banner-shape">
                                 <span class="stripe"></span>
@@ -177,7 +177,7 @@
                         <div class="why-choose-content wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
                                     WHY CHOOSE US
                                 </span>
                                 <h2 class="h2-title">Bring Innovation To Business</h2>
@@ -203,13 +203,13 @@
                         <div class="why-choose-image-wp wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="row">
                                 <div class="col-8">
-                                    <div class="why-choose-image why-choose-1 back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/choose-us-1.jpg');"></div>
+                                    <div class="why-choose-image why-choose-1 back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-1.jpg');"></div>
                                 </div>
                                 <div class="col-4 align-self-center">
-                                    <div class="why-choose-image why-choose-2 back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/choose-us-2.jpg');"></div>
+                                    <div class="why-choose-image why-choose-2 back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-2.jpg');"></div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="why-choose-image why-choose-3 back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/choose-us-3.jpg');"></div>
+                                    <div class="why-choose-image why-choose-3 back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-3.jpg');"></div>
                                 </div>
                             </div>
                         </div>
@@ -220,14 +220,14 @@
         <!-- END OF INNOVATIONS -->
         <!-- START OF TESTIMONIALS -->
         <section class="testimonials">
-            <img src="{{asset('vendor/landing2')}}/assets/images/globe.svg" class="bg-glob" width="687" height="744"
+            <img src="{{asset('vendor/landing')}}/assets/images/globe.svg" class="bg-glob" width="687" height="744"
                  alt="Globe Icon">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sec-title">
                             <span class="sub-title wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18"
+                                <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
                                      height="18" alt="Setting Icon">
                                 TESTIMONIAL
                             </span>
@@ -243,7 +243,7 @@
                                         <div class="testimonial-author">
                                             <div class="author-img">
                                                 <div class="back-img"
-                                                     style="background-image: url('{{asset('vendor/landing2')}}/assets/images/mark-john.jpg');"></div>
+                                                     style="background-image: url('{{asset('vendor/landing')}}/assets/images/mark-john.jpg');"></div>
                                             </div>
                                             <div class="author-content">
                                                 <h4 class="h4-title">Mark John</h4>
@@ -272,7 +272,7 @@
                                         <div class="testimonial-author">
                                             <div class="author-img">
                                                 <div class="back-img"
-                                                     style="background-image: url('{{asset('vendor/landing2')}}/assets/images/patrick-palmer.jpg');">
+                                                     style="background-image: url('{{asset('vendor/landing')}}/assets/images/patrick-palmer.jpg');">
                                                 </div>
                                             </div>
                                             <div class="author-content">
@@ -302,7 +302,7 @@
                                         <div class="testimonial-author">
                                             <div class="author-img">
                                                 <div class="back-img"
-                                                     style="background-image: url('{{asset('vendor/landing2')}}/assets/images/mark-john.jpg');"></div>
+                                                     style="background-image: url('{{asset('vendor/landing')}}/assets/images/mark-john.jpg');"></div>
                                             </div>
                                             <div class="author-content">
                                                 <h4 class="h4-title">Mark John</h4>
@@ -340,7 +340,7 @@
                     <div class="col-lg-6">
                         <div class="world-map-wp wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="world-map">
-                                <img src="{{asset('vendor/landing2')}}/assets/images/world-map.png" width="899" height="537" alt="World map">
+                                <img src="{{asset('vendor/landing')}}/assets/images/world-map.png" width="899" height="537" alt="World map">
                                 <span class="alaska"></span>
                                 <span class="usa"></span>
                                 <span class="brazil"></span>
@@ -358,7 +358,7 @@
                         <div class="global-content wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
                                     WE ARE GLOBLE
                                 </span>
                                 <h2 class="h2-title">We Have 500+ Clients Globally</h2>
@@ -378,12 +378,12 @@
         <div class="client-list secondary-bg wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
             <div class="container">
                 <div class="client-list-wp">
-                    <img src="{{asset('vendor/landing2')}}/assets/images/boltshift.svg" width="130" height="34" alt="Boltshift Icon">
-                    <img src="{{asset('vendor/landing2')}}/assets/images/lightbox.svg" width="130" height="33" alt="Lightbox Icon">
-                    <img src="{{asset('vendor/landing2')}}/assets/images/shperule.svg" width="130" height="39" alt="Shperule Icon">
-                    <img src="{{asset('vendor/landing2')}}/assets/images/globalbank.svg" width="130" height="30" alt="Global bank Icon">
-                    <img src="{{asset('vendor/landing2')}}/assets/images/nietzsche.svg" width="130" height="31" alt="Nietzsche Icon">
-                    <img src="{{asset('vendor/landing2')}}/assets/images/acme-corp.svg" width="130" height="29" alt="Acme corp Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/boltshift.svg" width="130" height="34" alt="Boltshift Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/lightbox.svg" width="130" height="33" alt="Lightbox Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/shperule.svg" width="130" height="39" alt="Shperule Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/globalbank.svg" width="130" height="30" alt="Global bank Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/nietzsche.svg" width="130" height="31" alt="Nietzsche Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/acme-corp.svg" width="130" height="29" alt="Acme corp Icon">
                 </div>
             </div>
         </div>
@@ -393,7 +393,7 @@
             <div class="container">
                 <div class="sec-title wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                     <span class="sub-title">
-                        <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
                         OUR BLOG
                     </span>
                     <h2 class="h2-title m-0">Latest Blog & News</h2>
@@ -403,7 +403,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                                 <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/new-machine-image.jpg');" title="New machine will efficient big factory"></a>
+                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/new-machine-image.jpg');" title="New machine will efficient big factory"></a>
                                     <p class="blog-published">7 June, 2024</p>
                                 </div>
                                 <div class="blog-box-content">
@@ -420,7 +420,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                                 <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/how-to-build.jpg');" title="How to build for best new machinery industry"></a>
+                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/how-to-build.jpg');" title="How to build for best new machinery industry"></a>
                                     <p class="blog-published">7 June, 2024</p>
                                 </div>
                                 <div class="blog-box-content">
@@ -437,7 +437,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                                 <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/we-are-best.jpg');" title="We are best any industrial & business solution"></a>
+                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/we-are-best.jpg');" title="We are best any industrial & business solution"></a>
                                     <p class="blog-published">7 June, 2024</p>
                                 </div>
                                 <div class="blog-box-content">

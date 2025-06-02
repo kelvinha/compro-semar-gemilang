@@ -16,7 +16,7 @@
     @endphp
     <main class="site-main">
         <!-- START OF MAIN BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing2')}}/assets/images/inner_banner_image.jpg');">
+        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -61,21 +61,21 @@
                                 <ul>
                                     <li>
                                         <a href="tel:+6221-3864386" title="Call on +62 213 864 386">
-                                            <img src="{{asset('vendor/landing2')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
+                                            <img src="{{asset('vendor/landing')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
                                             <span>+62 213 864 386</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:marketing_official@sadikun.com"
                                            title="Mail on marketing_official@sadikun.com">
-                                            <img src="{{asset('vendor/landing2')}}/assets/images/mail-icon.svg" width="18" height="13"
+                                            <img src="{{asset('vendor/landing')}}/assets/images/mail-icon.svg" width="18" height="13"
                                                  alt="Mail Icon">
                                             <span>marketing_official@sadikun.com</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://maps.app.goo.gl/ybuuJrh7x4fdod3w9" title="8/05 Mozilla Golden" target="_blank">
-                                            <img src="{{asset('vendor/landing2')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
+                                            <img src="{{asset('vendor/landing')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
                                             <span>Central Jakarta, Senen</span>
                                         </a>
                                     </li>
@@ -88,21 +88,21 @@
                                 <ul>
                                     <li>
                                         <a href="tel:+62214351375" title="Call on 0214351375">
-                                            <img src="{{asset('vendor/landing2')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
+                                            <img src="{{asset('vendor/landing')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
                                             <span>+62 214 351 375</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:marketing_official@sadikun.com"
                                            title="Mail on marketing_official@sadikun.com">
-                                            <img src="{{asset('vendor/landing2')}}/assets/images/mail-icon.svg" width="18" height="13"
+                                            <img src="{{asset('vendor/landing')}}/assets/images/mail-icon.svg" width="18" height="13"
                                                  alt="Mail Icon">
                                             <span>marketing_official@sadikun.com</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://maps.app.goo.gl/JbiawARPtpBphF5eA" title="North Jakarta, Koja" target="_blank">
-                                            <img src="{{asset('vendor/landing2')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
+                                            <img src="{{asset('vendor/landing')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
                                             <span>North Jakarta, Koja</span>
                                         </a>
                                     </li>
@@ -124,7 +124,7 @@
                             <div class="main-contact-form wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
                                 <div class="sec-title">
                                     <span class="sub-title">
-                                        <img src="{{asset('vendor/landing2')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
                                         CONTACT US
                                     </span>
                                     <h2 class="h2-title">Let Start The Smart Work !</h2>
