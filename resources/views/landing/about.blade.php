@@ -3,8 +3,7 @@
 @section('content')
     <main class="site-main">
         <!-- START OF INNER BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/banner.jpg');">
-{{--        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">--}}
+        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -26,7 +25,7 @@
                             <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                                 <ul>
                                     <li>
-                                        <a href="index.html" title="Home">Home</a>
+                                        <a href="{{ route("home.index") }}" title="Home">Home</a>
                                     </li>
                                     <li>
                                         <span>About Us</span>

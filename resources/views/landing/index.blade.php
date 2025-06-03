@@ -36,15 +36,14 @@
                                 <div class="col-lg-6">
                                     <div class="banner-content white-text">
                                         <h1 class="h1-title">
-                                            Best Solution Grow
+                                            We Are Your Energy
                                             <span>
-                                                Industry
+                                                Partner
                                                 <img src="{{asset('vendor/landing')}}/assets/images/title-line.svg"
                                                      width="342" height="13" alt="Title line">
                                             </span>
                                         </h1>
-                                        <p class="text-lg">Maecenas ullamcorper felis at lacus feugiat, vel viverra nisl
-                                            molestie phasellus iaculis nulla est.</p>
+                                        <p class="text-lg">Bersama dengan Anda, kami bertekad untuk menjadi mitra energi pilihan utama di Indonesia dengan memberikan layanan yang handal, inovatif, serta berorientasi pada dedikasi untuk melayani dengan ketulusan dan profesional.</p>
                                         <div class="banner-btn">
                                             <a href="{{asset('vendor/landing')}}/about-us.html" class="sec-btn"
                                                title="Discover More">Discover
@@ -70,15 +69,14 @@
                                 <div class="col-lg-6">
                                     <div class="banner-content white-text">
                                         <h1 class="h1-title">
-                                            Best Solution Grow
+                                            We Are Your Energy
                                             <span>
-                                                Industry
+                                                Partner
                                                 <img src="{{asset('vendor/landing')}}/assets/images/title-line.svg"
                                                      width="342" height="13" alt="Title line">
                                             </span>
                                         </h1>
-                                        <p class="text-lg">Maecenas ullamcorper felis at lacus feugiat, vel viverra nisl
-                                            molestie phasellus iaculis nulla est.</p>
+                                        <p class="text-lg">Bersama dengan Anda, kami bertekad untuk menjadi mitra energi pilihan utama di Indonesia dengan memberikan layanan yang handal, inovatif, serta berorientasi pada dedikasi untuk melayani dengan ketulusan dan profesional.</p>
                                         <div class="banner-btn">
                                             <a href="{{asset('vendor/landing')}}/about-us.html" class="sec-btn"
                                                title="Discover More">Discover
@@ -103,89 +101,6 @@
         </section>
         <!-- END OF HERO SECTION -->
         <!-- START OF HERO SECTION -->
-        <section class="about-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about-images wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="about-top-image back-img"
-                                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-1.jpg');">
-                                <span class="logo-icon">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/logo-icon.svg" width="48"
-                                         height="48" alt="Logo Icon">
-                                </span>
-                            </div>
-                            <div class="about-bottom-image back-img"
-                                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-2.jpg');"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-us-content wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="sec-title">
-                                <span class="sub-title">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
-                                         height="18" alt="Setting Icon">
-                                    ABOUT US
-                                </span>
-                                <h2 class="h2-title">We Renovate New Innovation</h2>
-                                <p>Donec hendrerit felis id neque gravida euismod. Fusce non ex justo. Praesent
-                                    faucibus, ipsum ut viverra blandit, urna nisl congue odio, quis bibendum ante arcu
-                                    at augue.</p>
-                            </div>
-                            <div class="engineer-list">
-                                <div class="engineer-list-item">
-                                    <span class="engineer-list-icon">
-                                        <img src="{{asset('vendor/landing')}}/assets/images/expert-engineer.svg"
-                                             width="35" height="43" alt="Expert Engineer Logo">
-                                    </span>
-                                    <div class="engineer-list-content">
-                                        <h4 class="h4-title">Expert Engineer</h4>
-                                        <p>Cras sit amet aliquet sem, sed eleifend ipsum. Maecenas id hendrerit tortor,
-                                            id fringilla urna. Sed vitae vehicula nulla, nec posuere turpis.</p>
-                                    </div>
-                                </div>
-                                <div class="engineer-list-item">
-                                    <span class="engineer-list-icon">
-                                        <img src="{{asset('vendor/landing')}}/assets/images/certified-engineer.svg"
-                                             width="33" height="45" alt="Certified Engineer Logo">
-                                    </span>
-                                    <div class="engineer-list-content">
-                                        <h4 class="h4-title">Certified Engineer</h4>
-                                        <p>Cras sit amet aliquet sem, sed eleifend ipsum. Maecenas id hendrerit tortor,
-                                            id fringilla urna. Sed vitae vehicula nulla, nec posuere turpis.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="{{asset('vendor/landing')}}/about-us.html" class="sec-btn" title="Discover More">Discover
-                                More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="company-timeline wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <span class="timeline-text">1995</span>
-                            <div class="company-experiance">
-                                <img src="{{asset('vendor/landing')}}/assets/images/plus-icon.svg" width="20"
-                                     height="20" alt="Plus Icon">
-                                <div class="company-experiance-content">
-                                    <svg class="textcircle" viewbox="0 0 500 500">
-                                        <defs>
-                                            <path id="textcircle"
-                                                  d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
-                                        </defs>
-                                        <text>
-                                            <textpath xlink:href="#textcircle" textlength="900">
-                                                28 YEARS OF EXPERIANCE
-                                            </textpath>
-                                        </text>
-                                    </svg>
-                                </div>
-                            </div>
-                            <span class="timeline-text">Since</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- END OF HERO SECTION -->
         <!-- START OF SERVICE SECTION -->
         <section class="services light-bg">
@@ -994,57 +909,6 @@
             </div>
         </section>
         <!-- END OF TESTIMONIALS SECTION -->
-        <!-- START OF GLOBAL CLIENTS SECTION -->
-        <section class="global-clients light-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 order-lg-1 order-2 align-self-center">
-                        <div class="global-clients-list wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <img src="{{asset('vendor/landing')}}/assets/images/boltshift.svg" width="130" height="34"
-                                 alt="Boltshift Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/lightbox.svg" width="130" height="33"
-                                 alt="Lightbox Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/shperule.svg" width="130" height="39"
-                                 alt="Shperule Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/globalbank.svg" width="130" height="30"
-                                 alt="Global bank Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/nietzsche.svg" width="130" height="31"
-                                 alt="Nietzsche Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/acme-corp.svg" width="130" height="29"
-                                 alt="Acme corp Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/polymath.svg" width="130" height="30"
-                                 alt="Polymath Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/featherdev.svg" width="130" height="25"
-                                 alt="Featherdev Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/boltshift.svg" width="130" height="34"
-                                 alt="Boltshift Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/lightbox.svg" width="130" height="33"
-                                 alt="Lightbox Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/shperule.svg" width="130" height="39"
-                                 alt="Shperule Icon">
-                            <img src="{{asset('vendor/landing')}}/assets/images/globalbank.svg" width="130" height="30"
-                                 alt="Global bank Icon">
-                        </div>
-                    </div>
-                    <div class="col-lg-5 order-lg-2 order-1">
-                        <div class="global-clients-content wow fadeInRight" data-wow-duration=".8s"
-                             data-wow-delay=".2s">
-                            <div class="sec-title">
-                                <span class="sub-title">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
-                                         height="18" alt="Setting Icon">
-                                    TRUSTED BY
-                                </span>
-                                <h2 class="h2-title">Our Global 500+ Clients</h2>
-                            </div>
-                            <p>Nullam iaculis quis mauris ut imperdiet. Vestibulum et augue pulvinar dui vehicula luctus
-                                vel vitae metus. Nunc id pulvinar est, ut placerat lectus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END OF GLOBAL CLIENTS SECTION -->
         <!-- START OF BLOG SECTION -->
         <section class="blog-section">
             <div class="container">

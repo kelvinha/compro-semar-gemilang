@@ -1,4 +1,31 @@
 <!-- START OF FOOTER -->
+@php
+    $settings = \App\Helpers\SettingsHelper::getPublic();
+    $data = [];
+
+    foreach ($settings as $setting) {
+        switch ($setting->key) {
+            case 'social_facebook':
+                $data['social_facebook'] = $setting->value;
+                break;
+            case 'social_twitter':
+                $data['social_twitter'] = $setting->value;
+                break;
+            case 'social_instagram':
+                $data['social_instagram'] = $setting->value;
+                break;
+            case 'social_linkedin':
+                $data['social_linkedin'] = $setting->value;
+                break;
+            case 'social_youtube':
+                $data['social_youtube'] = $setting->value;
+                break;
+            case 'website_logo':
+                $data['website_logo'] = $setting->value;
+                break;
+        }
+    }
+@endphp
 <footer class="site-footer white-text">
     <div class="top-footer">
         <div class="banner-shape">
@@ -11,9 +38,15 @@
                     <div class="footer-left">
                         <div class="footer-branding">
                             <a href="index.html" title="Induris">
-                                <img src="{{asset('vendor/landing')}}/assets/images/logo.svg" width="152" height="35" alt="Induris Logo">
+                                @if($data['website_logo'])
+                                    <img src="{{ asset('storage/' . $data['website_logo']) }}" width="152" height="35"
+                                         alt="PT Sadikun Niagamas Raya Logo">
+                                @else
+                                    <img src="{{asset('vendor/landing')}}/assets/images/logo.svg" width="152" height="35"
+                                         alt="PT Sadikun Niagamas Raya Logo">
+                                @endif
                             </a>
-                            <p>We leverage cutting-edge technologies to manufacture</p>
+                            <p>Empowering Indonesia with reliable, innovative, and heartfelt energy solutions</p>
                         </div>
                         <div class="mail-form">
                             <form>
@@ -24,17 +57,17 @@
                         <div class="footer-socials">
                             <ul>
                                 <li>
-                                    <a href="https://www.facebook.com/" title="Follow on Facebook" target="_blank">
+                                    <a href="{{ $data['social_facebook'] }}" title="Follow on Facebook" target="_blank">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/" title="Follow on Instagram" target="_blank">
+                                    <a href={{ $data['social_instagram'] }}" title="Follow on Instagram" target="_blank">
                                         <i class="fab fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/" title="Follow on Linkedin" target="_blank">
+                                    <a href="{{ $data['social_linkedin'] }}" title="Follow on Linkedin" target="_blank">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </li>
@@ -46,24 +79,20 @@
                     <div class="footer-links">
                         <h4 class="h4-title">Our Links</h4>
                         <ul>
-                            <li class="active-footer-menu">
-                                <a href="index.html" title="Home">Home</a>
-                            </li>
-                            <li>
-                                <a href="about-us.html" title="About Us">About Us</a>
-                            </li>
-                            <li>
-                                <a href="services.html" title="Services">Services</a>
-                            </li>
-                            <li>
-                                <a href="portfolio.html" title="Portfolio">Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="blog-grid.html" title="Blog">Blog</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html" title="Contact Us">Contact Us</a>
-                            </li>
+                            @php
+                                // Load main menu directly in the header
+                                $mainMenu = \App\Helpers\MenuHelper::getMainMenu();
+                                $currentPath = "/". Request::path();
+                            @endphp
+
+                            @if($mainMenu && $mainMenu->submenus && $mainMenu->submenus->count() > 0)
+                                @foreach($mainMenu->submenus as $submenu)
+                                    <li class="{{ $currentPath === $submenu->url || Request::path() === $submenu->url ? 'active-footer-menu' : '' }}">
+                                        <a href="{{ $submenu->url }}"
+                                           title="{{ $submenu->name }}">{{ $submenu->name }}</a>
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                 </div>
