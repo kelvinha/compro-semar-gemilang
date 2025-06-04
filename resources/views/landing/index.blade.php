@@ -45,40 +45,7 @@
                                         </h1>
                                         <p class="text-lg">Bersama dengan Anda, kami bertekad untuk menjadi mitra energi pilihan utama di Indonesia dengan memberikan layanan yang handal, inovatif, serta berorientasi pada dedikasi untuk melayani dengan ketulusan dan profesional.</p>
                                         <div class="banner-btn">
-                                            <a href="{{asset('vendor/landing')}}/about-us.html" class="sec-btn"
-                                               title="Discover More">Discover
-                                                More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="banner-image-path-main">
-                                        <div class="banner-image-path-sub">
-                                            <div class="banner-image back-img"
-                                                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/hero.jpg');">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide main-banner-slide">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="banner-content white-text">
-                                        <h1 class="h1-title">
-                                            We Are Your Energy
-                                            <span>
-                                                Partner
-                                                <img src="{{asset('vendor/landing')}}/assets/images/title-line.svg"
-                                                     width="342" height="13" alt="Title line">
-                                            </span>
-                                        </h1>
-                                        <p class="text-lg">Bersama dengan Anda, kami bertekad untuk menjadi mitra energi pilihan utama di Indonesia dengan memberikan layanan yang handal, inovatif, serta berorientasi pada dedikasi untuk melayani dengan ketulusan dan profesional.</p>
-                                        <div class="banner-btn">
-                                            <a href="{{asset('vendor/landing')}}/about-us.html" class="sec-btn"
+                                            <a href="{{ route('home.products') }}" class="sec-btn"
                                                title="Discover More">Discover
                                                 More</a>
                                         </div>

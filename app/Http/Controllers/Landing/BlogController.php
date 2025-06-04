@@ -60,7 +60,7 @@ class BlogController extends Controller
             $query->where('status', 'published');
         }])->having('blogs_count', '>', 0)->get();
 
-        return view('landing.blog2', compact('blogPage', 'blogs', 'featuredBlogs', 'categories', 'category'));
+        return view('landing.blog', compact('blogPage', 'blogs', 'featuredBlogs', 'categories', 'category'));
     }
 
     /**
