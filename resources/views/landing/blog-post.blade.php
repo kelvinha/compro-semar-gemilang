@@ -1,5 +1,5 @@
 @extends('landing.layout.master')
-@section('classBody', 'blog_list_page')
+@section('classBody', 'blog_detail_page')
 @section('meta_description', $blogPage->seo->description ?? $blogPage->subtitle ?? 'Stay updated with the latest news,
 insights, and articles from our team.')
 @section('meta_keywords', $blogPage->seo->keywords ?? 'blog, news, articles, insights, updates')
@@ -24,7 +24,8 @@ latest news, insights, and articles from our team.')
     @endphp
     <main class="site-main">
         <!-- START OF MAIN BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
+        <section class="inner-banner back-img"
+                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -41,15 +42,19 @@ latest news, insights, and articles from our team.')
                     <div class="col-lg-12">
                         <div class="inner-banner-content-wp white-text text-center">
                             <div class="inner-banner-content wow fadeInUp" data-wow-duration=".8s">
-                                <h2 class="h1-title">Blog List</h2>
+                                <h2 class="h1-title">Blog Detail</h2>
                             </div>
-                            <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+                            <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s"
+                                 data-wow-delay=".2s">
                                 <ul>
                                     <li>
                                         <a href="{{ route('home.index') }}" title="Home">Home</a>
                                     </li>
                                     <li>
                                         <span>Blog</span>
+                                    </li>
+                                    <li>
+                                        <span>Blog Detail</span>
                                     </li>
                                 </ul>
                             </div>
@@ -60,33 +65,26 @@ latest news, insights, and articles from our team.')
         </section>
         <!-- END OF MAIN BANNER -->
         <!-- BLOG MAIN CONTENT START -->
-        <section class="blog-listing">
+        <section class="blog-detail-main">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-                        <div class="blog-listing-box wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
-                            @foreach($blogs as $blog)
-                                <div class="blog-box">
-                                    <div class="blog-image">
-                                        @if($blog->featured_image)
-                                            <a href="{{ route('home.blog.post', $blog->slug) }}" class="back-img" style="background-image: url('{{asset('storage/' . $blog->featured_image)}}');" title="{{ $blog->title }}"></a>
-                                        @else
-                                            <a href="{{ route('home.blog.post', $blog->slug) }}" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/default-blog-image.svg');" title="{{ $blog->title }}"></a>
-                                        @endif
-                                        <p class="blog-published">{{ $blog->published_at->format('l, j F Y')  }}</p>
-                                    </div>
-                                    <div class="blog-box-content">
-                                        <h4 class="h4-title">
-                                            <a href="{{ route('home.blog.post', $blog->slug) }}" title="{{ $blog->title }}">{{ $blog->title }}</a>
-                                        </h4>
-                                        <p>{{ $blog->excerpt  }}</p>
-                                        <a href="{{ route('home.blog.post', $blog->slug) }}" class="sec-btn" title="{{ $blog->excerpt  }}"></a>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="portfolio-pagination">
-                            {{ $blogs->links('pagination::bootstrap-4') }}
+                        <div class="blog-detail-content">
+                            <div class="blog-detail-image">
+                                @if($blog->featured_image)
+                                    <div class="back-img"
+                                         style="background-image: url('{{asset('storage/' . $blog->featured_image)}}');"></div>
+                                    <p class="blog-published">{{ $blog->published_at->format('l, j F Y') }}</p>
+                                @else
+                                    <div class="back-img"
+                                         style="background-image: url('{{asset('vendor/landing')}}/assets/images/default-blog-image.svg');"></div>
+                                    <p class="blog-published">{{ $blog->published_at->format('l, j F Y') }}</p>
+                                @endif
+                            </div>
+                            <div class="blog-detail-title">
+                                <h1 class="h2-title">{{ $blog->title  }}</h1>
+                            </div>
+                            {!! $blog->content !!}
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -141,7 +139,6 @@ latest news, insights, and articles from our team.')
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- BLOG MAIN CONTENT END-->
     </main>

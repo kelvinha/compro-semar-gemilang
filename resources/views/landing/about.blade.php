@@ -3,7 +3,8 @@
 @section('content')
     <main class="site-main">
         <!-- START OF INNER BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
+        <section class="inner-banner back-img"
+                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -22,7 +23,8 @@
                             <div class="inner-banner-content wow fadeInUp" data-wow-duration=".8s">
                                 <h1 class="h1-title">About Us</h1>
                             </div>
-                            <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+                            <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s"
+                                 data-wow-delay=".2s">
                                 <ul>
                                     <li>
                                         <a href="{{ route("home.index") }}" title="Home">Home</a>
@@ -44,22 +46,26 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-images wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="about-top-image back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-1.jpg');">
+                            <div class="about-top-image back-img"
+                                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-1.jpg');">
                                 <span class="logo-icon">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/logo-icon.svg" width="48" height="48" alt="Logo Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/logo-icon.svg" width="48"
+                                         height="48" alt="Logo Icon">
                                 </span>
                             </div>
-                            <div class="about-bottom-image back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-2.jpg');"></div>
+                            <div class="about-bottom-image back-img"
+                                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/about-us-2.jpg');"></div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="about-us-content wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
+                                         height="18" alt="Setting Icon">
                                     ABOUT US
                                 </span>
-                                <h2 class="h2-title">We Renovate New Innovation</h2>
+                                <h2 class="h2-title">Kami Hadirkan Solusi Energi Terpadu untuk Industri</h2>
                                 <p>Donec hendrerit felis id neque gravida euismod. Fusce non ex justo. Praesent
                                     faucibus, ipsum ut viverra blandit, urna nisl congue odio, quis bibendum ante arcu
                                     at augue.</p>
@@ -67,22 +73,24 @@
                             <div class="engineer-list">
                                 <div class="engineer-list-item">
                                     <span class="engineer-list-icon">
-                                        <img src="{{asset('vendor/landing')}}/assets/images/expert-engineer.svg" width="35" height="43" alt="Expert Engineer Logo">
+                                        <img src="{{asset('vendor/landing')}}/assets/images/expert-engineer.svg"
+                                             width="35" height="43" alt="Expert Engineer Logo">
                                     </span>
                                     <div class="engineer-list-content">
-                                        <h4 class="h4-title">Expert Engineer</h4>
-                                        <p>Cras sit amet aliquet sem, sed eleifend ipsum. Maecenas id hendrerit tortor,
-                                            id fringilla urna. Sed vitae vehicula nulla, nec posuere turpis.</p>
+                                        <h4 class="h4-title">Distributor Resmi Pertamina</h4>
+                                        <p>PT Sadikun BBM merupakan distributor resmi Pertamina sejak 31 Mei 2012 dan
+                                            bagian dari Sadikun Niagamas Raya.</p>
                                     </div>
                                 </div>
                                 <div class="engineer-list-item">
                                     <span class="engineer-list-icon">
-                                        <img src="{{asset('vendor/landing')}}/assets/images/certified-engineer.svg" width="33" height="45" alt="Certified Engineer Logo">
+                                        <img src="{{asset('vendor/landing')}}/assets/images/certified-engineer.svg"
+                                             width="33" height="45" alt="Certified Engineer Logo">
                                     </span>
                                     <div class="engineer-list-content">
-                                        <h4 class="h4-title">Certified Engineer</h4>
-                                        <p>Cras sit amet aliquet sem, sed eleifend ipsum. Maecenas id hendrerit tortor,
-                                            id fringilla urna. Sed vitae vehicula nulla, nec posuere turpis.</p>
+                                        <h4 class="h4-title">Pengalaman Lebih dari 10 Tahun</h4>
+                                        <p> Dengan pengalaman lebih dari satu dekade, kami berkomitmen memberikan
+                                            layanan energi terbaik dan terpercaya.</p>
                                     </div>
                                 </div>
                             </div>
@@ -95,12 +103,12 @@
         <!-- START OF NEW INNOVATIONS -->
         <div class="marquee-text-wp">
             <div class="marquee-text wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                <span class="h1-title">Grow Your Industrials Solution With a New Innovations</span>
-                <span class="h1-title">Grow Your Industrials Solution With a New Innovations</span>
+                <span class="h1-title">We Are Your Energy Partner</span>
+                <span class="h1-title">We Are Your Energy Partner</span>
             </div>
             <div class="marquee-text wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                <span class="h1-title">Grow Your Industrials Solution With a New Innovations</span>
-                <span class="h1-title">Grow Your Industrials Solution With a New Innovations</span>
+                <span class="h1-title">We Are Your Energy Partner</span>
+                <span class="h1-title">We Are Your Energy Partner</span>
             </div>
         </div>
         <!-- START OF NEW INNOVATIONS -->
@@ -109,7 +117,8 @@
             <div class="container">
                 <div class="sec-title text-center wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                     <span class="sub-title">
-                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18"
+                             alt="Setting Icon">
                         OUR PROCESS
                     </span>
                     <h2 class="h2-title">See How We Work</h2>
@@ -118,25 +127,25 @@
                     <div class="col-md-4">
                         <div class="work-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                             <span>01</span>
-                            <h4 class="h4-title">Get The Raw Material</h4>
-                            <p>Curabitur eu arcu sit amet orci malesuada non leo. Nam at nibh sapien. Quisque semper
-                                lorem nisl, quis interdum quam suscipit at.</p>
+                            <h4 class="h4-title">Analisis Kebutuhan Energi Industri</h4>
+                            <p>Kami memahami kebutuhan akan distribusi energi BBM yang handal dan terpercaya di
+                                Indonesia.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="work-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                             <span>02</span>
-                            <h4 class="h4-title">Design A Plan</h4>
-                            <p>Curabitur eu arcu sit amet orci malesuada non leo. Nam at nibh sapien. Quisque semper
-                                lorem nisl, quis interdum quam suscipit at.</p>
+                            <h4 class="h4-title">Rancang Jaringan Distribusi</h4>
+                            <p>Kami merancang solusi distribusi energi yang aman, tepat waktu, dan terintegrasi
+                                nasional..</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="work-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                             <span>03</span>
-                            <h4 class="h4-title">Manufacturer Product</h4>
-                            <p>Curabitur eu arcu sit amet orci malesuada non leo. Nam at nibh sapien. Quisque semper
-                                lorem nisl, quis interdum quam suscipit at.</p>
+                            <h4 class="h4-title">Menyalurkan Energi Secara Profesional</h4>
+                            <p> Dengan nilai integritas dan konsistensi, kami memastikan pengiriman energi berjalan
+                                optimal.</p>
                         </div>
                     </div>
                 </div>
@@ -151,12 +160,14 @@
                         <div class="join-us-content dark-bg">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
+                                         height="18" alt="Setting Icon">
                                     JOIN NOW
                                 </span>
                                 <h3 class="h3-title">Join The Future Of Industry Now</h3>
                             </div>
-                            <img src="{{asset('vendor/landing')}}/assets/images/join-our-team.png" width="271" height="271" alt="Join our team image">
+                            <img src="{{asset('vendor/landing')}}/assets/images/join-our-team.png" width="271"
+                                 height="271" alt="Join our team image">
                             <a href="contact-us.html" class="sec-btn" title="Get a Quote">Get a Quote</a>
                             <div class="banner-shape">
                                 <span class="stripe"></span>
@@ -176,23 +187,24 @@
                         <div class="why-choose-content wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
+                                         height="18" alt="Setting Icon">
                                     WHY CHOOSE US
                                 </span>
-                                <h2 class="h2-title">Bring Innovation To Business</h2>
+                                <h2 class="h2-title">Solusi Distribusi Energi yang Andal & Terpercaya</h2>
                             </div>
-                            <p>Praesent sed tincidunt turpis. Integer eget sem gravida, tempus quam nec, scelerisque
-                                lorem. Praesent eleifend pretium dignissim. Class aptent taciti sociosqu ad litora
-                                torquent per conubia nostra, per inceptos himenaeos.</p>
+                            <p>Kami hadir sebagai mitra strategis untuk memenuhi kebutuhan energi BBM industri secara
+                                efisien dan aman. Didukung oleh armada terintegrasi dan tim berpengalaman, kami siap
+                                menyalurkan energi ke seluruh penjuru negeri.</p>
                             <ul>
                                 <li>
-                                    <span>Curabitur eu arcu sit amet orci malesuada posuere at non leo.</span>
+                                    <span>Menyediakan layanan distribusi BBM industri dengan jangkauan nasional</span>
                                 </li>
                                 <li>
-                                    <span>Quisque semper lorem nisl, quis interdum quam suscipit at.</span>
+                                    <span>Armada dan peralatan modern untuk menjamin pengiriman yang cepat dan aman</span>
                                 </li>
                                 <li>
-                                    <span>Maecenas aliquet nunc ut dui euismod condimentum.</span>
+                                    <span>Komitmen terhadap integritas, kualitas layanan, dan kepuasan pelanggan</span>
                                 </li>
                             </ul>
                             <a href="services.html" class="sec-btn" title="Discover More">Discover More</a>
@@ -202,13 +214,16 @@
                         <div class="why-choose-image-wp wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="row">
                                 <div class="col-8">
-                                    <div class="why-choose-image why-choose-1 back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-1.jpg');"></div>
+                                    <div class="why-choose-image why-choose-1 back-img"
+                                         style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-1.jpg');"></div>
                                 </div>
                                 <div class="col-4 align-self-center">
-                                    <div class="why-choose-image why-choose-2 back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-2.jpg');"></div>
+                                    <div class="why-choose-image why-choose-2 back-img"
+                                         style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-2.jpg');"></div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="why-choose-image why-choose-3 back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-3.jpg');"></div>
+                                    <div class="why-choose-image why-choose-3 back-img"
+                                         style="background-image: url('{{asset('vendor/landing')}}/assets/images/choose-us-3.jpg');"></div>
                                 </div>
                             </div>
                         </div>
@@ -339,7 +354,8 @@
                     <div class="col-lg-6">
                         <div class="world-map-wp wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="world-map">
-                                <img src="{{asset('vendor/landing')}}/assets/images/world-map.png" width="899" height="537" alt="World map">
+                                <img src="{{asset('vendor/landing')}}/assets/images/world-map.png" width="899"
+                                     height="537" alt="World map">
                                 <span class="alaska"></span>
                                 <span class="usa"></span>
                                 <span class="brazil"></span>
@@ -357,7 +373,8 @@
                         <div class="global-content wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
+                                         height="18" alt="Setting Icon">
                                     WE ARE GLOBLE
                                 </span>
                                 <h2 class="h2-title">We Have 500+ Clients Globally</h2>
@@ -377,12 +394,18 @@
         <div class="client-list secondary-bg wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
             <div class="container">
                 <div class="client-list-wp">
-                    <img src="{{asset('vendor/landing')}}/assets/images/boltshift.svg" width="130" height="34" alt="Boltshift Icon">
-                    <img src="{{asset('vendor/landing')}}/assets/images/lightbox.svg" width="130" height="33" alt="Lightbox Icon">
-                    <img src="{{asset('vendor/landing')}}/assets/images/shperule.svg" width="130" height="39" alt="Shperule Icon">
-                    <img src="{{asset('vendor/landing')}}/assets/images/globalbank.svg" width="130" height="30" alt="Global bank Icon">
-                    <img src="{{asset('vendor/landing')}}/assets/images/nietzsche.svg" width="130" height="31" alt="Nietzsche Icon">
-                    <img src="{{asset('vendor/landing')}}/assets/images/acme-corp.svg" width="130" height="29" alt="Acme corp Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/boltshift.svg" width="130" height="34"
+                         alt="Boltshift Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/lightbox.svg" width="130" height="33"
+                         alt="Lightbox Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/shperule.svg" width="130" height="39"
+                         alt="Shperule Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/globalbank.svg" width="130" height="30"
+                         alt="Global bank Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/nietzsche.svg" width="130" height="31"
+                         alt="Nietzsche Icon">
+                    <img src="{{asset('vendor/landing')}}/assets/images/acme-corp.svg" width="130" height="29"
+                         alt="Acme corp Icon">
                 </div>
             </div>
         </div>
@@ -392,64 +415,41 @@
             <div class="container">
                 <div class="sec-title wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                     <span class="sub-title">
-                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18"
+                             alt="Setting Icon">
                         OUR BLOG
                     </span>
                     <h2 class="h2-title m-0">Latest Blog & News</h2>
                 </div>
                 <div class="blog-box-wp">
                     <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="blog-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/new-machine-image.jpg');" title="New machine will efficient big factory"></a>
-                                    <p class="blog-published">7 June, 2024</p>
-                                </div>
-                                <div class="blog-box-content">
-                                    <h4 class="h4-title">
-                                        <a href="blog-detail.html" title="New machine will efficient big factory">New
-                                            machine will efficient big factory</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu nisi sem maximus
-                                        suscipit.</p>
-                                    <a href="blog-detail.html" class="sec-btn" title="New machine will efficient big factory"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="blog-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/how-to-build.jpg');" title="How to build for best new machinery industry"></a>
-                                    <p class="blog-published">7 June, 2024</p>
-                                </div>
-                                <div class="blog-box-content">
-                                    <h4 class="h4-title">
-                                        <a href="blog-detail.html" title="How to build for best new machinery industry">How to build for best
-                                            new machinery industry</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu nisi sem maximus
-                                        suscipit.</p>
-                                    <a href="blog-detail.html" class="sec-btn" title="How to build for best new machinery industry"></a>
+                        @foreach($currentBlogs as $currentBlog)
+                            <div class="col-lg-4 col-md-6">
+                                <div class="blog-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+                                    <div class="blog-image">
+                                        @if($currentBlog->featured_image)
+                                            <a href="{{ route('home.blog.post', $currentBlog->slug) }}" class="back-img"
+                                               style="background-image: url('{{asset('storage/' . $currentBlog->featured_image)}}');"
+                                               title="{{ $currentBlog->title }}"></a>
+                                        @else
+                                            <a href="{{ route('home.blog.post', $currentBlog->slug) }}" class="back-img"
+                                               style="background-image: url('{{asset('vendor/landing')}}/assets/images/default-blog-image.svg');"
+                                               title="{{ $currentBlog->title }}"></a>
+                                        @endif
+                                        <p class="blog-published">{{ $currentBlog->published_at->format('l, j F Y')  }}</p>
+                                    </div>
+                                    <div class="blog-box-content">
+                                        <h4 class="h4-title">
+                                            <a href="{{ route('home.blog.post', $currentBlog->slug) }}"
+                                               title="{{ $currentBlog->title }}">{{ $currentBlog->title }}</a>
+                                        </h4>
+                                        <p>{{ $currentBlog->excerpt  }}</p>
+                                        <a href="{{ route('home.blog.post', $currentBlog->slug) }}" class="sec-btn"
+                                           title="{{ $currentBlog->excerpt  }}"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="blog-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/we-are-best.jpg');" title="We are best any industrial & business solution"></a>
-                                    <p class="blog-published">7 June, 2024</p>
-                                </div>
-                                <div class="blog-box-content">
-                                    <h4 class="h4-title">
-                                        <a href="blog-detail.html" title="We are best any industrial & business solution">We are best any
-                                            industrial & business solution</a>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu nisi sem maximus
-                                        suscipit.</p>
-                                    <a href="blog-detail.html" class="sec-btn" title="We are best any industrial & business solution"></a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

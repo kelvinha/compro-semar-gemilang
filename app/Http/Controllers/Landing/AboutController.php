@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Landing;
 use App\Helpers\PageHelper;
 use App\Http\Controllers\Controller;
 use App\Models\Testimonial;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -39,6 +40,10 @@ class AboutController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        return view('landing.about', compact('aboutPage', 'testimonials'));
+        // Get current blog
+        $currentBlogs = Blog::where('status', 'published')
+            ->orderBy('published_at', 'desc')->paginate(3);
+
+        return view('landing.about', compact('aboutPage', 'testimonials','currentBlogs'));
     }
 }

@@ -47,6 +47,7 @@ class BlogController extends Controller
         }
 
         $blogs = $query->paginate(9);
+        $currentBlogs = $query->paginate(5);
 
         // Get featured blogs for sidebar
         $featuredBlogs = Blog::where('status', 'published')
@@ -60,7 +61,7 @@ class BlogController extends Controller
             $query->where('status', 'published');
         }])->having('blogs_count', '>', 0)->get();
 
-        return view('landing.blog', compact('blogPage', 'blogs', 'featuredBlogs', 'categories', 'category'));
+        return view('landing.blog', compact('blogPage', 'blogs', 'featuredBlogs', 'categories', 'category','currentBlogs'));
     }
 
     /**
@@ -99,7 +100,16 @@ class BlogController extends Controller
             $blogPage = PageHelper::createFallbackPage('Our Blog');
         }
 
-        return view('landing.blog-post', compact('blog', 'relatedBlogs', 'blogPage'));
+        // Get published blogs
+        $query = Blog::where('status', 'published')
+            ->orderBy('published_at', 'desc');
+        $currentBlogs = $query->paginate(5);
+
+        $categories = BlogCategory::withCount(['blogs' => function($query) {
+            $query->where('status', 'published');
+        }])->having('blogs_count', '>', 0)->get();
+
+        return view('landing.blog-post', compact('blog', 'relatedBlogs', 'blogPage','categories','currentBlogs'));
     }
 
     /**
