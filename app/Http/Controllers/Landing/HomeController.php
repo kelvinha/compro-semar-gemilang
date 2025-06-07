@@ -37,7 +37,13 @@ class HomeController extends Controller
         // Get featured products
         $featuredProducts = ProductHelper::getFeatured(3);
 
-        return view('landing.index', compact('featuredBlogs', 'featuredProjects', 'featuredProducts'));
+        // Get testimonials client
+        $testimonials = Testimonial::where('status', '1')
+            ->orderBy('order', 'asc')
+            ->take(10)
+            ->get();
+
+        return view('landing.index', compact('featuredBlogs', 'featuredProjects', 'featuredProducts','testimonials'));
     }
 
     /**

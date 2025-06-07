@@ -35,9 +35,9 @@ class AboutController extends Controller
         }
 
         // Get testimonials
-        $testimonials = Testimonial::where('status', 'active')
-            ->orderBy('order')
-            ->orderBy('created_at', 'desc')
+        $testimonials = Testimonial::where('status', '1')
+            ->orderBy('order', 'asc')
+            ->take(10)
             ->get();
 
         // Get current blog

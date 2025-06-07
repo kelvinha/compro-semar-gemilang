@@ -25,7 +25,7 @@ latest news, insights, and articles from our team.')
     <main class="site-main">
         <!-- START OF MAIN BANNER -->
         <section class="inner-banner back-img"
-                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
+                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/banner.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>

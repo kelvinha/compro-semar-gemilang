@@ -3,7 +3,7 @@
 @section('content')
     <main class="site-main">
         <!-- START OF BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
+        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/banner.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -25,10 +25,10 @@
                             <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
                                 <ul>
                                     <li>
-                                        <a href="index.html" title="Home">Home</a>
+                                        <a href="{{ route('home.index') }}" title="Home">Home</a>
                                     </li>
                                     <li>
-                                        <span>Services</span>
+                                        <span>Products</span>
                                     </li>
                                 </ul>
                             </div>
@@ -42,142 +42,24 @@
         <section class="main-services-grid">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-1.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/all-maintenance-icon.svg" width="38" height="38" alt="All Maintenance Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="All Maintenance">All Maintenance</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to All Maintenance"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-2.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/general-contract-icon.svg" width="33" height="37" alt="General Contract Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="General Contract">General Contract</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to General Contract"></a>
+                    @foreach($products as $product)
+                        <div class="col-lg-6 col-xxl-3 col-sm-4">
+                            <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="services-image">
+                                    <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-1.jpg');"></div>
+                                </div>
+                                <div class="services-box-icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/all-maintenance-icon.svg" width="38" height="38" alt="All Maintenance Icon">
+                                </div>
+                                <div class="services-box-content">
+                                    <h4 class="h4-title">
+                                        <a href="" title="All Maintenance">{{ $product->title }}</a>
+                                    </h4>
+                                    {!! $product->short_description !!}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-3.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/automobiles-icon.svg" width="35" height="35" alt="Automobiles Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="Automobiles">Automobiles</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to Automobiles"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-4.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/mechanical-parts-icon.svg" width="35" height="35" alt="Mechanical Parts Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="Mechanical Parts">Mechanical Parts</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to Mechanical Parts"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-5.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/petroleum-gas-icon.svg" width="34" height="34" alt="Petroleum & Gas Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="Petroleum & Gas">Petroleum & Gas</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to Petroleum & Gas"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-6.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/electric-engineer-icon.svg" width="33" height="33" alt="Electric Engineer Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="Electric Engineer">Electric Engineer</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to Electric Engineer"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-7.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/smart-technology.svg" width="26" height="39" alt="smart technology Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="Smart Technology">Smart Technology</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to Smart Technology"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-xxl-3 col-sm-6">
-                        <div class="services-box wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="services-image">
-                                <div class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/service-list-card-8.jpg');"></div>
-                            </div>
-                            <div class="services-box-icon">
-                                <img src="{{asset('vendor/landing')}}/assets/images/support-24x7-icon.svg" width="32" height="32" alt="Support 24x7 Icon">
-                            </div>
-                            <div class="services-box-content">
-                                <h4 class="h4-title">
-                                    <a href="service-details.html" title="24x7 Support">24x7 Support</a>
-                                </h4>
-                                <p>Vivamus vari fermentum vestibulum consectetur morbi at odio.</p>
-                                <a href="service-details.html" class="sec-btn icon-lg" title="Go to 24x7 Support"></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -315,10 +197,8 @@
                                     <img src="{{asset('vendor/landing')}}/assets/images/all-maintenance-icon.svg" width="38" height="38" alt="All Maintenance Icon">
                                 </span>
                                 <div class="quality-content">
-                                    <h4 class="h4-title">All Maintenance</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu nisi ut sem
-                                        maximus suscipit. Donec malesuada ultricies eleifend. Duis hendrerit augue sit
-                                        amet quam mollis.</p>
+                                    <h4 class="h4-title">Distribusi BBM Industri</h4>
+                                    <p>Sadikun menyediakan bahan bakar minyak untuk kebutuhan industri dengan distribusi yang cepat, aman, dan terpercaya ke seluruh wilayah Indonesia.</p>
                                 </div>
                             </div>
                         </div>
@@ -328,10 +208,8 @@
                                     <img src="{{asset('vendor/landing')}}/assets/images/general-contract-icon.svg" width="33" height="37" alt="General Contract Icon">
                                 </span>
                                 <div class="quality-content">
-                                    <h4 class="h4-title">General Contract</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu nisi ut sem
-                                        maximus suscipit. Donec malesuada ultricies eleifend. Duis hendrerit augue sit
-                                        amet quam mollis.</p>
+                                    <h4 class="h4-title">Pasokan Gas Industri</h4>
+                                    <p>Menyediakan berbagai jenis gas industri (seperti LPG, LNG, dan lainnya) untuk mendukung sektor manufaktur, energi, dan transportasi.</p>
                                 </div>
                             </div>
                         </div>
@@ -341,10 +219,8 @@
                                     <img src="{{asset('vendor/landing')}}/assets/images/automobiles-icon.svg" width="35" height="35" alt="Automobiles Icon">
                                 </span>
                                 <div class="quality-content">
-                                    <h4 class="h4-title">Automobiles</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu nisi ut sem
-                                        maximus suscipit. Donec malesuada ultricies eleifend. Duis hendrerit augue sit
-                                        amet quam mollis.</p>
+                                    <h4 class="h4-title">Solusi Energi Terintegrasis</h4>
+                                    <p>Kami menawarkan solusi lengkap dari pengadaan, pengelolaan, hingga efisiensi energi untuk berbagai kebutuhan bisnis dan industri</p>
                                 </div>
                             </div>
                         </div>
@@ -354,10 +230,8 @@
                                     <img src="{{asset('vendor/landing')}}/assets/images/mechanical-parts-icon.svg" width="35" height="35" alt="Mechanical Parts Icon">
                                 </span>
                                 <div class="quality-content">
-                                    <h4 class="h4-title">Mechanical Parts</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu nisi ut sem
-                                        maximus suscipit. Donec malesuada ultricies eleifend. Duis hendrerit augue sit
-                                        amet quam mollis.</p>
+                                    <h4 class="h4-title">Layanan Konsultasi Energi</h4>
+                                    <p>Tim ahli kami siap membantu Anda merancang strategi energi yang hemat biaya dan ramah lingkungan.</p>
                                 </div>
                             </div>
                         </div>
@@ -378,7 +252,8 @@
                         <div class="faq-content wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
                             <div class="sec-title">
                                 <span class="sub-title">
-                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
+                                    <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18"
+                                         height="18" alt="Setting Icon">
                                     FAQ
                                 </span>
                                 <h2 class="h2-title m-0">Do You Have Any Question ?</h2>
@@ -386,62 +261,82 @@
                             <div class="faq-accordian white-text">
                                 <div class="faq-accordian-box">
                                     <div class="faq-accordian-title">
-                                        <h6 class="h6-title">Compliance crucial in product design ?</h6>
+                                        <h6 class="h6-title">Apa itu Sadikun BBM?</h6>
                                         <span class="icon"></span>
                                     </div>
                                     <div class="faq-accordian-content">
-                                        <p>Quisque sed risus gravida, condimentum risus ac, euismod arcu. Proin ornare
-                                            arcu non finibus finibus. Nullam et fringilla quam, sit amet feugiat eros.
-                                            Maecenas scelerisque, libero at malesuada tempus, nulla ante sollicitudin
-                                            tortor, sed placerat leo lacus ac nisi.</p>
+                                        <p>Sadikun BBM merupakan perusahaan agen resmi dari Pertamina Patra Niaga dalam
+                                            mensupply kebutuhan energi Anda.</p>
                                     </div>
                                 </div>
                                 <div class="faq-accordian-box">
                                     <div class="faq-accordian-title">
-                                        <h6 class="h6-title">Et harum quidem rerum facilis est et expedita?</h6>
+                                        <h6 class="h6-title">Apa saja produk yang ditawarkan?</h6>
                                         <span class="icon"></span>
                                     </div>
                                     <div class="faq-accordian-content">
-                                        <p>Quisque sed risus gravida, condimentum risus ac, euismod arcu. Proin ornare
-                                            arcu non finibus finibus. Nullam et fringilla quam, sit amet feugiat eros.
-                                            Maecenas scelerisque, libero at malesuada tempus, nulla ante sollicitudin
-                                            tortor, sed placerat leo lacus ac nisi.</p>
+                                        <p>Kami menawarkan berbagai jenis produk BBM (diarahkan ke produk)</p>
                                     </div>
                                 </div>
                                 <div class="faq-accordian-box">
                                     <div class="faq-accordian-title">
-                                        <h6 class="h6-title">How do I choose right factory for manufacturing ?</h6>
+                                        <h6 class="h6-title">Bagaimana cara melakukan pembelian produk BBM?</h6>
                                         <span class="icon"></span>
                                     </div>
                                     <div class="faq-accordian-content">
-                                        <p>Quisque sed risus gravida, condimentum risus ac, euismod arcu. Proin ornare
-                                            arcu non finibus finibus. Nullam et fringilla quam, sit amet feugiat eros.
-                                            Maecenas scelerisque, libero at malesuada tempus, nulla ante sollicitudin
-                                            tortor, sed placerat leo lacus ac nisi.</p>
+                                        <p>Anda dapat melakukan pembelian dengan menghubungi nomor whatsapp kami di
+                                            0811-1030-322</p>
                                     </div>
                                 </div>
                                 <div class="faq-accordian-box">
                                     <div class="faq-accordian-title">
-                                        <h6 class="h6-title">What is the process of product manufacturing ?</h6>
+                                        <h6 class="h6-title">Apakah Sadikun BBM melayani pengiriman luar kota?</h6>
                                         <span class="icon"></span>
                                     </div>
                                     <div class="faq-accordian-content">
-                                        <p>Quisque sed risus gravida, condimentum risus ac, euismod arcu. Proin ornare
-                                            arcu non finibus finibus. Nullam et fringilla quam, sit amet feugiat eros.
-                                            Maecenas scelerisque, libero at malesuada tempus, nulla ante sollicitudin
-                                            tortor, sed placerat leo lacus ac nisi.</p>
+                                        <p> Kami melayani pengiriman dengan jangkauan pulau Jawa</p>
                                     </div>
                                 </div>
                                 <div class="faq-accordian-box">
                                     <div class="faq-accordian-title">
-                                        <h6 class="h6-title">Do we have the best business services ?</h6>
+                                        <h6 class="h6-title">Apakah Sadikun BBM membuka peluang kerja sama atau
+                                            partnership?</h6>
                                         <span class="icon"></span>
                                     </div>
                                     <div class="faq-accordian-content">
-                                        <p>Quisque sed risus gravida, condimentum risus ac, euismod arcu. Proin ornare
-                                            arcu non finibus finibus. Nullam et fringilla quam, sit amet feugiat eros.
-                                            Maecenas scelerisque, libero at malesuada tempus, nulla ante sollicitudin
-                                            tortor, sed placerat leo lacus ac nisi.</p>
+                                        <p>Kami membuka peluang kerja sama atau partnership, silahkan email ke <a
+                                                href="mailto:marketing_official@sadikun.com"></a>marketing_official@sadikun.com
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq-accordian-box">
+                                    <div class="faq-accordian-title">
+                                        <h6 class="h6-title">Bagaimana cara melamar kerja di Sadikun BBM?</h6>
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="faq-accordian-content">
+                                        <p>Silahkan email ke <a href="mailto:marketing_official@sadikun.com"></a>marketing_official@sadikun.com
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq-accordian-box">
+                                    <div class="faq-accordian-title">
+                                        <h6 class="h6-title">Bagaimana jika saya mengalami masalah dengan produk atau
+                                            layanan?</h6>
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="faq-accordian-content">
+                                        <p>Silahkan menghubungi kami pada whatsapp di 0811-1030-322</p>
+                                    </div>
+                                </div>
+                                <div class="faq-accordian-box">
+                                    <div class="faq-accordian-title">
+                                        <h6 class="h6-title">Bagaimana saya bisa mendapatkan informasi terbaru tentang
+                                            Sadikun BBM?</h6>
+                                        <span class="icon"></span>
+                                    </div>
+                                    <div class="faq-accordian-content">
+                                        <p>Anda dapat membuka media sosial kami di Instagram: @officialsadikun</p>
                                     </div>
                                 </div>
                             </div>
@@ -459,17 +354,20 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-field">
-                                            <input type="email" class="input-field" placeholder="Email Address" required="">
+                                            <input type="email" class="input-field" placeholder="Email Address"
+                                                   required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-field">
-                                            <input type="number" class="input-field" placeholder="Phone No." required="">
+                                            <input type="number" class="input-field" placeholder="Phone No."
+                                                   required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-field">
-                                            <textarea name="message" class="input-field" placeholder="Message..."></textarea>
+                                            <textarea name="message" class="input-field"
+                                                      placeholder="Message..."></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">

@@ -4,7 +4,7 @@
     <main class="site-main">
         <!-- START OF INNER BANNER -->
         <section class="inner-banner back-img"
-                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/inner_banner_image.jpg');">
+                 style="background-image: url('{{asset('vendor/landing')}}/assets/images/banner.jpg');">
             <div class="banner-stripes">
                 <span></span>
                 <span></span>
@@ -233,7 +233,7 @@
         </section>
         <!-- END OF INNOVATIONS -->
         <!-- START OF TESTIMONIALS -->
-        <section class="testimonials">
+        <section class="testimonials dark-bg">
             <img src="{{asset('vendor/landing')}}/assets/images/globe.svg" class="bg-glob" width="687" height="744"
                  alt="Globe Icon">
             <div class="container">
@@ -245,100 +245,41 @@
                                      height="18" alt="Setting Icon">
                                 TESTIMONIAL
                             </span>
-                            <h2 class="h2-title m-0 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">What
+                            <h2 class="h2-title m-0 wow fadeInUp text-white" data-wow-duration=".8s" data-wow-delay=".2s">What
                                 Client Say About Us</h2>
                         </div>
                         <div class="swiper testimonial-slider wow fadeInUp" data-wow-duration=".8s"
                              data-wow-delay=".2s">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testimonial-box">
-                                        <span class="quote_icon"></span>
-                                        <div class="testimonial-author">
-                                            <div class="author-img">
-                                                <div class="back-img"
-                                                     style="background-image: url('{{asset('vendor/landing')}}/assets/images/mark-john.jpg');"></div>
-                                            </div>
-                                            <div class="author-content">
-                                                <h4 class="h4-title">Mark John</h4>
-                                                <span>Our Client</span>
-                                                <div class="star-rating-wp">
-                                                    <div class="star-rating">
-                                                        <span class="star-rating__fill" style="width: 96%"></span>
+                                @foreach($testimonials as $testimonial)
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-box">
+                                            <span class="quote_icon"></span>
+                                            <div class="testimonial-author">
+                                                @if($testimonial->image)
+                                                    <div class="author-img">
+                                                        <div class="back-img"
+                                                             style="background-image: url('{{asset('storage/' . $testimonial->image)}}');"></div>
                                                     </div>
+                                                @else
+                                                    <div class="author-img">
+                                                        <div class="back-img"
+                                                             style="background-image: url('{{asset('vendor/landing')}}/assets/images/mark-john.jpg');"></div>
+                                                    </div>
+                                                @endif
+                                                <div class="author-content">
+                                                    <h4 class="h4-title">{{ $testimonial->name }}</h4>
+                                                    <span>{{ $testimonial->company }}</span>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text overflow-text" data-simplebar="">
-                                                <p>In hac habitasse platea dictumst. Mauris tortor mauris, ornare non
-                                                    efficitur et, condimentum ac magna. Vivamus rutrum enim vel elit
-                                                    pharetra, et mollis tellus porta. Quisque quis augue elementum,
-                                                    bibendum odio id, lobortis lacus. Ut commodo ac enim sit amet
-                                                    pellentesque. Aliquam sodales a leo sed aliquam.</p>
+                                            <div class="testimonial-content">
+                                                <div class="testimonial-text overflow-text" data-simplebar="">
+                                                    <p>{{ $testimonial->quote }}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-box">
-                                        <span class="quote_icon"></span>
-                                        <div class="testimonial-author">
-                                            <div class="author-img">
-                                                <div class="back-img"
-                                                     style="background-image: url('{{asset('vendor/landing')}}/assets/images/patrick-palmer.jpg');">
-                                                </div>
-                                            </div>
-                                            <div class="author-content">
-                                                <h4 class="h4-title">Mark John</h4>
-                                                <span>Our Client</span>
-                                                <div class="star-rating-wp">
-                                                    <div class="star-rating">
-                                                        <span class="star-rating__fill" style="width: 96%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text overflow-text" data-simplebar="">
-                                                <p>In hac habitasse platea dictumst. Mauris tortor mauris, ornare non
-                                                    efficitur et, condimentum ac magna. Vivamus rutrum enim vel elit
-                                                    pharetra, et mollis tellus porta. Quisque quis augue elementum,
-                                                    bibendum odio id, lobortis lacus. Ut commodo ac enim sit amet
-                                                    pellentesque. Aliquam sodales a leo sed aliquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-box">
-                                        <span class="quote_icon"></span>
-                                        <div class="testimonial-author">
-                                            <div class="author-img">
-                                                <div class="back-img"
-                                                     style="background-image: url('{{asset('vendor/landing')}}/assets/images/mark-john.jpg');"></div>
-                                            </div>
-                                            <div class="author-content">
-                                                <h4 class="h4-title">Mark John</h4>
-                                                <span>Our Client</span>
-                                                <div class="star-rating-wp">
-                                                    <div class="star-rating">
-                                                        <span class="star-rating__fill" style="width: 96%"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <div class="testimonial-text overflow-text" data-simplebar="">
-                                                <p>In hac habitasse platea dictumst. Mauris tortor mauris, ornare non
-                                                    efficitur et, condimentum ac magna. Vivamus rutrum enim vel elit
-                                                    pharetra, et mollis tellus porta. Quisque quis augue elementum,
-                                                    bibendum odio id, lobortis lacus. Ut commodo ac enim sit amet
-                                                    pellentesque. Aliquam sodales a leo sed aliquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="testimonial-pagination"></div>
                         </div>
