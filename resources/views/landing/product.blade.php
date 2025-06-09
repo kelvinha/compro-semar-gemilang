@@ -275,7 +275,7 @@
                                         <span class="icon"></span>
                                     </div>
                                     <div class="faq-accordian-content">
-                                        <p>Kami menawarkan berbagai jenis produk BBM (diarahkan ke produk)</p>
+                                        <p>Kami menawarkan berbagai jenis produk BBM <a href="{{ route('home.products') }}">lihat disini</a></p>
                                     </div>
                                 </div>
                                 <div class="faq-accordian-box">
