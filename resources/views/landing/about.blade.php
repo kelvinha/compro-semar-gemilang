@@ -66,9 +66,7 @@
                                     ABOUT US
                                 </span>
                                 <h2 class="h2-title">Kami Hadirkan Solusi Energi Terpadu untuk Industri</h2>
-                                <p>Donec hendrerit felis id neque gravida euismod. Fusce non ex justo. Praesent
-                                    faucibus, ipsum ut viverra blandit, urna nisl congue odio, quis bibendum ante arcu
-                                    at augue.</p>
+                                <p>Kami menyediakan layanan distribusi BBM industri yang efisien, aman, dan terpercaya. Dengan dukungan armada modern dan jaringan nasional, kami siap menjadi mitra energi terbaik bagi bisnis Anda..</p>
                             </div>
                             <div class="engineer-list">
                                 <div class="engineer-list-item">
