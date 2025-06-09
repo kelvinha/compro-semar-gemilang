@@ -224,13 +224,19 @@ class BlogController extends BaseController
 
         $blog->excerpt = $request->excerpt;
         $blog->content = $request->content;
+
+        // Store the original status before updating
+        $originalStatus = $blog->status;
         $blog->status = $request->status;
 
         // Update published_at if status is changed to published
-        if ($blog->status != 'published' && $request->status == 'published') {
+        if ($originalStatus != 'published' && $request->status == 'published') {
             $blog->published_at = now();
         } elseif ($request->status == 'scheduled') {
             $blog->published_at = $request->published_at;
+        } elseif ($request->status == 'draft') {
+            // Reset published_at when changing back to draft
+            $blog->published_at = null;
         }
 
         $blog->featured = $request->has('featured');

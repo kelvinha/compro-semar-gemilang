@@ -210,4 +210,69 @@ class MediaController extends BaseController
             'media' => $media,
         ]);
     }
+
+    /**
+     * Handle batch upload of multiple files.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function batchUpload(Request $request)
+    {
+        $request->validate([
+            'files' => 'required|array',
+            'files.*' => 'file|max:10240', // 10MB max per file
+        ]);
+
+        $uploadedFiles = [];
+        $errors = [];
+
+        foreach ($request->file('files') as $file) {
+            try {
+                $originalName = $file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $mimeType = $file->getMimeType();
+                $size = $file->getSize();
+                $fileHash = md5_file($file->getRealPath());
+
+                // Generate a unique filename
+                $filename = Str::slug(pathinfo($originalName, PATHINFO_FILENAME)) . '_' . time() . '_' . uniqid() . '.' . $extension;
+
+                // Store the file
+                $path = $file->storeAs('public/media', $filename);
+
+                // Create media record
+                $media = new Media();
+                $media->user_id = Auth::id();
+                $media->name = pathinfo($originalName, PATHINFO_FILENAME);
+                $media->file_name = $filename;
+                $media->mime_type = $mimeType;
+                $media->path = 'media/' . $filename;
+                $media->disk = 'public';
+                $media->file_hash = $fileHash;
+                $media->size = $size;
+                $media->save();
+
+                $uploadedFiles[] = [
+                    'id' => $media->id,
+                    'name' => $media->name,
+                    'url' => asset('storage/' . $media->path),
+                    'size' => $media->human_size,
+                    'type' => $media->mime_type,
+                ];
+            } catch (\Exception $e) {
+                $errors[] = [
+                    'file' => $originalName,
+                    'error' => $e->getMessage(),
+                ];
+            }
+        }
+
+        return response()->json([
+            'success' => count($errors) === 0,
+            'uploaded' => $uploadedFiles,
+            'errors' => $errors,
+            'message' => count($uploadedFiles) . ' files uploaded successfully' . (count($errors) > 0 ? ', ' . count($errors) . ' failed' : ''),
+        ]);
+    }
 }

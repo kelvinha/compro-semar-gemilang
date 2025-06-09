@@ -84,6 +84,10 @@
                                 Categories</a></li>
                         <li class="pc-item"><a class="pc-link" href="{{ route('admin.media.index') }}">Media Library</a>
                         </li>
+                        <li class="pc-item"><a class="pc-link" href="{{ route('admin.banners.index') }}">Banners</a>
+                        </li>
+                        <li class="pc-item"><a class="pc-link" href="{{ route('admin.clients.index') }}">Clients</a>
+                        </li>
                         <li class="pc-item"><a class="pc-link"
                                 href="{{ route('admin.testimonials.index') }}">Testimonials</a></li>
                     </ul>

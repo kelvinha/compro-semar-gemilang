@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\LanguageController;
 
 /*
@@ -135,6 +137,9 @@ Route::middleware(['auth', 'isAdmin'])->prefix('admin')->as('admin.')->group(fun
         'update' => 'media.update',
         'destroy' => 'media.destroy',
     ]);
+    Route::post('media/upload', [MediaController::class, 'upload'])->name('media.upload');
+    Route::post('media/batch-upload', [MediaController::class, 'batchUpload'])->name('media.batch-upload');
+    Route::get('media/get-all', [MediaController::class, 'getAll'])->name('media.get-all');
 
     // E-commerce
     Route::resource('services', \App\Http\Controllers\Admin\ServiceController::class)->names([
@@ -174,6 +179,28 @@ Route::middleware(['auth', 'isAdmin'])->prefix('admin')->as('admin.')->group(fun
         'edit' => 'projects.edit',
         'update' => 'projects.update',
         'destroy' => 'projects.destroy',
+    ]);
+
+    // Banners
+    Route::resource('banners', BannerController::class)->names([
+        'index' => 'banners.index',
+        'create' => 'banners.create',
+        'store' => 'banners.store',
+        'show' => 'banners.show',
+        'edit' => 'banners.edit',
+        'update' => 'banners.update',
+        'destroy' => 'banners.destroy',
+    ]);
+
+    // Clients
+    Route::resource('clients', ClientController::class)->names([
+        'index' => 'clients.index',
+        'create' => 'clients.create',
+        'store' => 'clients.store',
+        'show' => 'clients.show',
+        'edit' => 'clients.edit',
+        'update' => 'clients.update',
+        'destroy' => 'clients.destroy',
     ]);
 
     // Settings

@@ -450,28 +450,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Contact Settings -->
-                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                    <div class="row mt-4">
-                                        <div class="col-md-6 mb-3">
-                                            <div class="form-group">
-                                                <label for="contact_email">Contact Email</label>
-                                                <input type="email" class="form-control" id="contact_email"
-                                                    name="settings[contact_email]"
-                                                    value="{{ $settings->where('key', 'contact_email')->first()?->value }}">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <div class="form-group">
-                                                <label for="contact_phone">Contact Phone</label>
-                                                <input type="text" class="form-control" id="contact_phone"
-                                                    name="settings[contact_phone]"
-                                                    value="{{ $settings->where('key', 'contact_phone')->first()?->value }}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <!-- Social Media Settings -->
                                 <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="social-tab">
                                     <div class="row mt-4">

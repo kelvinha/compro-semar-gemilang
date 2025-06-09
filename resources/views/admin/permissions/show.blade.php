@@ -10,7 +10,7 @@
                 </div>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('/admin') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('permissions.index') }}">Permissions</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.permissions.index') }}">Permissions</a></li>
                     <li class="breadcrumb-item">View</li>
                 </ul>
             </div>
@@ -24,8 +24,8 @@
             <div class="card-header d-flex justify-content-between">
                 <h5>Permission: {{ $permission->display_name }}</h5>
                 <div>
-                    <a href="{{ route('permissions.edit', $permission) }}" class="btn btn-primary">Edit</a>
-                    <a href="{{ route('permissions.index') }}" class="btn btn-secondary">Back to List</a>
+                    <a href="{{ route('admin.permissions.edit', $permission) }}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('admin.permissions.index') }}" class="btn btn-secondary">Back to List</a>
                 </div>
             </div>
             <div class="card-body">
@@ -58,7 +58,7 @@
                             </tr>
                         </table>
                     </div>
-                    
+
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
@@ -66,36 +66,37 @@
                             </div>
                             <div class="card-body p-0">
                                 @if($permission->roles->count() > 0)
-                                    <div class="table-responsive">
-                                        <table class="table mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Role Name</th>
-                                                    <th>Display Name</th>
-                                                    <th>Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach($permission->roles as $role)
-                                                    <tr>
-                                                        <td>{{ $role->name }}</td>
-                                                        <td>{{ $role->display_name }}</td>
-                                                        <td>
-                                                            <a href="{{ route('roles.show', $role) }}" class="btn btn-sm btn-info">
-                                                                <i class="ti ti-eye"></i> View
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Role Name</th>
+                                                <th>Display Name</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($permission->roles as $role)
+                                            <tr>
+                                                <td>{{ $role->name }}</td>
+                                                <td>{{ $role->display_name }}</td>
+                                                <td>
+                                                    <a href="{{ route('roles.show', $role) }}"
+                                                        class="btn btn-sm btn-info">
+                                                        <i class="ti ti-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                                 @else
-                                    <div class="p-3">
-                                        <div class="alert alert-info mb-0">
-                                            This permission is not assigned to any roles yet.
-                                        </div>
+                                <div class="p-3">
+                                    <div class="alert alert-info mb-0">
+                                        This permission is not assigned to any roles yet.
                                     </div>
+                                </div>
                                 @endif
                             </div>
                         </div>

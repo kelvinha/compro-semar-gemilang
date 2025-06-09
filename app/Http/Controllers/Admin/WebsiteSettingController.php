@@ -298,12 +298,26 @@ class WebsiteSettingController extends Controller
                     }
                     $setting->save();
                 } else {
+                    // Determine the appropriate group for the setting
+                    $group = 'general';
+                    if (in_array($key, ['contact_email', 'contact_phone', 'contact_address', 'admin_email'])) {
+                        $group = 'contact';
+                    } elseif (in_array($key, ['facebook_url', 'twitter_url', 'instagram_url', 'linkedin_url', 'youtube_url'])) {
+                        $group = 'social';
+                    } elseif (in_array($key, ['meta_description', 'meta_keywords', 'google_analytics_id'])) {
+                        $group = 'seo';
+                    } elseif (in_array($key, ['footer_text', 'footer_scripts'])) {
+                        $group = 'footer';
+                    } elseif (in_array($key, ['multilingual_enabled', 'default_language', 'available_languages'])) {
+                        $group = 'language';
+                    }
+
                     // Create a new setting if it doesn't exist
                     WebsiteSetting::create([
                         'key' => $key,
                         'value' => $value,
-                        'group' => 'general',
-                        'is_public' => true,
+                        'group' => $group,
+                        'is_public' => !in_array($key, ['admin_email']), // admin_email should not be public
                     ]);
                 }
             }
@@ -344,12 +358,26 @@ class WebsiteSettingController extends Controller
                 }
                 $setting->save();
             } else {
+                // Determine the appropriate group for the setting
+                $group = 'general';
+                if (in_array($key, ['contact_email', 'contact_phone', 'contact_address', 'admin_email'])) {
+                    $group = 'contact';
+                } elseif (in_array($key, ['facebook_url', 'twitter_url', 'instagram_url', 'linkedin_url', 'youtube_url'])) {
+                    $group = 'social';
+                } elseif (in_array($key, ['meta_description', 'meta_keywords', 'google_analytics_id'])) {
+                    $group = 'seo';
+                } elseif (in_array($key, ['footer_text', 'footer_scripts'])) {
+                    $group = 'footer';
+                } elseif (in_array($key, ['multilingual_enabled', 'default_language', 'available_languages'])) {
+                    $group = 'language';
+                }
+
                 // Create a new setting if it doesn't exist
                 WebsiteSetting::create([
                     'key' => $key,
                     'value' => $value,
-                    'group' => 'general',
-                    'is_public' => true,
+                    'group' => $group,
+                    'is_public' => !in_array($key, ['admin_email']), // admin_email should not be public
                 ]);
             }
         }
