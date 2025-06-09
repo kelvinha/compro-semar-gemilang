@@ -65,15 +65,11 @@ class ClientController extends BaseController
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'website_url' => 'nullable|url',
+            'website_url' => 'nullable|string',
             'industry' => 'nullable|string|max:255',
             'location' => 'nullable|string|max:255',
             'partnership_start' => 'nullable|date',
-            'featured' => 'boolean',
-            'active' => 'boolean',
             'order' => 'nullable|integer|min:0',
-            'contact_info' => 'nullable|json',
-            'services_provided' => 'nullable|json',
         ];
 
         // Add multilingual validation rules if needed
@@ -81,7 +77,7 @@ class ClientController extends BaseController
             $rules['description_id'] = 'nullable|string';
         }
 
-        $request->validate($rules);
+        $validated = $request->validate($rules);
 
         $client = new Client();
         $client->name = $request->name;
@@ -94,14 +90,6 @@ class ClientController extends BaseController
         $client->featured = $request->has('featured');
         $client->active = $request->has('active');
         $client->order = $request->order ?? 0;
-
-        // Handle JSON fields
-        if ($request->filled('contact_info')) {
-            $client->contact_info = json_decode($request->contact_info, true);
-        }
-        if ($request->filled('services_provided')) {
-            $client->services_provided = json_decode($request->services_provided, true);
-        }
 
         // Add multilingual content if needed
         if ($isMultilingual) {
@@ -180,15 +168,11 @@ class ClientController extends BaseController
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'website_url' => 'nullable|url',
+            'website_url' => 'nullable|string',
             'industry' => 'nullable|string|max:255',
             'location' => 'nullable|string|max:255',
             'partnership_start' => 'nullable|date',
-            'featured' => 'boolean',
-            'active' => 'boolean',
             'order' => 'nullable|integer|min:0',
-            'contact_info' => 'nullable|json',
-            'services_provided' => 'nullable|json',
         ];
 
         // Add multilingual validation rules if needed
@@ -196,15 +180,15 @@ class ClientController extends BaseController
             $rules['description_id'] = 'nullable|string';
         }
 
-        $request->validate($rules);
+        $validated = $request->validate($rules);
 
         $client->name = $request->name;
-        
+
         // Only update slug if name has changed
         if ($client->name != $request->name) {
             $client->slug = Str::slug($request->name);
         }
-        
+
         $client->description = $request->description;
         $client->website_url = $request->website_url;
         $client->industry = $request->industry;
@@ -213,14 +197,6 @@ class ClientController extends BaseController
         $client->featured = $request->has('featured');
         $client->active = $request->has('active');
         $client->order = $request->order ?? 0;
-
-        // Handle JSON fields
-        if ($request->filled('contact_info')) {
-            $client->contact_info = json_decode($request->contact_info, true);
-        }
-        if ($request->filled('services_provided')) {
-            $client->services_provided = json_decode($request->services_provided, true);
-        }
 
         // Add multilingual content if needed
         if ($isMultilingual) {

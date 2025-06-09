@@ -82,7 +82,8 @@
                                 <div class="form-group">
                                     <label for="description_id">Description (Indonesian)</label>
                                     <textarea class="form-control @error('description_id') is-invalid @enderror"
-                                        id="description_id" name="description_id" rows="3">{{ old('description_id') }}</textarea>
+                                        id="description_id" name="description_id"
+                                        rows="3">{{ old('description_id') }}</textarea>
                                     @error('description_id')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -129,7 +130,8 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="button_text_id">Button Text (Indonesian)</label>
-                                    <input type="text" class="form-control @error('button_text_id') is-invalid @enderror"
+                                    <input type="text"
+                                        class="form-control @error('button_text_id') is-invalid @enderror"
                                         id="button_text_id" name="button_text_id" value="{{ old('button_text_id') }}">
                                     @error('button_text_id')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -141,7 +143,7 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="button_url">Button URL</label>
-                                    <input type="url" class="form-control @error('button_url') is-invalid @enderror"
+                                    <input type="text" class="form-control @error('button_url') is-invalid @enderror"
                                         id="button_url" name="button_url" value="{{ old('button_url') }}">
                                     @error('button_url')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -155,7 +157,8 @@
                                     <select class="form-control @error('button_target') is-invalid @enderror"
                                         id="button_target" name="button_target">
                                         @foreach($targets as $value => $label)
-                                        <option value="{{ $value }}" {{ old('button_target', '_self') == $value ? 'selected' : '' }}>
+                                        <option value="{{ $value }}" {{ old('button_target', '_self' )==$value
+                                            ? 'selected' : '' }}>
                                             {{ $label }}
                                         </option>
                                         @endforeach
@@ -169,10 +172,11 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="type">Banner Type</label>
-                                    <select class="form-control @error('type') is-invalid @enderror"
-                                        id="type" name="type" required>
+                                    <select class="form-control @error('type') is-invalid @enderror" id="type"
+                                        name="type" required>
                                         @foreach($types as $value => $label)
-                                        <option value="{{ $value }}" {{ old('type', 'homepage') == $value ? 'selected' : '' }}>
+                                        <option value="{{ $value }}" {{ old('type', 'homepage' )==$value ? 'selected'
+                                            : '' }}>
                                             {{ $label }}
                                         </option>
                                         @endforeach
@@ -196,8 +200,8 @@
 
                             <div class="col-md-12 mb-3">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="active" name="active" 
-                                        {{ old('active', true) ? 'checked' : '' }}>
+                                    <input type="checkbox" class="form-check-input" id="active" name="active" {{
+                                        old('active', true) ? 'checked' : '' }}>
                                     <label class="form-check-label" for="active">
                                         Active
                                     </label>

@@ -32,11 +32,11 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="industry">Industry</label>
-                                    <select class="form-control @error('industry') is-invalid @enderror"
-                                        id="industry" name="industry">
+                                    <select class="form-control @error('industry') is-invalid @enderror" id="industry"
+                                        name="industry">
                                         <option value="">Select Industry</option>
                                         @foreach($industries as $value => $label)
-                                        <option value="{{ $value }}" {{ old('industry') == $value ? 'selected' : '' }}>
+                                        <option value="{{ $value }}" {{ old('industry')==$value ? 'selected' : '' }}>
                                             {{ $label }}
                                         </option>
                                         @endforeach
@@ -61,7 +61,7 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="website_url">Website URL</label>
-                                    <input type="url" class="form-control @error('website_url') is-invalid @enderror"
+                                    <input type="text" class="form-control @error('website_url') is-invalid @enderror"
                                         id="website_url" name="website_url" value="{{ old('website_url') }}">
                                     @error('website_url')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -72,8 +72,10 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="partnership_start">Partnership Start Date</label>
-                                    <input type="date" class="form-control @error('partnership_start') is-invalid @enderror"
-                                        id="partnership_start" name="partnership_start" value="{{ old('partnership_start') }}">
+                                    <input type="date"
+                                        class="form-control @error('partnership_start') is-invalid @enderror"
+                                        id="partnership_start" name="partnership_start"
+                                        value="{{ old('partnership_start') }}">
                                     @error('partnership_start')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -119,7 +121,8 @@
                                 <div class="form-group">
                                     <label for="description_id">Description (Indonesian)</label>
                                     <textarea class="form-control @error('description_id') is-invalid @enderror"
-                                        id="description_id" name="description_id" rows="4">{{ old('description_id') }}</textarea>
+                                        id="description_id" name="description_id"
+                                        rows="4">{{ old('description_id') }}</textarea>
                                     @error('description_id')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -127,38 +130,14 @@
                             </div>
                             @endif
 
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="contact_info">Contact Information (JSON)</label>
-                                    <textarea class="form-control @error('contact_info') is-invalid @enderror"
-                                        id="contact_info" name="contact_info" rows="3" 
-                                        placeholder='{"email": "contact@client.com", "phone": "+1234567890"}'>{{ old('contact_info') }}</textarea>
-                                    <small class="form-text text-muted">Enter contact details in JSON format</small>
-                                    @error('contact_info')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
 
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="services_provided">Services Provided (JSON)</label>
-                                    <textarea class="form-control @error('services_provided') is-invalid @enderror"
-                                        id="services_provided" name="services_provided" rows="3" 
-                                        placeholder='["Web Development", "SEO", "Digital Marketing"]'>{{ old('services_provided') }}</textarea>
-                                    <small class="form-text text-muted">Enter services as JSON array</small>
-                                    @error('services_provided')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
 
                             <div class="col-md-12 mb-3">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="featured" name="featured" 
-                                                {{ old('featured') ? 'checked' : '' }}>
+                                            <input type="checkbox" class="form-check-input" id="featured"
+                                                name="featured" {{ old('featured') ? 'checked' : '' }}>
                                             <label class="form-check-label" for="featured">
                                                 Featured Client
                                             </label>
@@ -166,8 +145,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="active" name="active" 
-                                                {{ old('active', true) ? 'checked' : '' }}>
+                                            <input type="checkbox" class="form-check-input" id="active" name="active" {{
+                                                old('active', true) ? 'checked' : '' }}>
                                             <label class="form-check-label" for="active">
                                                 Active
                                             </label>
@@ -187,35 +166,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('scripts')
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // JSON validation for contact_info and services_provided
-    const contactInfoField = document.getElementById('contact_info');
-    const servicesProvidedField = document.getElementById('services_provided');
-
-    function validateJSON(field) {
-        field.addEventListener('blur', function() {
-            const value = this.value.trim();
-            if (value) {
-                try {
-                    JSON.parse(value);
-                    this.classList.remove('is-invalid');
-                    this.classList.add('is-valid');
-                } catch (e) {
-                    this.classList.remove('is-valid');
-                    this.classList.add('is-invalid');
-                }
-            } else {
-                this.classList.remove('is-invalid', 'is-valid');
-            }
-        });
-    }
-
-    if (contactInfoField) validateJSON(contactInfoField);
-    if (servicesProvidedField) validateJSON(servicesProvidedField);
-});
-</script>
 @endsection

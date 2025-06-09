@@ -23,8 +23,6 @@ class Client extends Model
         'featured',
         'active',
         'order',
-        'contact_info',
-        'services_provided',
     ];
 
     protected $casts = [
@@ -32,8 +30,6 @@ class Client extends Model
         'active' => 'boolean',
         'order' => 'integer',
         'partnership_start' => 'date',
-        'contact_info' => 'json',
-        'services_provided' => 'json',
     ];
 
     /**

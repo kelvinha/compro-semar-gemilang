@@ -14,7 +14,8 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.banners.update', $banner) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.banners.update', $banner) }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -59,7 +60,8 @@
                                 <div class="form-group">
                                     <label for="subtitle_id">Subtitle (Indonesian)</label>
                                     <input type="text" class="form-control @error('subtitle_id') is-invalid @enderror"
-                                        id="subtitle_id" name="subtitle_id" value="{{ old('subtitle_id', $banner->subtitle_id) }}">
+                                        id="subtitle_id" name="subtitle_id"
+                                        value="{{ old('subtitle_id', $banner->subtitle_id) }}">
                                     @error('subtitle_id')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -71,7 +73,8 @@
                                 <div class="form-group">
                                     <label for="description">Description</label>
                                     <textarea class="form-control @error('description') is-invalid @enderror"
-                                        id="description" name="description" rows="3">{{ old('description', $banner->description) }}</textarea>
+                                        id="description" name="description"
+                                        rows="3">{{ old('description', $banner->description) }}</textarea>
                                     @error('description')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -83,7 +86,8 @@
                                 <div class="form-group">
                                     <label for="description_id">Description (Indonesian)</label>
                                     <textarea class="form-control @error('description_id') is-invalid @enderror"
-                                        id="description_id" name="description_id" rows="3">{{ old('description_id', $banner->description_id) }}</textarea>
+                                        id="description_id" name="description_id"
+                                        rows="3">{{ old('description_id', $banner->description_id) }}</textarea>
                                     @error('description_id')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -99,8 +103,8 @@
                                     <small class="form-text text-muted">Recommended size: 1920x600px</small>
                                     @if($banner->image)
                                     <div class="mt-2">
-                                        <img src="{{ asset('storage/' . $banner->image) }}" alt="Current banner" 
-                                             class="img-thumbnail" style="max-height: 100px;">
+                                        <img src="{{ asset('storage/' . $banner->image) }}" alt="Current banner"
+                                            class="img-thumbnail" style="max-height: 100px;">
                                         <small class="d-block text-muted">Current image</small>
                                     </div>
                                     @endif
@@ -118,8 +122,9 @@
                                     <small class="form-text text-muted">Recommended size: 768x400px</small>
                                     @if($banner->mobile_image)
                                     <div class="mt-2">
-                                        <img src="{{ asset('storage/' . $banner->mobile_image) }}" alt="Current mobile banner" 
-                                             class="img-thumbnail" style="max-height: 100px;">
+                                        <img src="{{ asset('storage/' . $banner->mobile_image) }}"
+                                            alt="Current mobile banner" class="img-thumbnail"
+                                            style="max-height: 100px;">
                                         <small class="d-block text-muted">Current mobile image</small>
                                     </div>
                                     @endif
@@ -133,7 +138,8 @@
                                 <div class="form-group">
                                     <label for="button_text">Button Text</label>
                                     <input type="text" class="form-control @error('button_text') is-invalid @enderror"
-                                        id="button_text" name="button_text" value="{{ old('button_text', $banner->button_text) }}">
+                                        id="button_text" name="button_text"
+                                        value="{{ old('button_text', $banner->button_text) }}">
                                     @error('button_text')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -144,8 +150,10 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="button_text_id">Button Text (Indonesian)</label>
-                                    <input type="text" class="form-control @error('button_text_id') is-invalid @enderror"
-                                        id="button_text_id" name="button_text_id" value="{{ old('button_text_id', $banner->button_text_id) }}">
+                                    <input type="text"
+                                        class="form-control @error('button_text_id') is-invalid @enderror"
+                                        id="button_text_id" name="button_text_id"
+                                        value="{{ old('button_text_id', $banner->button_text_id) }}">
                                     @error('button_text_id')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -156,8 +164,9 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="button_url">Button URL</label>
-                                    <input type="url" class="form-control @error('button_url') is-invalid @enderror"
-                                        id="button_url" name="button_url" value="{{ old('button_url', $banner->button_url) }}">
+                                    <input type="text" class="form-control @error('button_url') is-invalid @enderror"
+                                        id="button_url" name="button_url"
+                                        value="{{ old('button_url', $banner->button_url) }}">
                                     @error('button_url')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -170,7 +179,8 @@
                                     <select class="form-control @error('button_target') is-invalid @enderror"
                                         id="button_target" name="button_target">
                                         @foreach($targets as $value => $label)
-                                        <option value="{{ $value }}" {{ old('button_target', $banner->button_target) == $value ? 'selected' : '' }}>
+                                        <option value="{{ $value }}" {{ old('button_target', $banner->button_target) ==
+                                            $value ? 'selected' : '' }}>
                                             {{ $label }}
                                         </option>
                                         @endforeach
@@ -184,10 +194,11 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="type">Banner Type</label>
-                                    <select class="form-control @error('type') is-invalid @enderror"
-                                        id="type" name="type" required>
+                                    <select class="form-control @error('type') is-invalid @enderror" id="type"
+                                        name="type" required>
                                         @foreach($types as $value => $label)
-                                        <option value="{{ $value }}" {{ old('type', $banner->type) == $value ? 'selected' : '' }}>
+                                        <option value="{{ $value }}" {{ old('type', $banner->type) == $value ?
+                                            'selected' : '' }}>
                                             {{ $label }}
                                         </option>
                                         @endforeach
@@ -211,8 +222,8 @@
 
                             <div class="col-md-12 mb-3">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="active" name="active" 
-                                        {{ old('active', $banner->active) ? 'checked' : '' }}>
+                                    <input type="checkbox" class="form-check-input" id="active" name="active" {{
+                                        old('active', $banner->active) ? 'checked' : '' }}>
                                     <label class="form-check-label" for="active">
                                         Active
                                     </label>

@@ -45,7 +45,8 @@
                                 @if($client->website_url)
                                 <div class="col-md-6 mb-3">
                                     <strong>Website:</strong>
-                                    <p><a href="{{ $client->website_url }}" target="_blank" class="text-primary">{{ $client->website_url }}</a></p>
+                                    <p><a href="{{ $client->website_url }}" target="_blank" class="text-primary">{{
+                                            $client->website_url }}</a></p>
                                 </div>
                                 @endif
 
@@ -74,7 +75,7 @@
                                         @else
                                         <span class="badge bg-secondary">Inactive</span>
                                         @endif
-                                        
+
                                         @if($client->featured)
                                         <span class="badge bg-warning">Featured</span>
                                         @endif
@@ -95,37 +96,7 @@
                                 </div>
                                 @endif
 
-                                @if($client->contact_info)
-                                <div class="col-md-12 mb-3">
-                                    <strong>Contact Information:</strong>
-                                    <div class="mt-2">
-                                        @if(is_array($client->contact_info))
-                                            @foreach($client->contact_info as $key => $value)
-                                            <div class="mb-1">
-                                                <strong>{{ ucfirst($key) }}:</strong> {{ $value }}
-                                            </div>
-                                            @endforeach
-                                        @else
-                                            <pre class="bg-light p-2 rounded">{{ json_encode($client->contact_info, JSON_PRETTY_PRINT) }}</pre>
-                                        @endif
-                                    </div>
-                                </div>
-                                @endif
 
-                                @if($client->services_provided)
-                                <div class="col-md-12 mb-3">
-                                    <strong>Services Provided:</strong>
-                                    <div class="mt-2">
-                                        @if(is_array($client->services_provided))
-                                            @foreach($client->services_provided as $service)
-                                            <span class="badge bg-info me-1 mb-1">{{ $service }}</span>
-                                            @endforeach
-                                        @else
-                                            <pre class="bg-light p-2 rounded">{{ json_encode($client->services_provided, JSON_PRETTY_PRINT) }}</pre>
-                                        @endif
-                                    </div>
-                                </div>
-                                @endif
 
                                 <div class="col-md-6 mb-3">
                                     <strong>Created:</strong>
@@ -144,8 +115,8 @@
                             <div class="mb-3">
                                 <strong>Client Logo:</strong>
                                 <div class="mt-2">
-                                    <img src="{{ asset('storage/' . $client->logo) }}" alt="{{ $client->name }}" 
-                                         class="img-fluid rounded border">
+                                    <img src="{{ asset('storage/' . $client->logo) }}" alt="{{ $client->name }}"
+                                        class="img-fluid rounded border">
                                 </div>
                             </div>
                             @else
@@ -166,7 +137,7 @@
                                 <i class="ti ti-edit"></i> Edit Client
                             </a>
                             <form action="{{ route('admin.clients.destroy', $client) }}" method="POST" class="d-inline"
-                                  onsubmit="return confirm('Are you sure you want to delete this client?')">
+                                onsubmit="return confirm('Are you sure you want to delete this client?')">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">
