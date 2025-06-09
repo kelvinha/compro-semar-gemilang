@@ -220,3 +220,24 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const submitButton = document.querySelector('button[type="submit"]');
+
+    if (form && submitButton) {
+        form.addEventListener('submit', function(e) {
+            console.log('Form submission started');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Creating...';
+        });
+
+        console.log('Banner form loaded successfully');
+    } else {
+        console.error('Form or submit button not found');
+    }
+});
+</script>
+@endsection

@@ -64,11 +64,15 @@ class Banner extends Model
      */
     public function getLocalizedTitle()
     {
-        $multilingual = \App\Helpers\SettingsHelper::get('multilingual_enabled');
-        $isMultilingual = $multilingual == '1';
+        try {
+            $multilingual = \App\Models\WebsiteSetting::where('key', 'multilingual_enabled')->first();
+            $isMultilingual = $multilingual && $multilingual->value == '1';
 
-        if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->title_id)) {
-            return $this->title_id;
+            if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->title_id)) {
+                return $this->title_id;
+            }
+        } catch (\Exception $e) {
+            // If there's an error, just return the default title
         }
 
         return $this->title;
@@ -81,11 +85,15 @@ class Banner extends Model
      */
     public function getLocalizedSubtitle()
     {
-        $multilingual = \App\Helpers\SettingsHelper::get('multilingual_enabled');
-        $isMultilingual = $multilingual == '1';
+        try {
+            $multilingual = \App\Models\WebsiteSetting::where('key', 'multilingual_enabled')->first();
+            $isMultilingual = $multilingual && $multilingual->value == '1';
 
-        if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->subtitle_id)) {
-            return $this->subtitle_id;
+            if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->subtitle_id)) {
+                return $this->subtitle_id;
+            }
+        } catch (\Exception $e) {
+            // If there's an error, just return the default subtitle
         }
 
         return $this->subtitle;
@@ -98,11 +106,15 @@ class Banner extends Model
      */
     public function getLocalizedDescription()
     {
-        $multilingual = \App\Helpers\SettingsHelper::get('multilingual_enabled');
-        $isMultilingual = $multilingual == '1';
+        try {
+            $multilingual = \App\Models\WebsiteSetting::where('key', 'multilingual_enabled')->first();
+            $isMultilingual = $multilingual && $multilingual->value == '1';
 
-        if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->description_id)) {
-            return $this->description_id;
+            if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->description_id)) {
+                return $this->description_id;
+            }
+        } catch (\Exception $e) {
+            // If there's an error, just return the default description
         }
 
         return $this->description;
@@ -115,11 +127,15 @@ class Banner extends Model
      */
     public function getLocalizedButtonText()
     {
-        $multilingual = \App\Helpers\SettingsHelper::get('multilingual_enabled');
-        $isMultilingual = $multilingual == '1';
+        try {
+            $multilingual = \App\Models\WebsiteSetting::where('key', 'multilingual_enabled')->first();
+            $isMultilingual = $multilingual && $multilingual->value == '1';
 
-        if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->button_text_id)) {
-            return $this->button_text_id;
+            if ($isMultilingual && app()->getLocale() == 'id' && !empty($this->button_text_id)) {
+                return $this->button_text_id;
+            }
+        } catch (\Exception $e) {
+            // If there's an error, just return the default button text
         }
 
         return $this->button_text;

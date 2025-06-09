@@ -60,30 +60,10 @@ class BannerController extends BaseController
         $multilingual = WebsiteSetting::where('key', 'multilingual_enabled')->first();
         $isMultilingual = $multilingual && $multilingual->value == '1';
 
-        // Base validation rules
-        $rules = [
+        // Simplified validation - just require title
+        $request->validate([
             'title' => 'required|string|max:255',
-            'subtitle' => 'nullable|string',
-            'description' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-            'mobile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-            'button_text' => 'nullable|string|max:255',
-            'button_url' => 'nullable|string',
-            'button_target' => 'required|in:_self,_blank',
-            'active' => 'boolean',
-            'order' => 'nullable|integer|min:0',
-            'type' => 'required|string|max:255',
-        ];
-
-        // Add multilingual validation rules if needed
-        if ($isMultilingual) {
-            $rules['title_id'] = 'nullable|string|max:255';
-            $rules['subtitle_id'] = 'nullable|string';
-            $rules['description_id'] = 'nullable|string';
-            $rules['button_text_id'] = 'nullable|string|max:255';
-        }
-
-        $request->validate($rules);
+        ]);
 
         $banner = new Banner();
         $banner->title = $request->title;
@@ -91,10 +71,10 @@ class BannerController extends BaseController
         $banner->description = $request->description;
         $banner->button_text = $request->button_text;
         $banner->button_url = $request->button_url;
-        $banner->button_target = $request->button_target;
+        $banner->button_target = $request->button_target ?? '_self';
         $banner->active = $request->has('active');
         $banner->order = $request->order ?? 0;
-        $banner->type = $request->type;
+        $banner->type = $request->type ?? 'homepage';
 
         // Add multilingual content if needed
         if ($isMultilingual) {
@@ -102,22 +82,6 @@ class BannerController extends BaseController
             $banner->subtitle_id = $request->subtitle_id;
             $banner->description_id = $request->description_id;
             $banner->button_text_id = $request->button_text_id;
-        }
-
-        // Handle image upload
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $filename = 'banner_' . time() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/banners', $filename);
-            $banner->image = 'banners/' . $filename;
-        }
-
-        // Handle mobile image upload
-        if ($request->hasFile('mobile_image')) {
-            $file = $request->file('mobile_image');
-            $filename = 'banner_mobile_' . time() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/banners', $filename);
-            $banner->mobile_image = 'banners/' . $filename;
         }
 
         $banner->save();
@@ -189,7 +153,6 @@ class BannerController extends BaseController
             'button_text' => 'nullable|string|max:255',
             'button_url' => 'nullable|string',
             'button_target' => 'required|in:_self,_blank',
-            'active' => 'boolean',
             'order' => 'nullable|integer|min:0',
             'type' => 'required|string|max:255',
         ];
