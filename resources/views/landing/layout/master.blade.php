@@ -3,7 +3,8 @@
 
 @include('landing.partials.head')
 
-<body class="fixed @yield('classBody')">
+<body>
+<div class="boxed_wrapper">
 
 @include('landing.partials.preloader')
 
@@ -13,11 +14,11 @@
 
 @include('landing.partials.footer')
 
-<!-- SCROLL TO TOP Start -->
-<a href="javascript:void(0);" id="scroll-to-top" class="scroll-to-top" title="Scroll to Top">
-    <i class="fas fa-arrow-up"></i>
-</a>
-<!-- SCROLL TO TOP End -->
+</div>
+
+<button class="scroll-top scroll-to-target" data-target="html">
+    <span class="icon-angle"></span>
+</button>
 
 @include('landing.partials.scripts')
 </body>

@@ -1,6 +1,6 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @php
@@ -84,8 +84,7 @@
         $pageOgImage = $activePage->seo->og_image ?: ($ogImage ?: $websiteLogo);
         }
     @endphp
-
-            <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags -->
     <meta name="description" content="@yield('meta_description', $pageDescription)">
     <meta name="keywords" content="@yield('meta_keywords', $pageKeywords)">
     <title>@yield('title', $pageTitle) - {{ $websiteName }}</title>
@@ -112,7 +111,7 @@
         }
     @endphp
 
-            <!-- Custom colors -->
+        <!-- Custom colors -->
     @php
         $primaryColor = null;
         $secondaryColor = null;
@@ -126,7 +125,7 @@
         }
     @endphp
 
-            <!-- Favicons -->
+        <!-- Favicons -->
     @php
         $websiteFavicon = null;
         $websiteFaviconApple = null;
@@ -154,7 +153,7 @@
         <link rel="apple-touch-icon" href="{{ asset('storage/' . $websiteFavicon) }}">
     @elseif($websiteFaviconApple)
         <link rel="apple-touch-icon" href="{{ asset('storage/' . $websiteFaviconApple) }}">
-        <link rel="icon" type="image/png" href="{{ asset('vendor/landing/assets/img/favicon.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('storage/' . $websiteFavicon) }}">
     @else
         <link rel="icon" type="image/png" href="{{ asset('vendor/landing/assets/img/favicon.png') }}">
         <link rel="apple-touch-icon" href="{{ asset('vendor/landing/assets/img/favicon.png') }}">
@@ -174,20 +173,23 @@
         <link rel="manifest" href="{{ asset('storage/' . $websiteManifest) }}">
     @endif
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/aos.css">
     <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/bootstrap.min.css">
-    <!-- Swiper Slider CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/swiper-bundle.min.css">
-    <!-- Magnific Popup CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/magnific-popup.min.css">
-    <!-- Animate CSS Link -->
-    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/animate.min.css">
-    <!-- Main Style CSS Link -->
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/imp.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/custom-animate.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/flaticon.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/owl.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/color.css">
+    <link href="{{asset('vendor/landing')}}/assets/css/color/theme-color.css" id="jssDefault" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/responsive.css">
+
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="{{asset('vendor/landing')}}/assets/js/html5shiv.js"></script>
+
     @if($primaryColor || $secondaryColor)
         <style>
             :root {
@@ -197,8 +199,8 @@
 
                 @if($secondaryColor)
                     --secondary-color: {{ $secondaryColor }} !important;
-               @endif
-            }
+            @endif
+}
         </style>
     @endif
 </head>

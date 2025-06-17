@@ -1,23 +1,28 @@
-<!-- Jquery JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/jquery.min.js"></script>
-<!-- Bootstrap and Popper JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/bootstrap.min.js"></script>
-<script src="{{asset('vendor/landing')}}/assets/js/popper.min.js"></script>
-<!-- Simplebar JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/simplebar.js"></script>
-<!-- Font Awesome JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/font-awesome.min.js"></script>
-<!-- Swiper Slider JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/swiper-bundle.min.js"></script>
-<!-- Magnific Popup JS Link -->
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/aos.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/appear.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/bootstrap-select.min.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/isotope.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.bootstrap-touchspin.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.countdown.min.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.countTo.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.easing.min.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.enllax.min.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.fancybox.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.mixitup.min.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.paroller.min.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jquery.polyglot.language.switcher.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/map-script.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/nouislider.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/owl.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/timePicker.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/validation.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/wow.js"></script>
 <script src="{{asset('vendor/landing')}}/assets/js/jquery.magnific-popup.min.js"></script>
-<!-- Wow Animation JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/wow.min.js"></script>
-<!-- Counter JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/counter.js"></script>
-<!-- Progress Bar JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/progress-bar.js"></script>
-<!-- Wow Animation JS Link -->
-<script src="{{asset('vendor/landing')}}/assets/js/wow.min.js"></script>
-<!-- Custom JS Link -->
+<script src="{{asset('vendor/landing')}}/assets/js/slick.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/lazyload.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/scrollbar.js"></script>
+<script src="{{asset('vendor/landing')}}/assets/js/jQuery.style.switcher.min.js"></script>
+<!-- thm custom script -->
 <script src="{{asset('vendor/landing')}}/assets/js/custom.js"></script>
