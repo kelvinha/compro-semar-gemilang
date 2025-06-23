@@ -1,5 +1,4 @@
 @extends('landing.layout.master')
-@section('classBody', 'index_page')
 @section('content')
     @php
         // Load home page content directly in the view
@@ -19,72 +18,38 @@
             <!-- Banner Carousel -->
             <div class="banner-carousel owl-theme owl-carousel">
                 <!-- Slide -->
-                <div class="slide">
-                    <div class="image-layer lazy-image"
-                         style="background-image:url({{asset('vendor/landing')}}/assets/images/slides/slide-v2-1.jpg)"></div>
-                    <div class="auto-container">
-                        <div class="content">
-                            <h2>Make <span>Your</span><br> Dream House</h2>
-                            <h3><img src="{{asset('vendor/landing')}}/assets/images/icon/slide-title-icon-1.png" alt="">Our
-                                Top Construction.</h3>
-                            <div class="text">
-                                <p>Nunc molestie mi nunc, nec accumsan libero dignissim sit amet. Fusce sit amet
-                                    tincidunt metus. Nunc eu risus suscipit massa dapibu.</p>
-                            </div>
-                            <div class="btns-box">
-                                <a href="#" class="btn-two">Get a Quote</a>
-                                <a class="btn-one" href="#">View More<span class="flaticon-next"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide -->
-                <div class="slide">
-                    <div class="image-layer lazy-image"
-                         style="background-image:url({{asset('vendor/landing')}}/assets/images/slides/slide-v2-1.jpg)"></div>
-                    <div class="auto-container">
-                        <div class="content">
-                            <h2>Make <span>Your</span><br> Dream House</h2>
-                            <h3><img src="{{asset('vendor/landing')}}/assets/images/icon/slide-title-icon-1.png" alt="">Our
-                                Top Construction.</h3>
-                            <div class="text">
-                                <p>Nunc molestie mi nunc, nec accumsan libero dignissim sit amet. Fusce sit amet
-                                    tincidunt metus. Nunc eu risus suscipit massa dapibu.</p>
-                            </div>
-                            <div class="btns-box">
-                                <a href="#" class="btn-two">Get a Quote</a>
-                                <a class="btn-one" href="#">View More<span class="flaticon-next"></span></a>
+                @foreach($banners as $banner)
+                    <div class="slide">
+                        @if($banner->image)
+                            <div class="image-layer lazy-image"
+                                 style="background-image:url({{asset('storage/' . $banner->image)}}"></div>
+                            <div class="overlay"></div>
+                        @else
+                            <div class="image-layer lazy-image"
+                                 style="background-image:url({{asset('vendor/landing')}}/assets/images/slides/slide-v2-1.jpg)"></div>
+                        @endif
+                        <div class="auto-container">
+                            <div class="content">
+                                @php
+                                    $words = array_filter(explode(" ", trim($banner->title)));
+                                    $words = array_values($words); // reset index biar mulai dari 0
+
+                                    $firstWord = $words[0] ?? '';
+                                    $secondWord = $words[1] ?? '';
+                                    $remainingWords = implode(" ", array_slice($words, 2));
+                                @endphp
+
+                                <h2 style="color:white;">{{ $firstWord }} <span>{{ $secondWord }}</span><br> {{ $remainingWords }}</h2>
+                                <div class="text">
+                                    <p>{{ $banner->description  }}</p>
+                                </div>
+                                <div class="btns-box">
+                                    <a class="btn-one" href="{{ route('home.products') }}">View More<span class="flaticon-next"></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Slide -->
-                <div class="slide">
-                    <div class="image-layer lazy-image"
-                         style="background-image:url({{asset('vendor/landing')}}/assets/images/slides/slide-v2-1.jpg)"></div>
-                    <div class="auto-container">
-                        <div class="content">
-                            <h2>Make <span>Your</span><br> Dream House</h2>
-                            <h3><img src="{{asset('vendor/landing')}}/assets/images/icon/slide-title-icon-1.png" alt="">Our
-                                Top Construction.</h3>
-                            <div class="text">
-                                <p>Nunc molestie mi nunc, nec accumsan libero dignissim sit amet. Fusce sit amet
-                                    tincidunt metus. Nunc eu risus suscipit massa dapibu.</p>
-                            </div>
-                            <div class="btns-box">
-                                <a href="#" class="btn-two">Get a Quote</a>
-                                <a class="btn-one" href="#">View More<span class="flaticon-next"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="video-holder-box-style4">
-                <a class="video-popup wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms"
-                   title="RinBuild Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
-                    <span class="flaticon-play-button"></span>
-                </a>
-                <h6>Play Video</h6>
+                @endforeach
             </div>
         </div>
     </section>
@@ -97,116 +62,19 @@
                 <div class="col-xl-12">
                     <div class="partner-box">
                         <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-1.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-1.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-2.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-2.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-3.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-3.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-4.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-4.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-5.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-5.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-6.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-6.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-7.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-7.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-8.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-8.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-9.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-9.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
-                        <!--Start Single Partner Logo Box-->
-                        <div class="single-partner-logo-box">
-                            <a href="#"><img src="{{asset('vendor/landing')}}/assets/images/brand/brand-10.png"
-                                             alt="Awesome Image"></a>
-                            <div class="overlay-box">
-                                <a href="#"><img
-                                        src="{{asset('vendor/landing')}}/assets/images/brand/overlay-brand-10.png"
-                                        alt="Awesome Image"></a>
-                            </div>
-                        </div>
-                        <!--End Single Partner Logo Box-->
+                        @foreach($clients as $client)
+                            @if($client->logo)
+                                <div class="single-partner-logo-box">
+                                    <a href="javascript:void(0);"><img src="{{ asset('storage/' . $client->logo) }}"
+                                                                       alt="{{ $client->name }}"></a>
+                                    <div class="overlay-box">
+                                        <a href="javascript:void(0);"><img
+                                                src="{{ asset('storage/' . $client->logo) }}"
+                                                alt="{{ $client->name }}"></a>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -277,49 +145,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-5">
-                    <div class="about-style2-image-box clearfix">
-                        <img src="{{asset('vendor/landing')}}/assets/images/about/about-3.jpg" alt="Awesome Image">
-                        <div class="inner-box">
-                            <div class="image-box1 lazy-image">
-                                <img src="{{asset('vendor/landing')}}/assets/images/about/about-4.jpg"
-                                     alt="Awesome Image">
-                            </div>
-                            <div class="image-box2 lazy-image">
-                                <img src="{{asset('vendor/landing')}}/assets/images/about/about-2.jpg"
-                                     alt="Awesome Image">
-                            </div>
-                            <div class="video-holder-box style2">
-                                <div class="icon">
-                                    <div class="inner">
-                                        <a class="video-popup wow zoomIn" data-wow-delay="300ms"
-                                           data-wow-duration="1500ms" title="RinBuild Video Gallery"
-                                           href="https://www.youtube.com/watch?v=p25gICT63ek">
-                                            <span class="flaticon-play-button"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="about-style2-image-box">
+                        <img src="{{asset('vendor/landing')}}/assets/images/about/about-7.jpg" height="50%" width="100%" alt="Awesome Image">
                     </div>
                 </div>
                 <div class="col-xl-7 col-lg-12">
                     <div class="about-style1-text-box style2">
                         <div class="title">
                             <p>WELCOME</p>
-                            <h1>Our 10 <span>RinBuild</span><br> <b>years</b> working<br> experience.</h1>
+                            @php
+                                $since = date('Y') - 2007;
+                            @endphp
+                            <h1>Our {{ $since }}<br> <b>years</b> working<br> experience.</h1>
                         </div>
                         <div class="inner-contant">
-                            <p>Donec scelerisque dolor id nunc dictum, interdum gravida mauris rhoncus. Aliquam at
-                                ultrices nunc. In sem leo, fermentum at lorem in, porta finibus mauris. Aliquam
-                                consectetur, ex in gravida porttitor,</p>
+                            <p>Since 2007, PT. Semar Gemilang has delivered reliable LPG solutions for industries nationwide — from manufacturing to hospitality. We are committed to safety, quality, and operational excellence.</p>
                             <div class="fact-box-style2">
                                 <ul>
                                     <li class="single-fact-counter text-center wow fadeInLeft" data-wow-delay="100ms"
                                         data-wow-duration="1500ms">
                                         <div class="count-box">
                                             <h1>
-                                                <span class="timer" data-from="1" data-to="30" data-speed="5000"
-                                                      data-refresh-interval="50">30</span>
+                                                <span class="timer" data-from="1" data-to="{{$since}}" data-speed="5000"
+                                                      data-refresh-interval="50">{{$since}}</span>
                                             </h1>
                                             <div class="icon"><span class="flaticon-plus"></span></div>
                                         </div>
@@ -679,96 +527,22 @@
                 <div class="col-xl-12">
                     <div class="rinbuild-carousel testimonial-carousel owl-carousel owl-theme owl-dot-style1"
                          data-options='{"loop":true, "margin":30, "autoheight":true, "nav":false, "dots":true, "autoplay":true, "autoplayTimeout":6000, "smartSpeed":500, "responsive":{ "0":{"items": "1"}, "768":{"items": "1"}, "1000":{"items": "2" }}}'>
-                        <!--Start Single Testimonial Style2-->
-                        <div class="single-testimonial-style1">
-                            <div class="text">
-                                <p>Etiam fermentum non turpis in vivera. Nulla facilisis molestie mattis. Nulla
-                                    fringilla mollis neque in pretium Nunc posuere ipsum.turpis in vivera. Nulla
-                                    facilisis molestie mattis.</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="icon-box">
-                                    <span class="flaticon-engineer-1"></span>
+                        @foreach($testimonials as $testimonial)
+                            <div class="single-testimonial-style1">
+                                <div class="text">
+                                    <p>{{$testimonial->quote}}.</p>
                                 </div>
-                                <div class="title-box">
-                                    <h3>Anil Barua</h3>
-                                    <p>construction worker</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Testimonial Style2-->
-                        <!--Start Single Testimonial Style2-->
-                        <div class="single-testimonial-style1">
-                            <div class="text">
-                                <p>Etiam fermentum non turpis in vivera. Nulla facilisis molestie mattis. Nulla
-                                    fringilla mollis neque in pretium Nunc posuere ipsum.turpis in vivera. Nulla
-                                    facilisis molestie mattis.</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="icon-box">
-                                    <span class="flaticon-engineer-1"></span>
-                                </div>
-                                <div class="title-box">
-                                    <h3>Anil Barua</h3>
-                                    <p>construction worker</p>
+                                <div class="client-info">
+                                    <div class="icon-box">
+                                        <span class="flaticon-engineer-1"></span>
+                                    </div>
+                                    <div class="title-box">
+                                        <h3>{{ $testimonial->name }}</h3>
+                                        <p>{{ $testimonial->company  }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--End Single Testimonial Style2-->
-                        <!--Start Single Testimonial Style2-->
-                        <div class="single-testimonial-style1">
-                            <div class="text">
-                                <p>Etiam fermentum non turpis in vivera. Nulla facilisis molestie mattis. Nulla
-                                    fringilla mollis neque in pretium Nunc posuere ipsum.turpis in vivera. Nulla
-                                    facilisis molestie mattis.</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="icon-box">
-                                    <span class="flaticon-engineer-1"></span>
-                                </div>
-                                <div class="title-box">
-                                    <h3>Anil Barua</h3>
-                                    <p>construction worker</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Testimonial Style2-->
-                        <!--Start Single Testimonial Style2-->
-                        <div class="single-testimonial-style1">
-                            <div class="text">
-                                <p>Etiam fermentum non turpis in vivera. Nulla facilisis molestie mattis. Nulla
-                                    fringilla mollis neque in pretium Nunc posuere ipsum.turpis in vivera. Nulla
-                                    facilisis molestie mattis.</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="icon-box">
-                                    <span class="flaticon-engineer-1"></span>
-                                </div>
-                                <div class="title-box">
-                                    <h3>Anil Barua</h3>
-                                    <p>construction worker</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Testimonial Style2-->
-                        <!--Start Single Testimonial Style2-->
-                        <div class="single-testimonial-style1">
-                            <div class="text">
-                                <p>Etiam fermentum non turpis in vivera. Nulla facilisis molestie mattis. Nulla
-                                    fringilla mollis neque in pretium Nunc posuere ipsum.turpis in vivera. Nulla
-                                    facilisis molestie mattis.</p>
-                            </div>
-                            <div class="client-info">
-                                <div class="icon-box">
-                                    <span class="flaticon-engineer-1"></span>
-                                </div>
-                                <div class="title-box">
-                                    <h3>Anil Barua</h3>
-                                    <p>construction worker</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Testimonial Style2-->
+                        @endforeach
                     </div>
                 </div>
 
@@ -784,27 +558,23 @@
                 <div class="col-xl-6">
                     <div class="faq-content-box">
                         <div class="sec-title">
-                            <p>frequency</p>
-                            <div class="big-title black-clr"><h1>Frequency Rinbuild</h1></div>
+                            <p>Faq</p>
+                            <div class="big-title black-clr"><h1>FREQUENTLY ASKED QUESTIONS (PT. SEMAR GEMILANG)</h1></div>
                         </div>
                         <div class="accordion-box">
                             <!--Start single accordion box-->
                             <div class="accordion accordion-block">
                                 <div class="accord-btn active"><h4>What industries do you serve?</h4></div>
                                 <div class="accord-content collapsed">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has when an unknown printer took a galley of type and scrambled it to
-                                        make.</p>
+                                    <p>We serve a wide range of industries including manufacturing, hospitality, F&B (food & beverage), ceramics, and the automotive sector — providing both LPG cylinders and bulk supply solutions across Indonesia. .</p>
                                 </div>
                             </div>
                             <!--End single accordion box-->
                             <!--Start single accordion box-->
                             <div class="accordion accordion-block">
-                                <div class="accord-btn"><h4>What are your help desk hours?</h4></div>
+                                <div class="accord-btn"><h4>What are your operating hours??</h4></div>
                                 <div class="accord-content">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has when an unknown printer took a galley of type and scrambled it to
-                                        make.</p>
+                                    <p>Our office and distribution services operate from Monday to Saturday, 08.00 – 17.00 WIB. For bulk delivery schedules, our team is ready to coordinate based on client needs.</p>
                                 </div>
                             </div>
                             <!--End single accordion box-->
@@ -820,11 +590,14 @@
                             <!--End single accordion box-->
                             <!--Start single accordion box-->
                             <div class="accordion accordion-block marginbottom0">
-                                <div class="accord-btn"><h4>What does having managed it services cost?</h4></div>
+                                <div class="accord-btn"><h4>What types of LPG products do you offer?</h4></div>
                                 <div class="accord-content">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has when an unknown printer took a galley of type and scrambled it to
-                                        make.</p>
+                                    <p>We offer: </p>
+                                        <ul>
+                                            <li>LPG 50 KG – Ideal for hotels, restaurants, and small-scale industries.</li>
+                                            <li>LPG Bulk (1,000–9,000 kg) – Suited for large-scale industrial needs like ceramics, automotive, and food production..</li>
+                                            <li>Mini Bulk – Upon request and project basis..</li>
+                                        </ul>
                                 </div>
                             </div>
                             <!--End single accordion box-->
@@ -834,7 +607,7 @@
 
                 <div class="col-xl-6">
                     <div class="faq-image-box" data-aos="fade-left" data-aos-duration="0" data-aos-delay="0">
-                        <img src="{{asset('vendor/landing')}}/assets/images/resources/faq-image.jpg"
+                        <img src="{{asset('vendor/landing')}}/assets/images/about/about-8.jpg"
                              alt="Awesome Image">
                     </div>
                 </div>
@@ -844,102 +617,6 @@
     </section>
     <!--End Faq Content Area-->
 
-    <!--Start Video Gallery Area-->
-    <section class="video-gallery-area lazy-image"
-             style="background-image:url({{asset('vendor/landing')}}/assets/images/parallax-background/video-gallery-bg.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="video-holder-box-style3">
-                        <a class="video-popup wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms"
-                           title="RinBuild Video Gallery" href="https://www.youtube.com/watch?v=p25gICT63ek">
-                            <span class="flaticon-play-button"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Video Gallery Area-->
-
-    <!--Start latest blog area -->
-    <section class="latest-blog-area pdtop120">
-        <div class="container">
-            <div class="sec-title text-center">
-                <p>Our Blog</p>
-                <div class="big-title black-clr"><h1>Our Letest Posts</h1></div>
-            </div>
-            <div class="row">
-                <!--Start single blog post-->
-                <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12">
-                    <div class="single-blog-post wow fadeInUp animated" data-wow-delay="0.3s"
-                         data-wow-duration="1200ms">
-                        <div class="img-holder">
-                            <img class="lazy-image" src="{{asset('vendor/landing')}}/assets/images/blog/blog-v1-1.jpg"
-                                 alt="Awesome Image">
-                            <div class="overlay-style-one bg1"></div>
-                            <div class="post-date">
-                                <p><span class="flaticon-clock"></span>20/10/19</p>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <h3 class="blog-title"><a href="blog-single.html">Fusce convallis enim non magna pharetra
-                                    facilisis. Duis lacus nulla dignissim.</a></h3>
-                            <p>Nam mollis turpis sed magna vestibulum, pretium imperdiet. Mauris vehicula pellentesque
-                                tortor, at vulputate dolor cursus eu. Morbi semper ante at libero ultrices, eget
-                                pharetra nunc lacinia.</p>
-                            <div class="bottom">
-                                <div class="author-name">
-                                    <a href="#"><span class="flaticon-user"></span>Richi Moni</a>
-                                </div>
-                                <div class="read-more-button">
-                                    <a href="blog-single.html">Read More<span class="flaticon-next"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End single blog post-->
-                <!--Start single blog post-->
-                <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12">
-                    <div class="single-blog-post style2 wow fadeInUp animated" data-wow-delay="0.4s"
-                         data-wow-duration="1300ms">
-                        <div class="img-holder">
-                            <img class="lazy-image" src="{{asset('vendor/landing')}}/assets/images/blog/blog-v2-1.jpg"
-                                 alt="Awesome Image">
-                            <div class="overlay-style-one bg1"></div>
-                            <div class="post-date">
-                                <p><span class="flaticon-clock"></span>20/10/19</p>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <h3 class="blog-title"><a href="blog-single.html">Sed volutpat velit purus, eget ultricies
-                                    pretium orci pretium id. Quisque.</a></h3>
-                        </div>
-                    </div>
-                    <div class="single-blog-post style2 wow fadeInUp animated" data-wow-delay="0.5s"
-                         data-wow-duration="1400ms">
-                        <div class="img-holder">
-                            <img class="lazy-image" src="{{asset('vendor/landing')}}/assets/images/blog/blog-v2-2.jpg"
-                                 alt="Awesome Image">
-                            <div class="overlay-style-one bg1"></div>
-                            <div class="post-date">
-                                <p><span class="flaticon-clock"></span>20/10/19</p>
-                            </div>
-                        </div>
-                        <div class="text-holder">
-                            <h3 class="blog-title"><a href="blog-single.html">Sed volutpat velit purus, eget ultricies
-                                    pretium orci pretium id. Quisque.</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <!--End single blog post-->
-
-            </div>
-        </div>
-    </section>
-    <!--End latest blog area-->
-
     <!--Start Slogan Area-->
     <section class="slogan-area">
         <div class="container">
@@ -947,10 +624,10 @@
                 <div class="col-xl-12">
                     <div class="slogan-content wow slideInUp" data-wow-delay="100ms">
                         <div class="title">
-                            <h1>Contact Us Now in Our Rinbuild</h1>
+                            <h1>Contact Us Now</h1>
                         </div>
                         <div class="quote-button">
-                            <a href="#">Get a Quote<span class="flaticon-next"></span></a>
+                            <a href="{{ route('home.index') }}">Get a Quote<span class="flaticon-next"></span></a>
                         </div>
                     </div>
                 </div>

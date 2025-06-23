@@ -35,36 +35,45 @@
         }
     }
 @endphp
-<!--Start footer area-->
+    <!--Start footer area-->
 <footer class="footer-area">
     <div class="footer">
         <div class="container">
             <div class="row">
                 <!--Start single footer widget-->
-                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
                     <div class="single-footer-widget">
                         <div class="our-company-info">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="assets/images/footer/footer-logo.png" alt="Awesome Footer Logo" title="Logo"></a>
+                                <a href="{{ route('home.index') }}">
+                                    @if($data['website_logo'])
+                                        <img src="{{ ('storage/' . $data['website_logo']) }}" alt="semar gemilang logo">
+                                    @else
+                                        <img src="assets/images/footer/footer-logo.png" alt="Awesome Footer Logo"
+                                             title="Logo">
+                                    @endif
+                                </a>
                             </div>
                             <div class="text">
-                                <p>Proin tempus, enim lobortis placerat porta, libero mauris feugiat magna, ut
-                                    lobortis justo tortor a ipsum. Proin luctus posuere eros porttitor euismod.
-                                    Praesent pulvinar.</p>
+                                <p>PT. Semar Gemilang is a trusted Indonesian company specializing in LPG distribution since 2007. We deliver reliable and efficient energy solutions to support industries across the nation.</p>
                             </div>
                             <div class="footer-social-links">
                                 <ul class="social-links-style1">
                                     <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="{{ $data['social_facebook'] }}"><i class="fa fa-facebook"
+                                                                                    aria-hidden="true"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="{{ $data['social_twitter'] }}"><i class="fa fa-twitter"
+                                                                                   aria-hidden="true"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                        <a href="{{ $data['social_linkedin'] }}"><i class="fa fa-linkedin"
+                                                                                    aria-hidden="true"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                                        <a href="{{ $data['social_instagram'] }}"><i class="fa fa-instagram"
+                                                                                     aria-hidden="true"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -73,7 +82,7 @@
                 </div>
                 <!--End single footer widget-->
                 <!--Start single footer widget-->
-                <div class="col-xl-4 col-lg-4 col-md-9 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
+                <div class="col-xl-6 col-lg-6 col-md-9 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
                     <div class="single-footer-widget margin50-0">
                         <div class="title">
                             <h3>Information</h3>
@@ -82,51 +91,25 @@
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <ul class="page-links">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Departments</a></li>
-                                        <li><a href="#">Timetable</a></li>
-                                        <li><a href="#">Why Us</a></li>
-                                        <li><a href="#">Specilaties</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-6">
-                                    <ul class="page-links">
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Departments</a></li>
-                                        <li><a href="#">Timetable</a></li>
-                                        <li><a href="#">Why Us</a></li>
-                                        <li><a href="#">Specilaties</a></li>
-                                        <li><a href="#">Retail</a></li>
+                                        @php
+                                            // Load main menu directly in the header
+                                            $mainMenu = \App\Helpers\MenuHelper::getMainMenu();
+                                            $currentPath = "/". Request::path();
+                                        @endphp
+
+                                        @if($mainMenu && $mainMenu->submenus && $mainMenu->submenus->count() > 0)
+                                            @foreach($mainMenu->submenus as $submenu)
+                                                <li class="{{ $currentPath === $submenu->url || Request::path() === $submenu->url ? 'current' : '' }}">
+                                                    <a href="{{ $submenu->url }}"
+                                                       title="{{ $submenu->name }}">{{ $submenu->name }}</a>
+                                                </li>
+                                            @endforeach
+                                        @endif
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-                </div>
-                <!--End single footer widget-->
-                <!--Start single footer widget-->
-                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
-                    <div class="single-footer-widget">
-                        <div class="twitter-feed-box">
-                            <h3><a href="#">Etiam sapien tortor, dictum</a></h3>
-                            <span>July 21, 2018 10:00 AM</span>
-                            <div class="border-box"></div>
-                            <div class="text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elieiusmod tempor incididunt
-                                    ut labore et dolore magn aliqua. Ut enim ad minim veniam.</p>
-                            </div>
-                            <div class="bottom">
-                                <div class="comments">
-                                    <a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i>2 comments</a>
-                                </div>
-                                <div class="twitter-icon">
-                                    <span class="flaticon-twitter-logo-shape"></span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!--End single footer widget-->
@@ -137,13 +120,12 @@
         <div class="container">
             <div class="outer-box">
                 <div class="copyright-text">
-                    <p>Copyright© All Rights Reserved <a href="#">RinBuild.</a></p>
+                    <p>Copyright© All Rights Reserved <a href="#">PT Semar Gemilang.</a></p>
                 </div>
                 <div class="footer-menu">
                     <ul>
                         <li><a href="#">Career</a></li>
                         <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Refund policy</a></li>
                     </ul>
                 </div>
             </div>

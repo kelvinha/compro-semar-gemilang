@@ -78,7 +78,7 @@
 .single-sidebar .ratting-box .ratting-lists li a:hover,
 .scroll-top,
 .service-style1-area .title h1 a{
-    color: #2F5D2E;
+    color: var(--primary-color);
 }
 
 .main-menu.style4 .navigation>li:hover>a,
@@ -98,7 +98,7 @@
 .service-style7-text-box .button-box a:hover,
 .single-portfolio-style5 .title-holder span.tag,
 .single-portfolio-style5 .title-holder h5 a:hover {
-    color: #a0c239;
+    color: var(--secondary-color);
 }
 
 /*==============================================
@@ -176,8 +176,8 @@
 .single-testimonial-style1.style3 .client-info .icon-box span:before,
 .main-slider .content .btns-box .btn-one,
 .main-slider .content .btns-box .btn-two:hover{
-    background: #fd5d14;
-    background-color: #fd5d14;
+    background: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 .quote-button-style4 a,
@@ -196,7 +196,7 @@
 .testimonial-style5-area .owl-nav-style-one.owl-theme .owl-nav [class*="owl-"]:hover,
 .single-service-style5 .icon:before,
 .single-testimonial-style4 .inner-content .quote-box:before {
-    background: #fd5d14;
+    background: var(--primary-color);
 }
 
 /*==============================================
@@ -207,43 +207,43 @@
 .share-products-socials ul li a:hover i,
 .main-slider .content .btns-box .btn-one,
 .main-slider .content .btns-box .btn-two:hover{
-    border-color: #fd5d14;
+    border-color: var(--secondary-color);
 }
 
 .single-testimonial-style4 .inner-content:before{
-    border: 4px solid #fd5d14;
+    border: 4px solid var(--primary-color);
 }
 
 .single-testimonial-style1.style3 .client-info .icon-box span:before {
-    border: 1px solid #fd5d14;
+    border: 1px solid var(--primary-color);
 }
 .scroll-top {
-    border: 2px solid #fd5d14;
+    border: 2px solid var(--primary-color);
 }
 .btn-one {
-    border: 2px solid #fd5d14;
+    border: 2px solid var(--primary-color);
 }
 .btn-one:hover,
 .btn-one:focus{
-    border: 2px solid #fd5d14;
+    border: 2px solid var(--primary-color);
 }
 .single-blog-post-style3.withbdr {
-    border: 5px solid #fd5d14;
+    border: 5px solid var(--primary-color);
 }
 .mobile-menu .navigation li > a:before {
-    border-left: 5px solid #fd5d14;
+    border-left: 5px solid var(--primary-color);
 }
 .single-product-item .img-holder .product-info:before {
-    border-right: 20px solid #fd5d14;
+    border-right: 20px solid var(--primary-color);
 }
 .service-style1-area .title h1 a{
-    border-bottom: 1px solid #fd5d14;
+    border-bottom: 1px solid var(--primary-color);
 }
 .single-service-style2 .img-holder .static-content .title:before {
-    border: 2px solid #fd5d14;
+    border: 2px solid var(--primary-color);
 }
 .single-service-style2 .overlay-content .inner-content .text-holder .title:before {
-    border: 2px solid #fd5d14;
+    border: 2px solid var(--primary-color);
 }
 
 
@@ -265,14 +265,14 @@
     background: #ffeee7;
 }
 .about-style1-text-box.style2 .title h1 span {
-    background: #fb8b57;
+    background:var(--secondary-color);
 }
 .main-menu .navigation>li:hover>a,
 .main-menu .navigation>li.current>a{
 	color: #fff;
 }
 .single-portfolio-style1 .img-holder .title-holder span.tag {
-    color: #fd5d14;
+    color: var(--primary-color);
     background: rgba(253, 93, 19, 0.20);
 }
 
@@ -281,7 +281,7 @@
     background: rgba(253, 93, 19, 0.20);
 }
 .single-service-style7:before{
-    border: 2px solid #fd5d14;
+    border: 2px solid var(--primary-color);
 }
 
 

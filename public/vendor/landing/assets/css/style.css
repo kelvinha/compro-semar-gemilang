@@ -14,7 +14,7 @@
 07. Categories area style
 08. Fact counter area style
 09. Latest Blog area style
-10. Latest blog area style 
+10. Latest blog area style
 11. Testimonial area style
 12. Brand area style
 13. Single service style
@@ -67,7 +67,7 @@
 	font-size: 100%;
 }
 html,
-body { 
+body {
     height: 100%;
 }
 body {
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 h3 {
-    font-size: 18px; 
+    font-size: 18px;
     line-height: 30px;
     font-weight: 500;
 }
@@ -109,7 +109,7 @@ a:focus {
     border: none;
 }
 img.lazy-image{
-	background:url(../images/icon/image-bg.svg) center center no-repeat;	
+	background:url(../images/icon/image-bg.svg) center center no-repeat;
 }
 img.lazy-image.loaded{
 	background-image:none;
@@ -173,13 +173,13 @@ li {
 ol,
 li{
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 .clr1{
     color: #f36727;
 }
 .bgclr1{
-    background: #f36727;    
+    background: #f36727;
 }
 
 
@@ -207,7 +207,7 @@ li{
 .btn-one span:before{
     position: relative;
     display: inline-block;
-    padding-left: 10px;    
+    padding-left: 10px;
 }
 .btn-one:hover,
 .btn-one:focus{
@@ -285,7 +285,7 @@ li{
     top: 0;
     width: 100%;
     z-index: -1;
-} 
+}
 .parallax-bg-two {
     background-attachment: fixed;
     background-position: center top;
@@ -303,7 +303,7 @@ li{
     top: 0;
     width: 100%;
     z-index: -1;
-} 
+}
 
 .flex-box {
     display: flex;
@@ -440,7 +440,7 @@ li{
 	transition: all 500ms ease;
 }
 .owl-carousel.owl-dot-style1 .owl-dots .owl-dot span{
-	display: none;	
+	display: none;
 }
 .owl-carousel.owl-dot-style1 .owl-dots .owl-dot.active{
     width: 95px;
@@ -556,7 +556,7 @@ li{
     width: 100%;
     min-width: 320px;
     min-height: 400px;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 
@@ -752,16 +752,16 @@ header.main-header.box-layout {
 
 
 /*________________Preloader_______________ */
-.preloader{ 
-    position:fixed; 
-    left:0px; 
-    top:0px; 
-    width:100%; 
-    height:100%; 
-    z-index:999999999999999999; 
-    background-color:#ffffff; 
-    background-position:center center; 
-    background-repeat:no-repeat; 
+.preloader{
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:999999999999999999;
+    background-color:#ffffff;
+    background-position:center center;
+    background-repeat:no-repeat;
     background-image:url(../images/icon/preloader.gif);
 }
 .preloader.style-two {
@@ -887,16 +887,16 @@ select:focus {
 }
 
 #contact-form input[type="text"].error{
-    border-color: red;    
+    border-color: red;
 }
 #contact-form input[type="email"].error{
-  border-color: red;    
+  border-color: red;
 }
 #contact-form select.error {
   border-color: red;
 }
 #contact-form textarea.error{
-  border-color: red;    
+  border-color: red;
 }
 
 
@@ -935,14 +935,14 @@ select:focus {
     transition: all 200ms linear;
     transition-delay: 0.1s;
 }
-.post-pagination li.active a, 
+.post-pagination li.active a,
 .post-pagination li:hover a {
     background: #fec727;
     border-color: #fec727;
 }
 .post-pagination li.active a i,
 .post-pagination li:hover a i{
-    color: #131313;    
+    color: #131313;
 }
 
 
@@ -972,28 +972,28 @@ select:focus {
     z-index: 1;
 }
 .overlay-style-one.bg1{
-    background-color: rgba(3, 13, 40, 0.70);    
+    background-color: rgba(3, 13, 40, 0.70);
 }
 .overlay-style-one.bg2{
-    background-color: rgba(255, 255, 255, 0.70);    
+    background-color: rgba(255, 255, 255, 0.70);
 }
 .overlay-style-one.bg3{
-    background-color: rgba(0, 83, 153, 0.90);    
+    background-color: rgba(0, 83, 153, 0.90);
 }
 .overlay-style-one .box{
     display: table;
     height: 100%;
-    width: 100%;    
+    width: 100%;
 }
 .overlay-style-one .box .content{
     display: table-cell;
     text-align: center;
-    vertical-align: middle;    
+    vertical-align: middle;
 }
 .overlay-style-one .box .inner{
     display: table-cell;
     text-align: center;
-    vertical-align: middle;    
+    vertical-align: middle;
 }
 
 .overlay-style-two{
@@ -1004,7 +1004,7 @@ select:focus {
     top: 0px;
     z-index: 2;
     opacity: 0;
-    transition: all 900ms ease;    
+    transition: all 900ms ease;
 }
 .overlay-style-two:before{
 	position: absolute;
@@ -1055,7 +1055,7 @@ select:focus {
     margin-right: 4px;
 }
 .review-box ul li:last-child{
-    margin-right: 0px;    
+    margin-right: 0px;
 }
 .review-box ul li i {
     font-size: 18px;
@@ -1109,7 +1109,7 @@ select:focus {
     margin-right: 25px;
 }
 .sociallinks-style-two li:last-child{
-    margin-right: 0px;    
+    margin-right: 0px;
 }
 .sociallinks-style-two li a i {
     position: relative;
@@ -1132,7 +1132,7 @@ select:focus {
     100% {margin-top: 0;}
 }
 
-/*** 
+/***
 ========================================
     Mobile Menu
 ========================================
@@ -1192,17 +1192,17 @@ select:focus {
 	transform: translateX(0%);
 }
 .mobile-menu .mCSB_inside>.mCSB_container{
-	margin-right:5px;	
+	margin-right:5px;
 }
 .mobile-menu .navbar-collapse{
-	display:block !important;	
+	display:block !important;
 }
 
 
 .mobile-menu .nav-logo{
 	position:relative;
 	padding:30px 25px;
-	text-align:left;	
+	text-align:left;
 }
 .mobile-menu .nav-logo a{
     position: relative;
@@ -1305,7 +1305,7 @@ select:focus {
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 }
 .mobile-menu .navigation li > a:before{
 	content:'';
@@ -1317,7 +1317,7 @@ select:focus {
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 }
 .mobile-menu .navigation li.current > a:before{
 	height:100%;
@@ -1349,13 +1349,13 @@ select:focus {
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 	z-index:5;
 }
 .mobile-menu .navigation li.dropdown .dropdown-btn.open{
 	-webkit-transform:rotate(90deg);
 	-ms-transform:rotate(90deg);
-	transform:rotate(90deg);	
+	transform:rotate(90deg);
 }
 .mobile-menu .navigation li > ul,
 .mobile-menu .navigation li > ul > li > ul{
@@ -1381,10 +1381,10 @@ select:focus {
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 }
 .mobile-menu .social-links li a:hover{
-    color: #030e27;    
+    color: #030e27;
 }
 
 
@@ -1396,7 +1396,7 @@ select:focus {
 
 
 /*==============================================
-    Main Header Css        
+    Main Header Css
 ===============================================*/
 .main-header {
 	position: absolute;
@@ -1463,7 +1463,7 @@ select:focus {
     display: inline-block;
 }
 .sticky-header .main-menu .navigation> li{
-    
+
 }
 .sticky-header .main-menu .navigation> li> a{
     color: #000000;
@@ -1494,7 +1494,7 @@ select:focus {
 }
 .welcome-text{
     position: relative;
-    display: block;    
+    display: block;
 }
 .welcome-text h6{
     color: #798795;
@@ -1517,7 +1517,7 @@ select:focus {
     position: relative;
     display: block;
     max-width: 390px;
-    width: 100%;    
+    width: 100%;
 }
 .header-social-links{
     position: relative;
@@ -1552,7 +1552,7 @@ select:focus {
     position: relative;
     display: block;
     max-width: 390px;
-    width: 100%;   
+    width: 100%;
 }
 .header-menu {
     position: relative;
@@ -1620,7 +1620,7 @@ select:focus {
 }
 .header-upper-left .logo a{
     position: relative;
-    display: inline-block; 
+    display: inline-block;
 }
 .header-upper-left .logo a img{
     width: auto;
@@ -1632,7 +1632,7 @@ select:focus {
 }
 .header-contact-info{
     position: relative;
-    display: block;    
+    display: block;
 }
 .header-contact-info ul{
     position: relative;
@@ -1692,7 +1692,7 @@ select:focus {
 }
 .header-lawer-left{
     position: relative;
-    display: block;    
+    display: block;
 }
 
 .main-menu {
@@ -1813,7 +1813,7 @@ select:focus {
 }
 .main-menu .navigation> li> ul> li:last-child> a{
     border: none;
-} 
+}
 .main-menu .navigation>li>ul>li>a:hover {
     padding-left: 15px;
 }
@@ -1888,7 +1888,7 @@ select:focus {
 	-moz-transition:all 300ms ease;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 300ms ease;
-	-o-transition:all 300ms ease;	
+	-o-transition:all 300ms ease;
 }
 .main-menu .navigation>li>ul>li>ul> li {
 	position: relative;
@@ -2040,9 +2040,9 @@ select:focus {
     padding-right: 50px;
 }
 .outer-search-box-style1 .search-box .form-group input[type="search"]:focus{
-    border-color: #f5f5f5;	
+    border-color: #f5f5f5;
 }
-.outer-search-box-style1 .search-box .form-group button, 
+.outer-search-box-style1 .search-box .form-group button,
 .outer-search-box-style1 .search-box .form-group input[type="submit"] {
     position: absolute;
     right: 0;
@@ -2102,7 +2102,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =====================================================
 	Main Slider style
 =====================================================
@@ -2230,7 +2230,7 @@ select:focus {
 	-ms-transform: translateX(0);
 	-o-transform: translateX(0);
 	transform: translateX(0);
-	transition-delay: 1500ms;    
+	transition-delay: 1500ms;
 }
 .main-slider .content .text{
 	position: relative;
@@ -2252,7 +2252,7 @@ select:focus {
 .main-slider .content .text p{
 	color: #ffffff;
 	font-size: 18px;
-	line-height: 1.8em; 
+	line-height: 1.8em;
 	font-weight: 300;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -2348,7 +2348,7 @@ select:focus {
     transition: all 500ms ease;
 }
 .main-slider .owl-theme .owl-dots .owl-dot span{
-	display:none;	
+	display:none;
 }
 .main-slider .owl-theme .owl-dots .owl-dot.active{
     width: 40px;
@@ -2369,7 +2369,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style1 Area Css
 =============================================
@@ -2474,12 +2474,12 @@ select:focus {
     z-index: -1;
 }
 .single-service-style1:hover .text-holder .count-box:before{
-	transform:scale(1.0);        
+	transform:scale(1.0);
 }
 
 
 
-/*** 
+/***
 =============================================
     About Style1 Area Css
 =============================================
@@ -2529,10 +2529,10 @@ select:focus {
 .about-style1-image-box .image-box1 img{
     width: 100%;
     transform: scale(1.01);
-    transition: all 700ms ease;    
+    transition: all 700ms ease;
 }
 .about-style1-image-box .image-box1:hover img{
-    transform: scale(1.2);    
+    transform: scale(1.2);
 }
 .about-style1-image-box .image-box2 {
     position: relative;
@@ -2545,10 +2545,10 @@ select:focus {
 .about-style1-image-box .image-box2 img{
     width: 100%;
     transform: scale(1.2);
-    transition: all 700ms ease;    
+    transition: all 700ms ease;
 }
 .about-style1-image-box .image-box2:hover img{
-    transform: scale(1.0);    
+    transform: scale(1.0);
 }
 
 .video-holder-box {
@@ -2582,10 +2582,10 @@ select:focus {
     transition-duration: .7s;
     transition-property: all;
     opacity: 0;
-    z-index: 1;    
+    z-index: 1;
 }
 .video-holder-box:hover .icon:before{
-    opacity: 1;    
+    opacity: 1;
 }
 .video-holder-box .icon .inner {
     position: absolute;
@@ -2623,7 +2623,7 @@ select:focus {
 }
 .about-style1-text-box .title{
     position: relative;
-    display: block;    
+    display: block;
 }
 .about-style1-text-box .title:before {
     position: absolute;
@@ -2683,7 +2683,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style2 Area style
 =============================================
@@ -2715,10 +2715,10 @@ select:focus {
     transition-delay: .1s;
     transition-timing-function: ease-in-out;
     transition-duration: .7s;
-    transition-property: all; 
+    transition-property: all;
 }
 .service-style2-area .service-box{
-    z-index: 99;    
+    z-index: 99;
 }
 .single-service-style2{
     position: relative;
@@ -2734,10 +2734,10 @@ select:focus {
 .single-service-style2 .img-holder img{
     width: 100%;
     transition: .5s ease;
-    transform: scale(1.05);    
+    transform: scale(1.05);
 }
 .single-service-style2:hover .img-holder img{
-    transform: scale(1);    
+    transform: scale(1);
 }
 .single-service-style2 .img-holder .static-content {
     position: absolute;
@@ -2754,11 +2754,11 @@ select:focus {
     padding-left: 25px;
     transform: perspective(1200px) rotateX(0deg);
     transform-origin: bottom;
-    transition: all 700ms ease 100ms;	
+    transition: all 700ms ease 100ms;
 }
 .single-service-style2:hover .img-holder .static-content{
-    transform: perspective(1200px) rotateX(90deg); 
-    transition: all 700ms ease 200ms;	
+    transform: perspective(1200px) rotateX(90deg);
+    transition: all 700ms ease 200ms;
 }
 
 
@@ -2783,7 +2783,7 @@ select:focus {
     font-weight: 600;
 }
 .single-service-style2 .img-holder .static-content .title h3 a{
-    color: #000000;    
+    color: #000000;
 }
 .single-service-style2 .img-holder .static-content .icon {
     position: absolute;
@@ -2828,7 +2828,7 @@ select:focus {
     transition: all 0.1s ease-in-out 0.1s;
 }
 .single-service-style2:hover .overlay-content .inner-content{
-    opacity: 1; 
+    opacity: 1;
     transition: all 0.8s ease-in-out 0.7s;
 }
 .single-service-style2 .overlay-content .inner-content .icon {
@@ -2844,7 +2844,7 @@ select:focus {
     transition: all 0.3s ease-in-out 0.8s;
 }
 .single-service-style2:hover .overlay-content .inner-content .icon{
-    transform: translateY(0px);    
+    transform: translateY(0px);
 }
 .single-service-style2 .overlay-content .inner-content .text-holder {
     position: absolute;
@@ -2856,12 +2856,12 @@ select:focus {
     transition: all 0.2s ease-in-out 0.9s;
 }
 .single-service-style2:hover .overlay-content .inner-content .text-holder{
-    transform: translateY(0px);    
+    transform: translateY(0px);
 }
 .single-service-style2 .overlay-content .inner-content .text-holder .title{
     position: relative;
     display: block;
-    padding-left: 35px;    
+    padding-left: 35px;
 }
 .single-service-style2 .overlay-content .inner-content .text-holder .title:before {
     position: absolute;
@@ -2898,7 +2898,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Fact Counter Area style
 =============================================
@@ -2964,9 +2964,9 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
-    Latest Portfolio Area Css      
+    Latest Portfolio Area Css
 =============================================
 ***/
 .latest-portfolio-area{
@@ -3053,7 +3053,7 @@ select:focus {
 }
 .single-portfolio-style1 .img-holder .inner-box img{
     width: 100%;
-    transform: scale(1.0);    
+    transform: scale(1.0);
 }
 .single-portfolio-style1:hover .img-holder .inner-box img {
     transform: scale(1.2) rotate(1deg);
@@ -3062,7 +3062,7 @@ select:focus {
     background-color: rgba(3, 13, 40, 0.70);
 }
 .single-portfolio-style1:hover .img-holder .overlay-style-one{
-    opacity: 1;    
+    opacity: 1;
 }
 .single-portfolio-style1 .img-holder .inner-box .zoom-button {
     position: relative;
@@ -3084,10 +3084,10 @@ select:focus {
 }
 .single-portfolio-style1:hover .img-holder .inner-box .zoom-button a span:before{
     opacity: 1;
-    transform: translateY(0px); 
+    transform: translateY(0px);
 }
 .single-portfolio-style1 .img-holder .inner-box .zoom-button a:hover span:before{
-    color: #ffffff; 
+    color: #ffffff;
     background: #000000;
 }
 
@@ -3127,7 +3127,7 @@ select:focus {
     transition: all 0.2s ease-in-out 0.3s;
 }
 .single-portfolio-style1:hover .img-holder .title-holder span.tag{
-    color: #ffffff; 
+    color: #ffffff;
     background: rgba(255, 255, 255, 0.20);
     transition: all 0.5s ease-in-out 0.5s;
 }
@@ -3145,10 +3145,10 @@ select:focus {
 }
 .single-portfolio-style1:hover .img-holder .title-holder h5 a{
     color: #ffffff;
-    transition: all 0.5s ease-in-out 0.6s;    
+    transition: all 0.5s ease-in-out 0.6s;
 }
 .single-portfolio-style1 .img-holder .title-holder h5 a:hover{
-    color: #000000;    
+    color: #000000;
 }
 .single-portfolio-style1 .img-holder .title-holder p{
     position: relative;
@@ -3160,7 +3160,7 @@ select:focus {
 }
 .single-portfolio-style1:hover .img-holder .title-holder p{
     color: #ffffff;
-    transition: all 0.5s ease-in-out 0.7s;       
+    transition: all 0.5s ease-in-out 0.7s;
 }
 .single-portfolio-style1 .img-holder .title-holder p span:before{
     position: relative;
@@ -3173,7 +3173,7 @@ select:focus {
 }
 .single-portfolio-style1:hover .img-holder .title-holder p span:before{
     color: #ffffff;
-    transition: all 0.5s ease-in-out 0.9s;        
+    transition: all 0.5s ease-in-out 0.9s;
 }
 .all-portfolio-button {
     position: relative;
@@ -3183,7 +3183,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Testimonial Style1 Area Css
 =============================================
@@ -3405,7 +3405,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Team Area Css
 =============================================
@@ -3464,14 +3464,14 @@ select:focus {
     display: block;
     overflow: hidden;
     background: #ffffff;
-    -webkit-box-shadow: 0px 4px 7px 1px #ebebeb; 
+    -webkit-box-shadow: 0px 4px 7px 1px #ebebeb;
     box-shadow: 0px 4px 7px 1px #ebebeb;
     transition: all 0.4s ease-in-out 0.3s;
     z-index: 1;
 }
 .single-team-member:hover .title-holder{
     box-shadow: none;
-    transition: all 0.4s ease-in-out 0.3s;    
+    transition: all 0.4s ease-in-out 0.3s;
 }
 .single-team-member .title-holder:before{
     position: absolute;
@@ -3502,7 +3502,7 @@ select:focus {
 }
 .single-team-member .title-holder .inner .left{
     position: relative;
-    display: block;       
+    display: block;
 }
 .single-team-member .title-holder .inner .left h3{
     color: #000000;
@@ -3518,7 +3518,7 @@ select:focus {
 }
 .single-team-member .title-holder .inner .left .social-links{
     position: relative;
-    display: block;       
+    display: block;
 }
 .single-team-member .title-holder .inner .left .social-links .social-links-style1 li {
     margin-right: 20px;
@@ -3538,7 +3538,7 @@ select:focus {
     transition: all 0.4s ease-in-out 0.8s;
 }
 .single-team-member .title-holder .inner .left .social-links .social-links-style1 li a:hover{
-    color: #000000;    
+    color: #000000;
 }
 
 .single-team-member .title-holder .inner .right a{
@@ -3556,7 +3556,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Latest blog Area style
 =============================================
@@ -3590,7 +3590,7 @@ select:focus {
     transform: scale(1.05);
 }
 .single-blog-post:hover .img-holder img {
-    transform: scale(1);    
+    transform: scale(1);
 }
 .single-blog-post:hover .overlay-style-one{
     opacity: 1;
@@ -3659,7 +3659,7 @@ select:focus {
 }
 .single-blog-post .text-holder .bottom .author-name{
     position: relative;
-    display: block;       
+    display: block;
 }
 .single-blog-post .text-holder .bottom .author-name a{
     color: #000000;
@@ -3699,7 +3699,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Partner Area Css
 =============================================
@@ -3741,6 +3741,15 @@ select:focus {
     transition: all 0.8s ease-in-out 0.1s;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .single-partner-logo-box .overlay-box{
     position: absolute;
     top: 0;
@@ -3748,22 +3757,22 @@ select:focus {
     bottom: 0;
     right: 0;
     transform: translateY(80px);
-    transition: all 0.4s ease-in-out 0.1s;
+    transition: all 0.6s ease-in-out 0.1s;
 }
 .single-partner-logo-box:hover .overlay-box{
-    transform: translateX(0px);      
+    transform: translateX(0px);
 }
 .single-partner-logo-box .overlay-box a{
     position: relative;
-    display: inline-block;  
+    display: inline-block;
 }
 .single-partner-logo-box .overlay-box a img{
-    opacity: 1;    
+    opacity: 1;
 }
 
 
 
-/*** 
+/***
 =============================================
     Footer area style
 =============================================
@@ -3855,7 +3864,7 @@ select:focus {
 }
 .single-footer-widget .our-company-info .text{
     position: relative;
-    display: block;    
+    display: block;
 }
 .single-footer-widget .our-company-info .text p{
     color: #798795;
@@ -3877,7 +3886,7 @@ select:focus {
 }
 .single-footer-widget .page-links{
     position: relative;
-    display: block;    
+    display: block;
 }
 .single-footer-widget .page-links li {
     position: relative;
@@ -3964,7 +3973,7 @@ select:focus {
 }
 .twitter-feed-box .bottom .comments{
     position: relative;
-    display: block;    
+    display: block;
 }
 .twitter-feed-box .bottom .comments a{
     color: #798795;
@@ -4038,7 +4047,7 @@ select:focus {
     transition: all 500ms ease;
 }
 .copyright-text p a:hover{
-    color: #ffffff;    
+    color: #ffffff;
 }
 
 
@@ -4086,13 +4095,13 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Header Style2 Css
 =============================================
 ***/
 .header-style2{
-    
+
 }
 .header-upper-style2 {
     position: relative;
@@ -4102,7 +4111,7 @@ select:focus {
 }
 .header-upper-left-style2 {
     position: relative;
-    display: block;    
+    display: block;
 }
 .header-upper-left-style2 .logo {
     position: relative;
@@ -4111,7 +4120,7 @@ select:focus {
 }
 .header-upper-right-style2{
     position: relative;
-    display: block;    
+    display: block;
 }
 .header-upper-right-style2 .nav-outer{
     position: relative;
@@ -4162,12 +4171,12 @@ select:focus {
     padding: 0 30px;
 }
 .quote-button.style2 a:hover{
-    background: #030e27;    
+    background: #030e27;
 }
 
 
 
-/*** 
+/***
 =====================================================
 	Main Slider Style2 style
 =====================================================
@@ -4252,7 +4261,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =====================================================
 	Partner Style2 Area style
 =====================================================
@@ -4265,7 +4274,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =====================================================
 	About Style2 Area style
 =====================================================
@@ -4356,7 +4365,7 @@ select:focus {
 }
 .video-holder-box.style2 .icon .inner a:hover span:before{
     color: #ffffff;
-    background: #030e27;    
+    background: #030e27;
 }
 
 
@@ -4436,7 +4445,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style3 Area Css
 =============================================
@@ -4465,7 +4474,7 @@ select:focus {
     width: 100%;
     -webkit-transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.22);
     -o-transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.22);
-    transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style3:hover .img-holder img{
     -webkit-transform: scale(1.1);
@@ -4487,7 +4496,7 @@ select:focus {
 	-o-transform:translateY(-100%);
 	-moz-transform:translateY(-100%);
 	transform:translateY(-100%);
-    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style3:hover .overlay-content{
 	opacity:1;
@@ -4496,7 +4505,7 @@ select:focus {
 	-o-transform:translateY(0%);
 	-moz-transform:translateY(0%);
 	transform:translateY(0%);
-    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 
 .single-service-style3 .overlay-content .icon-holder{
@@ -4523,7 +4532,7 @@ select:focus {
 }
 .single-service-style3:hover .overlay-content .title-holder{
     opacity: 1;
-	transform:translateY(0%); 
+	transform:translateY(0%);
 	transition-delay: 700ms;
 }
 .single-service-style3 .overlay-content .title-holder p{
@@ -4554,7 +4563,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Testimonial Style2 Area Css
 =============================================
@@ -4576,7 +4585,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Faq Content Area Css
 =============================================
@@ -4596,9 +4605,9 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
-    Video Gallery Area Css      
+    Video Gallery Area Css
 =============================================
 ***/
 .video-gallery-area{
@@ -4609,14 +4618,14 @@ select:focus {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    z-index: 1;    
+    z-index: 1;
 }
 .video-gallery-area:before{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     background-color: rgba(3, 13, 40, 0.80);
     content: "";
     z-index: -1;
@@ -4658,7 +4667,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Slogan Area Css
 =============================================
@@ -4677,7 +4686,7 @@ select:focus {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     min-height: 140px;
     z-index: 1;
 }
@@ -4730,7 +4739,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     header Style3 Css
 =============================================
@@ -4747,7 +4756,7 @@ select:focus {
 }
 .main-menu.style2.clr-white .navigation>li:hover>a.homeicon,
 .main-menu.style2.clr-white .navigation>li.current>a.homeicon{
-    color: #ffffff;    
+    color: #ffffff;
 }
 .quote-button.style3 a {
     color: #ffffff;
@@ -4767,7 +4776,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Main Slider Style3 Css
 =============================================
@@ -4800,13 +4809,13 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style2 Area Style3 Css
 =============================================
 ***/
 .service-style2-area.style3{
-    padding: 0px 0 120px;    
+    padding: 0px 0 120px;
 }
 .service-style2-area.style3 .service-box{
     margin-top: -250px;
@@ -4814,19 +4823,19 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     About Style1 Area Style3 Css
 =============================================
 ***/
 .about-style1-area.style3{
     margin-top: 120px;
-    background: #ffffff;    
+    background: #ffffff;
 }
 .about-style3-image-box{
     position: absolute;
     left: 0;
-    bottom: 0; 
+    bottom: 0;
 }
 .about-style3-image-box img{
     width: auto;
@@ -4837,7 +4846,7 @@ select:focus {
 }
 
 
-/*** 
+/***
 =============================================
     Video Gallery Style2 Area Css
 =============================================
@@ -4925,10 +4934,10 @@ select:focus {
     transition-duration: .7s;
     transition-property: all;
     opacity: 0;
-    z-index: 1;    
+    z-index: 1;
 }
 .video-holder-box-style5:hover .icon:before{
-    opacity: 1;    
+    opacity: 1;
 }
 .video-holder-box-style5 .icon .inner {
     z-index: 5;
@@ -4962,7 +4971,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Latest Portfolio Style2 Area Css
 =============================================
@@ -5053,7 +5062,7 @@ select:focus {
 }
 .single-portfolio-style2:hover .overlay-content .title-holder{
     opacity: 1;
-	transform:translateY(0%); 
+	transform:translateY(0%);
 	transition-delay: 700ms;
 }
 .single-portfolio-style2 .overlay-content .title-holder p{
@@ -5084,7 +5093,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Testimonial Style2 Area Style3 Css
 =============================================
@@ -5097,14 +5106,14 @@ select:focus {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    z-index: 1;        
+    z-index: 1;
 }
 .testimonial-style2-area.style3:before{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     background-color: rgba(3, 13, 40, 0.80);
     content: "";
     z-index: -1;
@@ -5135,13 +5144,13 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style1 Area Style4 Css
 =============================================
 ***/
 .service-style1-area.style4{
-    padding: 120px 0 120px;    
+    padding: 120px 0 120px;
 }
 .service-style1-area.style4 .title {
     padding: 70px 0 140px;
@@ -5154,7 +5163,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Breadcrumb area style
 =============================================
@@ -5178,7 +5187,7 @@ select:focus {
     background: rgba(3, 13, 40, 0.80) none repeat scroll 0 0;
     content: "";
     z-index: -1;
-} 
+}
 .breadcrumb-area .inner-content {
     position: relative;
     display: block;
@@ -5229,7 +5238,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style1 Area Service Page1 Style
 =============================================
@@ -5238,23 +5247,23 @@ select:focus {
     padding-bottom: 62px;
 }
 .service-style1-area.service-page1 .single-service-style1{
-    margin-bottom: 50px;    
+    margin-bottom: 50px;
 }
 
 
 
-/*** 
+/***
 =============================================
     Service Style2 Area Service Page2 Style
 =============================================
 ***/
 .service-style2-area.service-page2{
-    padding-bottom: 82px;    
+    padding-bottom: 82px;
 }
 
 
 
-/*** 
+/***
 =============================================
     Service Imagegalley Area Style
 =============================================
@@ -5262,7 +5271,7 @@ select:focus {
 .service-imagegalley-area{
     position: relative;
     display: block;
-    padding: 109px 0 0px; 
+    padding: 109px 0 0px;
 }
 .top-single-service {
     position: relative;
@@ -5351,7 +5360,7 @@ select:focus {
 .single-service-big-image:hover img{
 	-webkit-transform:scale(1,1);
 	-ms-transform:scale(1,1);
-	transform:scale(1,1);    
+	transform:scale(1,1);
 }
 
 .single-service-image{
@@ -5383,10 +5392,10 @@ select:focus {
 }
 .single-service-image .single-img-box:hover::after{
 	-webkit-animation: shine 1.5s;
-	animation: shine 1.5s;    
+	animation: shine 1.5s;
 }
 .single-service-image .single-img-box:hover img{
-    transform: scale(1);        
+    transform: scale(1);
 }
 
 .single-service-text-box{
@@ -5406,7 +5415,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Single Service Page Style
 =============================================
@@ -5496,7 +5505,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Portfolio Pagev1 Css
 =============================================
@@ -5554,7 +5563,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Portfolio Pagev2 Css
 =============================================
@@ -5563,7 +5572,7 @@ select:focus {
     position: relative;
     display: block;
     padding-top: 106px;
-    padding-bottom: 0;    
+    padding-bottom: 0;
 }
 .portfolio-pagev2 .top-box {
     position: relative;
@@ -5585,7 +5594,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Related Portfolio Css
 =============================================
@@ -5593,12 +5602,12 @@ select:focus {
 .related-portfolio{
     position: relative;
     display: block;
-    padding: 120px 0 120px;    
+    padding: 120px 0 120px;
 }
 
 
 
-/*** 
+/***
 =============================================
     Portfolio Single style1 Area Css
 =============================================
@@ -5640,7 +5649,7 @@ select:focus {
     transform: scale(1.05);
 }
 .single-portfolio-slide:hover .big-image-box img{
-    transform: scale(1);        
+    transform: scale(1);
 }
 
 .single-portfolio-slider .slider-pager{
@@ -5670,11 +5679,11 @@ select:focus {
     overflow: hidden;
 }
 .single-portfolio-slider .slider-pager .thumb-box li a .img-holder img{
-    transition: all 0.5s ease-in-out 0.6s;    
-    width: 100%;    
+    transition: all 0.5s ease-in-out 0.6s;
+    width: 100%;
 }
 .single-portfolio-slider .slider-pager .thumb-box li a.active .img-holder img{
-    transform: scale(1.2, 1.2);    
+    transform: scale(1.2, 1.2);
 }
 .single-portfolio-slider .slider-pager .thumb-box li a .img-holder:before{
     position: absolute;
@@ -5691,12 +5700,12 @@ select:focus {
     z-index: 1;
 }
 .single-portfolio-slider .slider-pager .thumb-box li a.active .img-holder:before{
-    opacity: 1;    
+    opacity: 1;
 }
 
 
 
-/*** 
+/***
 =============================================
     Portfolio Single Content Area Css
 =============================================
@@ -5720,7 +5729,7 @@ select:focus {
 .portfolio-single-content p{
     color: #798795;
     font-size: 18px;
-    line-height: 32px;    
+    line-height: 32px;
 }
 
 .portfolio-single-video-box{
@@ -5763,7 +5772,7 @@ select:focus {
 .single-portfolio-bottom-text p{
     color: #798795;
     font-size: 18px;
-    line-height: 32px; 
+    line-height: 32px;
     margin: 0;
 }
 
@@ -5798,7 +5807,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Portfolio Single style2 Area Css
 =============================================
@@ -5821,10 +5830,10 @@ select:focus {
 .portfolio-details-top-image .single-img-holder img{
     width: 100%;
     transition: .5s ease;
-    transform: scale(1.05);    
+    transform: scale(1.05);
 }
 .portfolio-details-top-image .single-img-holder:hover img{
-    transform: scale(1);        
+    transform: scale(1);
 }
 
 .portfolio-details-content-box{
@@ -5847,12 +5856,12 @@ select:focus {
 }
 .portfolio-details-content-box .text{
     position: relative;
-    display: block;    
+    display: block;
 }
 .portfolio-details-content-box .text p{
     color: #798795;
     font-size: 18px;
-    line-height: 32px;    
+    line-height: 32px;
 }
 
 .project-info-box.style2 {
@@ -6011,7 +6020,7 @@ select:focus {
 .inner-comment-box .single-comment-box .text-holder .text p {
     color: #798795;
     font-size: 14px;
-    line-height: 24px; 
+    line-height: 24px;
     font-weight: 400;
     margin: 0;
 }
@@ -6083,7 +6092,7 @@ select:focus {
     color: #5f6973;
     font-size: 14px;
     font-weight: 400;
-    width: 100%; 
+    width: 100%;
     height: 40px;
     padding: 0 30px;
     border-radius: 0px;
@@ -6097,13 +6106,13 @@ select:focus {
     margin-bottom: 50px;
 }
 .add-comment-box #add-comment-form input[type="text"]:focus{
-    border-color: #d7d9df;    
+    border-color: #d7d9df;
 }
 .add-comment-box #add-comment-form input[type="email"]:focus{
-    border-color: #d7d9df;    
+    border-color: #d7d9df;
 }
 .add-comment-box #add-comment-form textarea:focus{
-    border-color: #d7d9df;       
+    border-color: #d7d9df;
 }
 .add-comment-box #add-comment-form button {
     color: #ffffff;
@@ -6115,7 +6124,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Team Area Team Page Css
 =============================================
@@ -6127,7 +6136,7 @@ select:focus {
 }
 
 
-/*** 
+/***
 =============================================
     Partner Area Team Page Css
 =============================================
@@ -6139,7 +6148,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Team Single Area Css
 =============================================
@@ -6151,7 +6160,7 @@ select:focus {
 }
 .team-singel-image-box{
     position: relative;
-    display: block;    
+    display: block;
 }
 .team-singel-image-box img{
     width: 100%;
@@ -6202,7 +6211,7 @@ select:focus {
     font-family: 'Poppins', sans-serif;
 }
 .team-member-info-box ul li a{
-    color: #798795;    
+    color: #798795;
 }
 .team-member-info-box .social-links-style1 {
     margin-top: 36px;
@@ -6301,7 +6310,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Testimonial Page Area style
 =============================================
@@ -6312,7 +6321,7 @@ select:focus {
     padding: 120px 0 55px;
 }
 .testimonial-page-area .sec-title{
-    padding-bottom: 64px;    
+    padding-bottom: 64px;
 }
 .testimonial-page-box{
     position: relative;
@@ -6325,7 +6334,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Partner Page Area style
 =============================================
@@ -6380,7 +6389,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Faq Page Area style
 =============================================
@@ -6392,7 +6401,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Blog Pagev1 Area style
 =============================================
@@ -6406,7 +6415,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Blog Pagev2 Area style
 =============================================
@@ -6432,7 +6441,7 @@ select:focus {
     transform: scale(1.0);
 }
 .single-blog-post-style3:hover .img-holder img {
-    transform:scale(1.2) rotate(1deg);	
+    transform:scale(1.2) rotate(1deg);
 }
 .single-blog-post-style3:hover .overlay-style-one{
     opacity: 1;
@@ -6440,12 +6449,12 @@ select:focus {
 
 .single-blog-post-style3 .text-holder{
     position: relative;
-    display: block; 
+    display: block;
     padding-top: 23px;
 }
 .single-blog-post-style3 .text-holder .meta-info{
     position: relative;
-    display: block;   
+    display: block;
     overflow: hidden;
     padding-bottom: 15px;
 }
@@ -6504,7 +6513,7 @@ select:focus {
 }
 .single-blog-post-style3 .text-holder .button-box .readmore{
     position: relative;
-    display: block;    
+    display: block;
 }
 .single-blog-post-style3 .text-holder .button-box .readmore a.btn-one {
     color: #ffffff;
@@ -6517,7 +6526,7 @@ select:focus {
 }
 .single-blog-post-style3 .text-holder .button-box .message{
     position: relative;
-    display: block; 
+    display: block;
     padding-left: 30px;
 }
 .single-blog-post-style3 .text-holder .button-box .message a {
@@ -6819,7 +6828,7 @@ select:focus {
     font-size: 14px;
     font-weight: 400;
     text-transform: capitalize;
-    transition: all 0.4s ease-in-out 0.1s;    
+    transition: all 0.4s ease-in-out 0.1s;
 }
 .single-sidebar .project-box .project-lists li a span{
     float: right;
@@ -6852,7 +6861,7 @@ select:focus {
     font-size: 14px;
     font-weight: 400;
     text-transform: capitalize;
-    transition: all 0.4s ease-in-out 0.1s;    
+    transition: all 0.4s ease-in-out 0.1s;
 }
 .single-sidebar .ratting-box .ratting-lists li a span{
     float: right;
@@ -6872,10 +6881,10 @@ select:focus {
 .sidebar-bottom-box .img-holder img{
     width: 100%;
     transition: .5s ease;
-    transform: scale(1.05);    
+    transform: scale(1.05);
 }
 .sidebar-bottom-box .img-holder:hover img{
-    transform: scale(1);        
+    transform: scale(1);
 }
 .sidebar-bottom-box .img-holder .overlay {
     position: absolute;
@@ -6907,7 +6916,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Blog Single Area style
 =============================================
@@ -6971,7 +6980,7 @@ select:focus {
     color: #798795;
     font-size: 18px;
     line-height: 32px;
-    margin: 0;    
+    margin: 0;
 }
 
 .blog-single-img-box{
@@ -6996,12 +7005,12 @@ select:focus {
     color: #798795;
     font-size: 18px;
     line-height: 32px;
-    margin: 0;      
+    margin: 0;
 }
 
 
 
-/*** 
+/***
 =============================================
     Contact Info Area Css
 =============================================
@@ -7028,7 +7037,7 @@ select:focus {
 }
 .single-contact-info-box .title{
     position: relative;
-    display: block;    
+    display: block;
 }
 .single-contact-info-box .title h3{
     color: #000000;
@@ -7058,12 +7067,12 @@ select:focus {
     line-height: 26px;
     font-weight: 400;
     margin: 17px 0 0;
-    font-family: 'Poppins', sans-serif;    
+    font-family: 'Poppins', sans-serif;
 }
 
 
 
-/*** 
+/***
 =============================================
     Contact Form Area Css
 =============================================
@@ -7080,7 +7089,7 @@ select:focus {
 }
 .contact-form .title{
     position: relative;
-    display: block; 
+    display: block;
     padding-bottom: 31px;
 }
 .contact-form .title h3 {
@@ -7116,7 +7125,7 @@ select:focus {
 .contact-form form input[type="email"],
 .contact-form form textarea{
     position: relative;
-    display: block;   
+    display: block;
     background: #ffffff;
     border: 1px solid #ededed;
     width: 100%;
@@ -7137,7 +7146,7 @@ select:focus {
 }
 .contact-form form input[type="text"]:focus{
     color: #222222;
-    border-color: #d9d5d5; 
+    border-color: #d9d5d5;
 }
 .contact-form form input[type="email"]:focus{
     color: #222222;
@@ -7199,7 +7208,7 @@ select:focus {
 }
 .contact-information-box .title {
     position: relative;
-    display: block; 
+    display: block;
     padding-bottom: 33px;
 }
 .contact-information-box .title h3{
@@ -7262,7 +7271,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Google Map Area Css
 =============================================
@@ -7284,9 +7293,9 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
-    Error Page Area Style      
+    Error Page Area Style
 =============================================
 ***/
 .error-page-area{
@@ -7332,7 +7341,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Elements Page Css
 =============================================
@@ -7392,7 +7401,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     RTL Page Css
 =============================================
@@ -7404,7 +7413,7 @@ select:focus {
 .main-header.home_rtl .header-social-links .social-links-style1 {
     flex-direction: row-reverse;
 }
-.main-header.home_rtl .header-contact-info ul li .icon, 
+.main-header.home_rtl .header-contact-info ul li .icon,
 .main-header.home_rtl .header-contact-info ul li .title {
     text-align: right;
 }
@@ -7424,7 +7433,7 @@ select:focus {
     text-align: right;
 }
 .main-header.home_rtl .main-menu .navigation> li> ul> li> a:before{
-    display: none;    
+    display: none;
 }
 .main-header.home_rtl .main-menu .navigation>li>ul>li>ul>li a:before {
     display: none;
@@ -7506,7 +7515,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Shop area  style
 =============================================
@@ -7534,8 +7543,8 @@ select:focus {
 }
 .single-product-item:hover{
     border: 1px solid transparent;
-    -webkit-box-shadow: 0px 3px 5px 1px rgba(229,229,231,0.7); 
-    box-shadow: 0px 3px 5px 1px rgba(229,229,231,0.7);    
+    -webkit-box-shadow: 0px 3px 5px 1px rgba(229,229,231,0.7);
+    box-shadow: 0px 3px 5px 1px rgba(229,229,231,0.7);
 }
 .single-product-item .img-holder{
     position: relative;
@@ -7546,7 +7555,7 @@ select:focus {
     opacity: 1;
 }
 .single-product-item .img-holder img{
-    transform: scale(1.05);   
+    transform: scale(1.05);
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
     width: 100%;
@@ -7569,7 +7578,7 @@ select:focus {
     background: #000000;
 }
 .single-product-item .img-holder .product-info.black:before{
-    border-right: 20px solid #000000;    
+    border-right: 20px solid #000000;
 }
 .single-product-item .img-holder .product-info:before {
     position: absolute;
@@ -7594,7 +7603,7 @@ select:focus {
     bottom: 0px;
     right: 0px;
     content: "";
-    background: rgba(0, 0, 0, 0.50);    
+    background: rgba(0, 0, 0, 0.50);
     opacity: 1;
     display: flex;
     flex-direction: row;
@@ -7626,7 +7635,7 @@ select:focus {
 }
 .single-product-item:hover .img-holder .overlay-content a{
     opacity: 1;
-    transform: translateY(0px); 
+    transform: translateY(0px);
     transition: all 500ms ease 600ms;
 }
 .single-product-item .img-holder .overlay-content a span:before{
@@ -7635,10 +7644,10 @@ select:focus {
     margin-left: 10px;
     padding-left: 10px;
     line-height: 20px;
-    border-left: 1px solid rgba(0, 0, 0, 0.15);  
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 .single-product-item .img-holder .overlay-content a:hover{
-    background: rgba(0, 0, 0, 0.15);      
+    background: rgba(0, 0, 0, 0.15);
 }
 
 
@@ -7673,7 +7682,7 @@ select:focus {
     overflow: hidden;
 }
 .rating-box ul{
-    overflow: hidden;    
+    overflow: hidden;
 }
 .rating-box ul li{
     position: relative;
@@ -7789,13 +7798,13 @@ select:focus {
 .shorting-box .title{
     position: absolute;
     top: 0;
-    left: 0;    
+    left: 0;
 }
 .shorting-box .title h5{
     color: #000000;
     font-size: 14px;
     line-height: 30px;
-    font-weight: 600;    
+    font-weight: 600;
 }
 .shorting-box .selects-box {
     position: relative;
@@ -7887,13 +7896,13 @@ select:focus {
 .showing-box .title{
     position: absolute;
     top: 0;
-    left: 0;    
+    left: 0;
 }
 .showing-box .title h5{
     color: #000000;
     font-size: 14px;
     line-height: 30px;
-    font-weight: 600;    
+    font-weight: 600;
 }
 .showing-box .selects-box {
     position: relative;
@@ -8031,7 +8040,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Single Shop Area style
 =============================================
@@ -8076,7 +8085,7 @@ select:focus {
     transform: scale(1.05);
 }
 .single-product-slide:hover .big-image-box img{
-    transform: scale(1);        
+    transform: scale(1);
 }
 
 
@@ -8102,7 +8111,7 @@ select:focus {
 }
 .single-product-image-holder .slider-pager .thumb-box li a{
     position: relative;
-    display: inline-block;    
+    display: inline-block;
 }
 .single-product-image-holder .slider-pager .thumb-box li .img-holder{
     position: relative;
@@ -8126,7 +8135,7 @@ select:focus {
 
 
 .single-product-image-holder .slider-pager .thumb-box li a.active .img-holder:before{
-    opacity: 1;    
+    opacity: 1;
 }
 
 
@@ -8228,7 +8237,7 @@ select:focus {
 }
 .single-shop-content .content-box .top .price-box .left{
     position: relative;
-    display: block;    
+    display: block;
 }
 .single-shop-content .content-box .top .price-box .left h3{
     color: #000000;
@@ -8487,12 +8496,12 @@ select:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center; 
+    align-items: center;
     margin-top: 40px;
 }
 .addto-cart-box .cart-box{
     position: relative;
-    display: block;    
+    display: block;
 }
 .addto-cart-box .cart-box button.addtocart {
     position: relative;
@@ -8510,7 +8519,7 @@ select:focus {
     font-family: 'Open Sans', sans-serif;
     transition: all 200ms linear;
     transition-delay: 0.1s;
-    -webkit-box-shadow: 0px 2px 0px 1px #e5e5e5; 
+    -webkit-box-shadow: 0px 2px 0px 1px #e5e5e5;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
 }
 .addto-cart-box .cart-box button.addtocart span:before {
@@ -8558,7 +8567,7 @@ select:focus {
     color: #798795;
     font-size: 16px;
     line-height: 40px;
-    -webkit-box-shadow: 0px 2px 0px 1px #e5e5e5; 
+    -webkit-box-shadow: 0px 2px 0px 1px #e5e5e5;
     box-shadow: 0px 2px 0px 1px #e5e5e5;
     transition: all 200ms linear;
     transition-delay: 0.1s;
@@ -8608,7 +8617,7 @@ select:focus {
     transition: all 500ms ease;
     font-family: 'Open Sans', sans-serif;
 }
-.product-tab-box .tab-btns .tab-btn.active-btn span, 
+.product-tab-box .tab-btns .tab-btn.active-btn span,
 .product-tab-box .tab-btns .tab-btn:hover span{
     color: #ffffff;
 }
@@ -8624,7 +8633,7 @@ select:focus {
 	display: none;
 }
 .product-tab-box .tabs-content .tab.active-tab{
-	display: block;	
+	display: block;
 }
 
 
@@ -8634,7 +8643,7 @@ select:focus {
 }
 .product-details-content .desc-content-box{
     position: relative;
-    display: block;    
+    display: block;
 }
 .product-details-content .desc-content-box p{
     color: #798795;
@@ -8717,7 +8726,7 @@ select:focus {
 .product-tab-box .review-form .add-rating-box .add-rating-title{
     position: relative;
     display: inline-block;
-    float: left;    
+    float: left;
 }
 .product-tab-box .review-form .add-rating-box .add-rating-title p {
     position: relative;
@@ -8730,7 +8739,7 @@ select:focus {
 .product-tab-box .review-form .add-rating-box .review-box{
     position: relative;
     display: inline-block;
-    float: left; 
+    float: left;
     padding-left: 20px;
 }
 .product-tab-box .review-form .add-rating-box .review-box ul li {
@@ -8757,8 +8766,8 @@ select:focus {
     font-weight: 500;
     margin: 0 0 5px;
 }
-.product-tab-box .review-form form input[type="text"], 
-.product-tab-box .review-form form input[type="email"], 
+.product-tab-box .review-form form input[type="text"],
+.product-tab-box .review-form form input[type="email"],
 .product-tab-box .review-form form textarea {
     position: relative;
     display: block;
@@ -8787,7 +8796,7 @@ select:focus {
     border-color: #e1dddd;
 }
 .product-tab-box .review-form form textarea:focus{
-    border-color: #e1dddd;  
+    border-color: #e1dddd;
 }
 
 
@@ -8865,7 +8874,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Cart area  style
 =============================================
@@ -8878,7 +8887,7 @@ select:focus {
     position: static;
     max-width: 1400px;
     padding: 0px 15px;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 .cart-area .table-outer {
     position: relative;
@@ -8995,7 +9004,7 @@ select:focus {
 
 
 .cart-area .cart-table tbody tr td.qty{
-    
+
 }
 .cart-area .cart-table tbody tr td.qty .product-quantity-box {
     border-left: 0px solid;
@@ -9228,7 +9237,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
    Checkout area  style
 =============================================
@@ -9264,7 +9273,7 @@ select:focus {
     line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
-} 
+}
 .buyer-info .top .left{}
 .buyer-info .top .right{}
 .buyer-info .form-box {
@@ -9312,28 +9321,28 @@ select:focus {
 
 .billing-info{
     position: relative;
-    display: block;    
+    display: block;
 }
 .billing-info .top{
     position: relative;
     background: #fcfcfc;
     padding: 21px 30px 20px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;    
+    border-top-right-radius: 10px;
 }
 .billing-info .top h5{
     color: #000000;
     font-size: 16px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 .billing-info .inner-box{
     position: relative;
     display: block;
     padding: 46px 100px 45px;
     border: 1px solid #ededed;
-    border-top: none;    
+    border-top: none;
 }
 .billing-info .inner-box h5{
     position: relative;
@@ -9387,21 +9396,21 @@ select:focus {
     background: #fcfcfc;
     padding: 21px 30px 20px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;    
+    border-top-right-radius: 10px;
 }
 .payment-info .top h5{
     color: #000000;
     font-size: 16px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 .payment-info .inner-box{
     position: relative;
     display: block;
     padding: 42px 100px 30px;
     border: 1px solid #ededed;
-    border-top: none;    
+    border-top: none;
 }
 .payment-info .inner-box p{
     color: #798795;
@@ -9453,7 +9462,7 @@ select:focus {
 	display: none;
 }
 .payment-tab .tabs-content .tab.active-tab{
-	display: block;	
+	display: block;
 }
 .payment-input-box{}
 .payment-input-box .input-box{
@@ -9501,12 +9510,12 @@ select:focus {
     background: #000000;
     border-color: #000000;
     line-height: 56px;
-    padding: 0 50px;  
+    padding: 0 50px;
 }
 
 
 
-/*** 
+/***
 =============================================
     Login Register Area style
 =============================================
@@ -9526,7 +9535,7 @@ select:focus {
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
-}    
+}
 
 .login-register-area .form form {
     width: 100%;
@@ -9633,12 +9642,12 @@ select:focus {
     font-weight: 400;
 }
 .login-register-area .form .input-field input[type="text"]:focus{
-    border: 1px solid #1d1d1d;    
+    border: 1px solid #1d1d1d;
 }
 
 
 
-/*** 
+/***
 =============================================
     header Style3 Css
 =============================================
@@ -9681,7 +9690,7 @@ select:focus {
 
 .header-contact-info-style4{
     position: relative;
-    display: block    
+    display: block
 }
 .header-contact-info-style4 ul{
     overflow: hidden;
@@ -9716,7 +9725,7 @@ select:focus {
     padding-right: 7px;
 }
 .header-contact-info-style4 ul li a{
-    color: #ffffff;    
+    color: #ffffff;
 }
 
 
@@ -9737,7 +9746,7 @@ select:focus {
 
 .header-upper-left-style4 {
     position: relative;
-    display: block;    
+    display: block;
 }
 .header-upper-left-style4 .logo {
     position: relative;
@@ -9795,7 +9804,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Main Style Style4 Css
 =============================================
@@ -9855,7 +9864,7 @@ select:focus {
 	-moz-transform: translateY(80px);
 	-ms-transform: translateY(80px);
 	-o-transform: translateY(80px);
-	transform: translateY(80px);    
+	transform: translateY(80px);
 }
 
 
@@ -9901,7 +9910,7 @@ select:focus {
 .main-slider.style4.home5 .content h2{
 	line-height: 1.0em;
     margin-top: 30px;
-    margin-bottom: 44px;    
+    margin-bottom: 44px;
 }
 .main-slider.style4.home5 .content h2 span{
     color: #ffffff;
@@ -9911,7 +9920,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Partner Style4 Area Css
 =============================================
@@ -9927,7 +9936,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style4 Area Css
 =============================================
@@ -10008,11 +10017,11 @@ select:focus {
     transform-origin: left;
     background-color: #110d3d;
     opacity: .70;
-    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style4:hover .img-holder .inner:before{
     transform: scaleY(1.0) rotateX(0deg);
-    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style4 .img-holder .inner img {
     width: 100%;
@@ -10023,7 +10032,7 @@ select:focus {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    transform: scale(1.1);    
+    transform: scale(1.1);
 }
 
 .single-service-style4 .text-holder {
@@ -10046,10 +10055,10 @@ select:focus {
     -webkit-transform-origin: top;
     -ms-transform-origin: top;
     transform-origin: top;
-    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style4:hover .text-holder:before{
-    transform: scaleX(1.0) rotateX(0deg);    
+    transform: scaleX(1.0) rotateX(0deg);
 }
 .single-service-style4 .text-holder h3 {
     font-size: 20px;
@@ -10070,7 +10079,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     About Style4 Area style
 =============================================
@@ -10091,7 +10100,7 @@ select:focus {
     display: block;
     overflow: hidden;
     max-width: 480px;
-    width: 100%;    
+    width: 100%;
 }
 .about-style4-image-box .inner:before{
     content: "";
@@ -10115,7 +10124,7 @@ select:focus {
 }
 .about-style4-image-box:hover .inner::after{
 	-webkit-animation: shine 1.5s;
-	animation: shine 1.5s;    
+	animation: shine 1.5s;
 }
 
 .about-style4-image-box .inner img {
@@ -10161,7 +10170,7 @@ select:focus {
 
 .about-style4-text-box .inner-contant{
     position: relative;
-    display: block;    
+    display: block;
 }
 .about-style4-text-box .inner-contant .text{
     position: relative;
@@ -10214,7 +10223,7 @@ select:focus {
 }
 .about-style4-author .title-box{
     position: relative;
-    display: block; 
+    display: block;
     padding-left: 20px;
 }
 .about-style4-author .title-box h3{
@@ -10230,7 +10239,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style5 Area style
 =============================================
@@ -10267,12 +10276,12 @@ select:focus {
     -webkit-transform-origin: center ;
     -ms-transform-origin: center;
     transform-origin: center;
-    transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.22);    
+    transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style5:hover:before{
     opacity: 1;
-    transform: scaleX(1.0) rotateX(0deg); 
-    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);    
+    transform: scaleX(1.0) rotateX(0deg);
+    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 
 .single-service-style5 .icon {
@@ -10317,7 +10326,7 @@ select:focus {
     transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style5:hover .icon:after{
-    transform: scaleX(1.0) rotateX(0deg);        
+    transform: scaleX(1.0) rotateX(0deg);
 }
 
 .single-service-style5 .text-holder{
@@ -10337,7 +10346,7 @@ select:focus {
     transition-delay: 0.3s;
 }
 .single-service-style5:hover .text-holder h3 a{
-    color: #ffffff;    
+    color: #ffffff;
 }
 
 .single-service-style5 .text-holder p{
@@ -10397,12 +10406,12 @@ select:focus {
     transition-delay: 0.3s;
 }
 .single-service-style5:hover .counting:after{
-    transform: scale(1.0);    
+    transform: scale(1.0);
 }
 
 
 
-/*** 
+/***
 =============================================
     Skill Area style
 =============================================
@@ -10418,7 +10427,7 @@ select:focus {
 
 .skill-content-box{
     position: relative;
-    display: block; 
+    display: block;
     padding-right: 40px;
 }
 .skill-content-box .sec-title{
@@ -10434,7 +10443,7 @@ select:focus {
 }
 .skill-content-box .inner-contant{
     position: relative;
-    display: block;    
+    display: block;
 }
 .skill-content-box .inner-contant .text {
     margin-bottom: 39px;
@@ -10483,7 +10492,7 @@ select:focus {
 .progress-levels .progress-box .bar .bar-innner{
 	position: relative;
 	width: 100%;
-    height: 8px;	
+    height: 8px;
 	background: #ebebeb;
     border-radius: 0px;
 }
@@ -10539,9 +10548,9 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
-    Latest Portfolio Area Css      
+    Latest Portfolio Area Css
 =============================================
 ***/
 .portfolio-style4-area{
@@ -10576,7 +10585,7 @@ select:focus {
     width: 100%;
     height: auto;
     overflow: hidden;
-    
+
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -10623,8 +10632,8 @@ select:focus {
 }
 .portfolio-item-style4:hover .portfolio-item-style4-content .title-holder{
     opacity: 1;
-    transform: scaleX(1.0) rotateX(0deg); 
-    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);       
+    transform: scaleX(1.0) rotateX(0deg);
+    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 
 .portfolio-item-style4-content .title-holder span.tag{
@@ -10671,7 +10680,7 @@ select:focus {
 
 
 @media(min-width:1199px) {
-    
+
 
 .portfolio-style4-content {
     height: 540px;
@@ -10681,20 +10690,20 @@ select:focus {
     width: 25%;
     height: 100%;
     display: inline-block;
-} 
+}
 .portfolio-style4-content .portfolio-item-style4.inactive {
     width: 22%
 }
 .portfolio-style4-content .portfolio-item-style4.active {
     width: 34%
-}    
- 
-    
+}
+
+
 }
 
 
 
-/*** 
+/***
 =============================================
     Team style2 Area Css
 =============================================
@@ -10806,7 +10815,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Fact Counter style2 Area style
 =============================================
@@ -10885,7 +10894,7 @@ select:focus {
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
 }
-/*** 
+/***
 =============================================
     Fact Counter Style2 in style3 Area css
 =============================================
@@ -10902,7 +10911,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Pricing Table Area style
 =============================================
@@ -11000,7 +11009,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Contact Style4 Area style
 =============================================
@@ -11123,13 +11132,13 @@ select:focus {
     font-size: 18px;
 }
 .contact-style4-form form .input-box .icon.envelop{
-    top: 18px;    
+    top: 18px;
 }
 .contact-style4-form form input[type="text"],
 .contact-style4-form form input[type="email"],
 .contact-style4-form form textarea{
     position: relative;
-    display: block;   
+    display: block;
     background: none;
     border: 2px solid rgb(255, 255, 255, 0.30);
     width: 100%;
@@ -11151,15 +11160,15 @@ select:focus {
 }
 .contact-style4-form form input[type="text"]:focus{
     color: #ffffff;
-    border-color: #ffffff; 
+    border-color: #ffffff;
 }
 .contact-style4-form form input[type="email"]:focus{
     color: #ffffff;
-    border-color: #ffffff; 
+    border-color: #ffffff;
 }
 .contact-style4-form form textarea:focus{
     color: #ffffff;
-    border-color: #ffffff; 
+    border-color: #ffffff;
 }
 
 .contact-style4-form form input[type="text"]::-webkit-input-placeholder {
@@ -11216,7 +11225,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Testimonial Style4 Area style
 =============================================
@@ -11253,7 +11262,7 @@ select:focus {
     transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-testimonial-style4:hover .inner-content:before{
-    opacity: 1.0;    
+    opacity: 1.0;
 }
 
 .single-testimonial-style4 .inner-content .arrow {
@@ -11272,7 +11281,7 @@ select:focus {
 .single-testimonial-style4:hover .inner-content .arrow{
     opacity: 0;
     transform: scaleX(0.8) rotateX(0deg);
-    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 
 .single-testimonial-style4 .inner-content .arrow2 {
@@ -11366,7 +11375,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Blog Style4 Area style
 =============================================
@@ -11474,7 +11483,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Footer Top Contact Area style
 =============================================
@@ -11578,7 +11587,7 @@ select:focus {
 
 
 .footer-bottom.style2 .outer-box{
-    border-top: 1px solid #5c697a;    
+    border-top: 1px solid #5c697a;
 }
 .copyright-text.style2:before {
     display: none;
@@ -11589,7 +11598,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style6 Area Css
 =============================================
@@ -11654,11 +11663,11 @@ select:focus {
     -ms-transform-origin: left;
     transform-origin: left;
     opacity: .70;
-    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style6:hover .img-holder .inner:before{
     transform: scaleY(1.0) rotateX(0deg);
-    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);  
+    transition: all 0.7s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style6 .img-holder .inner img {
     width: 100%;
@@ -11669,7 +11678,7 @@ select:focus {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    transform: scale(1.1);    
+    transform: scale(1.1);
 }
 
 .single-service-style6 .text-holder {
@@ -11704,7 +11713,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     About Style5 Area Css
 =============================================
@@ -11767,7 +11776,7 @@ select:focus {
 
 .about-style5-text-box .inner-contant{
     position: relative;
-    display: block;    
+    display: block;
 }
 .about-style5-text-box .inner-contant .text {
     position: relative;
@@ -11827,7 +11836,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     Service Style7 Area Css
 =============================================
@@ -11884,7 +11893,7 @@ select:focus {
     transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 .single-service-style7:hover:before{
-    transform: scaleX(1.0) rotateY(0deg);         
+    transform: scaleX(1.0) rotateY(0deg);
 }
 
 .single-service-style7 .icon{
@@ -11960,9 +11969,9 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
-    Portfolio Style5 Area Css      
+    Portfolio Style5 Area Css
 =============================================
 ***/
 .portfolio-style5-area{
@@ -12005,7 +12014,7 @@ select:focus {
 }
 .single-portfolio-style5 .img-holder .inner-box img{
     width: 100%;
-    transform: scale(1.0);    
+    transform: scale(1.0);
 }
 .single-portfolio-style5:hover .img-holder .inner-box img {
     transform: scale(1.2) rotate(1deg);
@@ -12026,8 +12035,8 @@ select:focus {
 }
 .single-portfolio-style5:hover .title-holder{
     opacity: 1;
-    transform: scaleX(1.0) rotateX(0deg); 
-    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);       
+    transform: scaleX(1.0) rotateX(0deg);
+    transition: all 0.9s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 
 .single-portfolio-style5 .title-holder span.tag{
@@ -12074,9 +12083,9 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
-    Testimonial Style5 Area Css      
+    Testimonial Style5 Area Css
 =============================================
 ***/
 .testimonial-style5-area{
@@ -12123,7 +12132,7 @@ select:focus {
     border-radius: 50%;
     color: #ffffff;
     font-size: 25px;
-    align-items: center;    
+    align-items: center;
 }
 .single-testimonial-style5 .top .quote-box span {
     position: relative;
@@ -12178,7 +12187,7 @@ select:focus {
 
 
 
-/*** 
+/***
 =============================================
     header Style5 Css
 =============================================
@@ -12273,7 +12282,7 @@ select:focus {
 
 .header-upper-left-style5 {
     position: relative;
-    display: block; 
+    display: block;
     width: 255px;
 }
 .header-upper-left-style5 .logo {
@@ -12405,7 +12414,7 @@ select:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: .10;    
+    opacity: .10;
 }
 .quote-button-style5 a:hover{
     color: #ffffff;
@@ -12447,8 +12456,8 @@ select:focus {
     background: #f5f5f5 !important;
     border: 1px solid #f9f9f9 !important;
 }
-.ui-state-highlight, 
-.ui-widget-content .ui-state-highlight, 
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight{
     border: 1px solid #333333 !important;
     background: #333333 !important;
@@ -12457,7 +12466,7 @@ select:focus {
 .ui-datepicker .ui-datepicker-prev {
     left: 5px;
 }
-.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
     border-radius: 30%;
     height: 20px;
@@ -12470,7 +12479,7 @@ select:focus {
 .ui-datepicker .ui-datepicker-next {
     right: 5px;
 }
-.ui-datepicker .ui-datepicker-prev:hover, 
+.ui-datepicker .ui-datepicker-prev:hover,
 .ui-datepicker .ui-datepicker-next:hover {
     top: 7px;
     background: #fff;
