@@ -240,7 +240,7 @@
                 <!--Logo-->
                 <div class="logo float-left">
                     @if($data['website_logo'])
-                        <a href="index.html" class="img-responsive"><img src="{{asset('storage/' . $data['website_logo'])}}" alt="Awesome Logo" title="Logo PT Semar Gemilang" style="width: 35%"></a>
+                        <a href="index.html" class="img-responsive"><img src="{{asset('storage/' . $data['website_logo'])}}" alt="Awesome Logo" title="Logo PT Semar Gemilang"></a>
                     @else
                         <a href="index.html" class="img-responsive"><img src="{{asset('vendor/landing')}}/assets/images/resources/logo.png" alt="Awesome Logo" title=""></a>
                     @endif
