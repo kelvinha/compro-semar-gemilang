@@ -137,27 +137,11 @@
                         </nav>
                         <!-- Main Menu End-->
                     </div>
-                    <div class="menu-right-content clearfix">
-                        <div class="outer-search-box-style1">
-                            <div class="seach-toggle"><i class="fa fa-search"></i></div>
-                            <ul class="search-box">
-                                <li>
-                                    <form method="post" action="index.html">
-                                        <div class="form-group">
-                                            <input type="search" name="search" placeholder="Search Here"
-                                                   required="">
-                                            <button type="submit"><i class="fa fa-search"></i></button>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="quote-button style2">
-                            <a href="#">Get a Quote</a>
-                        </div>
+
+                    <div class="quote-button style2 pl-5">
+                        <a href="https://wa.me/628119848904?text=Halo%21%20Saya%20menemukan%20kontak%20ini%20dari%20website%20dan%20tertarik%20dengan%20layanan%2Fproduk%20yang%20ditawarkan.%20Boleh%20minta%20informasi%20lebih%20lengkapnya%3F%20Terima%20kasih%20sebelumnya." target="_blank" title="Get a Quote">Get a Quote</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
