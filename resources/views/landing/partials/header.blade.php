@@ -89,10 +89,10 @@
                 <div class="header-upper-left header-upper-left-style2 float-left clearfix">
                     <div class="logo">
                         @if($data['website_logo'])
-                            <a href="index.html"><img src="{{asset('storage/' . $data['website_logo'])}}"
+                            <a href="{{route('home.index')}}"><img src="{{asset('storage/' . $data['website_logo'])}}"
                                                       alt="Awesome Logo" title="Logo PT Semar Gemilang"></a>
                         @else
-                            <a href="index.html"><img src="{{asset('vendor/landing')}}/assets/images/resources/logo.png"
+                            <a href="{{route('home.index')}}"><img src="{{asset('vendor/landing')}}/assets/images/resources/logo.png"
                                                       alt="Awesome Logo" title=""></a>
                         @endif
                     </div>
