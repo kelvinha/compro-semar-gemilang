@@ -2395,9 +2395,9 @@ select:focus {
     left: 0;
     top: 0;
     right: 0;
-    background: url(../images/icon/services/service-title-icon.png);
+    background: url(../images/icon/services/sm-icon.png);
     width: 70px;
-    height: 130px;
+    height: 70px;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center;
