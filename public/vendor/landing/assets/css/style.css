@@ -2401,6 +2401,8 @@ select:focus {
     margin: 0 auto;
     background-repeat: no-repeat;
     background-position: center;
+    /* --- Tambahkan baris ini --- */
+    background-size: contain;
     content: "";
     z-index: -1;
 }
@@ -2498,7 +2500,7 @@ select:focus {
     left: -130px;
     bottom: -70px;
     right: 0px;
-    background: url(../images/shape/shape-1.png);
+    background: url(../images/shape/shape-2.png);
     width: 697px;
     height: 439px;
     content: "";
@@ -2522,7 +2524,7 @@ select:focus {
     right: 0;
     width: 170px;
     height: 300px;
-    background: url(../images/shape/border.png);
+    /*background: url(../images/shape/border.png);*/
     content: "";
     z-index: 1;
 }

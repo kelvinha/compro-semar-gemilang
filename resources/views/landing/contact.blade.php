@@ -14,155 +14,171 @@
         );
         }
     @endphp
-    <main class="site-main">
-        <!-- START OF MAIN BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/banner.jpg');">
-            <div class="banner-stripes">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="banner-shape-wp wow fadeInRight for-des" data-wow-duration=".8s">
-                <div class="banner-shape">
-                    <span class="stripe"></span>
-                    <span class="stripe stripe-secondary"></span>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="inner-banner-content-wp white-text text-center">
-                            <div class="inner-banner-content wow fadeInUp" data-wow-duration=".8s">
-                                <h2 class="h1-title">Contact Us</h2>
-                            </div>
-                            <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <ul>
-                                    <li>
-                                        <a href="index.html" title="Home">Home</a>
-                                    </li>
-                                    <li>
-                                        <span>Contact Us</span>
-                                    </li>
-                                </ul>
-                            </div>
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url({{asset('vendor/landing')}}/assets/images/breadcrumb/breadcrumb-1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="inner-content clearfix">
+                        <div class="title">
+                            <h1>Contact Us</h1>
+                        </div>
+                        <div class="breadcrumb-menu">
+                            <ul class="clearfix">
+                                <li><a href="{{ route('home.index') }}">Home Back</a></li>
+                                <li><span class="flaticon-next-1"></span></li>
+                                <li class="active">Contact</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- END OF MAIN BANNER -->
-        <section class="contact-main">
-            <div class="contact-offices">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="contact-office wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <h4 class="h4-title">Main Office</h4>
-                                <ul>
-                                    <li>
-                                        <a href="tel:+6221-3864386" title="Call on +62 213 864 386">
-                                            <img src="{{asset('vendor/landing')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
-                                            <span>+62 213 864 386</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:marketing_official@sadikun.com"
-                                           title="Mail on marketing_official@sadikun.com">
-                                            <img src="{{asset('vendor/landing')}}/assets/images/mail-icon.svg" width="18" height="13"
-                                                 alt="Mail Icon">
-                                            <span>marketing_official@sadikun.com</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://maps.app.goo.gl/ybuuJrh7x4fdod3w9" title="8/05 Mozilla Golden" target="_blank">
-                                            <img src="{{asset('vendor/landing')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
-                                            <span>Central Jakarta, Senen</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="contact-office wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <h4 class="h4-title">Our Retail Office</h4>
-                                <ul>
-                                    <li>
-                                        <a href="tel:+62214351375" title="Call on 0214351375">
-                                            <img src="{{asset('vendor/landing')}}/assets/images/phone-icon.svg" width="18" height="18" alt="Phone Icon">
-                                            <span>+62 214 351 375</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:marketing_official@sadikun.com"
-                                           title="Mail on marketing_official@sadikun.com">
-                                            <img src="{{asset('vendor/landing')}}/assets/images/mail-icon.svg" width="18" height="13"
-                                                 alt="Mail Icon">
-                                            <span>marketing_official@sadikun.com</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://maps.app.goo.gl/JbiawARPtpBphF5eA" title="North Jakarta, Koja" target="_blank">
-                                            <img src="{{asset('vendor/landing')}}/assets/images/map-pin-transparent.svg" width="15" height="20" alt="Map Icon">
-                                            <span>North Jakarta, Koja</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+        </div>
+    </section>
+    <!--End breadcrumb area-->
+
+    <!--Start Contact Info Area-->
+    <section class="contact-info-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="single-contact-info-box text-center">
+                        <div class="icon"><span class="flaticon-headphones"></span></div>
+                        <div class="title">
+                            <h3>Our Phone</h3>
+                            <ul>
+                                <li><a href="tel:{{ $contactInfo['phone'] }}">{{ $contactInfo['phone'] }}</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="main-contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 order-lg-1 order-2">
-                            <div class="main-contact-map wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.686441261886!2d106.83749607498997!3d-6.172719993814645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5ca63fc59bf%3A0x9fba725575f2db77!2sEra%20Tower!5e0!3m2!1sen!2sid!4v1748449635484!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
+                <div class="col-xl-4 col-lg-4">
+                    <div class="single-contact-info-box text-center">
+                        <div class="icon"><span class="flaticon-mail-1"></span></div>
+                        <div class="title">
+                            <h3>Our Mail Box</h3>
+                            <ul>
+                                <li><a href="mailto:{{ $contactInfo['email'] }}">{{ $contactInfo['email'] }}</a></li>
+                            </ul>
                         </div>
-                        <div class="col-lg-6 order-lg-2 order-1">
-                            <div class="main-contact-form wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <div class="sec-title">
-                                    <span class="sub-title">
-                                        <img src="{{asset('vendor/landing')}}/assets/images/setting-icon.svg" width="18" height="18" alt="Setting Icon">
-                                        CONTACT US
-                                    </span>
-                                    <h2 class="h2-title">Let Start The Smart Work !</h2>
-                                </div>
-                                <form>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="form-field">
-                                                <input type="text" class="input-field" placeholder="Full Name" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-field">
-                                                <input type="email" class="input-field" placeholder="Email Address" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-field">
-                                                <input type="number" class="input-field" placeholder="Phone No." required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-field">
-                                                <textarea name="message" class="input-field" placeholder="Message..."></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-field form-submit-btn">
-                                                <button type="submit" class="sec-btn">Submit now</button>
-                                            </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4">
+                    <div class="single-contact-info-box text-center">
+                        <div class="icon"><span class="flaticon-pin-1"></span></div>
+                        <div class="title">
+                            <h3>Our Location</h3>
+                            <p>{{ $contactInfo['address'] }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--End Contact Info Area-->
+
+    <!--Start Contact Form Section-->
+    <section class="contact-form-area">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <div class="col-xl-7 col-lg-7 col-md-12">
+                    <div class="contact-form">
+                        <div class="title">
+                            <h3>Leave Reply</h3>
+                        </div>
+                        <div class="inner-box">
+                            <form id="contact-form" name="contact_form" class="default-form2" action="" method="post">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="input-box">
+                                            <p>Name:</p>
+                                            <input type="text" name="form_name" value="" placeholder="" required="">
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-box">
+                                            <p>Email Address:</p>
+                                            <input type="email" name="form_email" value="" placeholder="" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="input-box">
+                                            <p>Subject:</p>
+                                            <input type="text" name="form_subject" value="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="input-box">
+                                            <p>Phone:</p>
+                                            <input type="text" name="form_phone" value="" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="input-box">
+                                            <p>Message:</p>
+                                            <textarea name="form_message" placeholder="" required=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="button-box">
+                                            <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                            <button class="btn-one" type="submit" data-loading-text="Please wait...">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-xl-5 col-lg-5 col-md-12">
+                    <div class="contact-information-box">
+                        <div class="title">
+                            <h3>Contact Info</h3>
+                        </div>
+                        <ul class="contact-us">
+                            <li>
+                                <div class="icon">
+                                    <span class="flaticon-pin-1"></span>
+                                </div>
+                                <div class="text">
+                                    <p>{{ $contactInfo['address'] }}</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <span class="flaticon-open-envelope-with-letter"></span>
+                                </div>
+                                <div class="text">
+                                    <a href="mailto:{{ $contactInfo['email'] }}"> {{ $contactInfo['email'] }}</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <span class="flaticon-smartphone"></span>
+                                </div>
+                                <div class="text">
+                                    <a href="tel:{{ $contactInfo['phone'] }}">{{ $contactInfo['phone'] }}</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+    <!--End Contact Form Section-->
+
+    <section class="google-map-area">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.2693676285967!2d107.08601327498936!3d-6.094372693891977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a27cd6f1ec2d1%3A0x387364b040a65954!2sPt.%20Semar%20gemilang!5e0!3m2!1sen!2sid!4v1752420743018!5m2!1sen!2sid" width="100%" height="950" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
 @endsection

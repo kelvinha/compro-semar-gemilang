@@ -22,127 +22,99 @@ latest news, insights, and articles from our team.')
         );
         }
     @endphp
-    <main class="site-main">
-        <!-- START OF MAIN BANNER -->
-        <section class="inner-banner back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/banner.jpg');">
-            <div class="banner-stripes">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="banner-shape-wp wow fadeInRight for-des" data-wow-duration=".8s">
-                <div class="banner-shape">
-                    <span class="stripe"></span>
-                    <span class="stripe stripe-secondary"></span>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="inner-banner-content-wp white-text text-center">
-                            <div class="inner-banner-content wow fadeInUp" data-wow-duration=".8s">
-                                <h2 class="h1-title">Blog List</h2>
-                            </div>
-                            <div class="inner-banner-breadcrumb wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".2s">
-                                <ul>
-                                    <li>
-                                        <a href="{{ route('home.index') }}" title="Home">Home</a>
-                                    </li>
-                                    <li>
-                                        <span>Blog</span>
-                                    </li>
-                                </ul>
-                            </div>
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url({{asset('vendor/landing')}}/assets/images/breadcrumb/breadcrumb-1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="inner-content clearfix">
+                        <div class="title">
+                            <h1>Blogs</h1>
+                        </div>
+                        <div class="breadcrumb-menu">
+                            <ul class="clearfix">
+                                <li><a href="{{ route('home.index') }}">Home Back</a></li>
+                                <li><span class="flaticon-next-1"></span></li>
+                                <li class="active">Our Blogs</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- END OF MAIN BANNER -->
-        <!-- BLOG MAIN CONTENT START -->
-        <section class="blog-listing">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="blog-listing-box wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
-                            @foreach($blogs as $blog)
-                                <div class="blog-box">
-                                    <div class="blog-image">
-                                        @if($blog->featured_image)
-                                            <a href="{{ route('home.blog.post', $blog->slug) }}" class="back-img" style="background-image: url('{{asset('storage/' . $blog->featured_image)}}');" title="{{ $blog->title }}"></a>
-                                        @else
-                                            <a href="{{ route('home.blog.post', $blog->slug) }}" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/default-blog-image.svg');" title="{{ $blog->title }}"></a>
-                                        @endif
-                                        <p class="blog-published">{{ $blog->published_at->format('l, j F Y')  }}</p>
-                                    </div>
-                                    <div class="blog-box-content">
-                                        <h4 class="h4-title">
-                                            <a href="{{ route('home.blog.post', $blog->slug) }}" title="{{ $blog->title }}">{{ $blog->title }}</a>
-                                        </h4>
-                                        <p>{{ $blog->excerpt  }}</p>
-                                        <a href="{{ route('home.blog.post', $blog->slug) }}" class="sec-btn" title="{{ $blog->excerpt  }}"></a>
+        </div>
+    </section>
+    <!--End breadcrumb area-->
+
+    <!--Start latest blog area -->
+    <section class="blog-pagev2-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12">
+                    <div class="blog-post">
+                        <!--Start Single Blog Post Style3-->
+                        @foreach($blogs as $blog)
+                        <div class="single-blog-post-style3 wow fadeInUp animated" data-wow-delay="0.3s" data-wow-duration="1200ms">
+                            @if($blog->featured_image)
+                                <div class="img-holder">
+                                    <img src="{{asset('storage/' . $blog->featured_image)}}" alt="{{ $blog->title }}">
+                                    <div class="overlay-style-one bg1"></div>
+                                </div>
+                            @else
+                            <div class="img-holder">
+                                <img src="{{asset('vendor/landing')}}/assets/images/blog/blog-v3-1.jpg" alt="Awesome Image">
+                                <div class="overlay-style-one bg1"></div>
+                            </div>
+                            @endif
+                            <div class="text-holder">
+                                <ul class="meta-info">
+                                    <li>{{ $blog->published_at->format('l, j F Y') }}</li>
+                                </ul>
+                                <h3 class="blog-title"><a href="#"> {{ $blog->title }}</a></h3>
+                                <h4>Author : {{ $blog->user->name }}</h4>
+                                <div class="button-box">
+                                    <div class="readmore">
+                                        <a class="btn-one" href="#">Read More<span class="flaticon-next"></span></a>
                                     </div>
                                 </div>
-                            @endforeach
+                            </div>
                         </div>
-                        <div class="portfolio-pagination">
-                            {{ $blogs->links('pagination::bootstrap-4') }}
-                        </div>
+                        @endforeach
                     </div>
-                    <div class="col-lg-4">
-                        <div class="blog-listing-sidebar wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s">
-                            <div class="blog-sidebar-box blog-search-box">
-                                <h4 class="h4-title">Search Here</h4>
-                                <div class="blog-search">
-                                    <form>
-                                        <div class="blog-search-bar">
-                                            <input type="text" placeholder="Search..." required="">
-                                            <button type="submit">
-                                                <img src="{{asset('vendor/landing')}}/assets/images/search-icon.svg" width="20" height="20" alt="Search Icon">
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
+                </div>
+                <!--Start sidebar Wrapper-->
+                <div class="col-xl-4 col-lg-5 col-md-9 col-sm-12">
+                    <div class="sidebar-wrapper">
+                        <!--Start sidebar categories Box-->
+                        <div class="sidebar-categories-box wow fadeInUp animated" data-wow-delay="0.1s" data-wow-duration="1200ms">
+                            <div class="categories-title">
+                                <h3>All Categories</h3>
                             </div>
-                            <div class="blog-sidebar-box blog-category-box">
-                                <h4 class="h4-title">Categories</h4>
-                                <ul>
-                                    @foreach($categories as $cat)
-                                        <li>
-                                            <a href="" title="{{ $cat->name }}">{{ $cat->name }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            <div class="blog-sidebar-box blog-recent-post-box">
-                                <h4 class="h4-title">Recent Post</h4>
-                                <div class="blog-recent-post-wp">
-                                    @foreach($currentBlogs as $currentBlog)
-                                        <div class="blog-recent-post">
-                                            @if($currentBlog->featured_image)
-                                                <div class="recent-post-img">
-                                                    <a class="back-img" href="{{ route('home.blog.post', $currentBlog->slug) }}" style="background-image: url('{{asset('storage/' . $currentBlog->featured_image)}}');" title="{{ $currentBlog->title }}"></a>
-                                                </div>
-                                            @else
-                                                <div class="recent-post-img">
-                                                    <a href="{{ route('home.blog.post', $currentBlog->slug) }}" class="back-img" style="background-image: url('{{asset('vendor/landing')}}/assets/images/default-blog-image.svg');" title="{{ $currentBlog->title }}"></a>
-                                                </div>
-                                            @endif
-                                            <div class="recent-post-content">
-                                                <p class="recent-post-text">
-                                                    <a href="{{ route('home.blog.post', $currentBlog->slug) }}" title={{ $currentBlog->title }}>{{ $currentBlog->title }}</a>
-                                                </p>
-                                                <div class="recent-post-date">{{ $currentBlog->published_at->format('l, j F Y')}}</div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
+                            <ul class="categories clearfix">
+                                @foreach($categories as $category)
+                                <li><a href="#">{{$category->name}}</a></li>
+                                @endforeach
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <!--End Sidebar Wrapper-->
             </div>
-        </section>
-        <!-- BLOG MAIN CONTENT END-->
-    </main>
+
+            <div class="row">
+{{--                <div class="col-xl-12">--}}
+{{--                    <!--Styled Pagination-->--}}
+{{--                    <ul class="styled-pagination blog_pagination clearfix text-left">--}}
+{{--                        <li><a href="#">1</a></li>--}}
+{{--                        <li><a href="#" class="active">2</a></li>--}}
+{{--                        <li><a href="#">3</a></li>--}}
+{{--                        <li class="next"><a href="#"><span class="fa fa-angle-right"></span></a></li>--}}
+{{--                    </ul>--}}
+{{--                    <!--End Styled Pagination-->--}}
+{{--                </div>--}}
+                {{ $blogs->links() }}
+            </div>
+
+        </div>
+    </section>
+    <!--End latest blog area-->
 @endsection

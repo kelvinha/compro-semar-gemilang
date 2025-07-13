@@ -86,7 +86,7 @@
     <section class="service-style1-area pdtop75">
         <div class="container">
             <div class="title">
-                <h1>Technology to take products from<br> an idea all the way to the end consumer.<br> <a href="#">#Request
+                <h1>Energy solutions for every industry. <br> From sourcing to safe delivery — we power your operations reliably.<br> <a href="{{ route('home.contact') }}">#Request
                         a quote.</a></h1>
             </div>
             <div class="row">
@@ -94,12 +94,11 @@
                 <div class="col-xl-4 col-lg-4">
                     <div class="single-service-style1">
                         <div class="icon-holder lazy-image">
-                            <img src="{{asset('vendor/landing')}}/assets/images/icon/services/service-icon-1.png"
-                                 alt="Icon">
+                            <img src="{{asset('vendor/landing')}}/assets/images/icon/services/industrial-icon.png" alt="Icon" width="50%">
                         </div>
                         <div class="text-holder">
-                            <h3><a href="#">Our Automobile<br> Manufactur</a></h3>
-                            <p>Nunc aliquet nulla nec dapibus max imus. Nam aliquam neque.</p>
+                            <h3>Industrial & <br> Manufacturing</h3>
+                            <p>Kami melayani kebutuhan LPG skala besar untuk sektor manufaktur, seperti pabrik makanan, keramik, dan tekstil.</p>
                             <div class="count-box">1</div>
                         </div>
                     </div>
@@ -109,12 +108,11 @@
                 <div class="col-xl-4 col-lg-4">
                     <div class="single-service-style1">
                         <div class="icon-holder lazy-image">
-                            <img src="{{asset('vendor/landing')}}/assets/images/icon/services/service-icon-2.png"
-                                 alt="Icon">
+                            <img src="{{asset('vendor/landing')}}/assets/images/icon/services/hotel-icon.png" alt="Icon" width="50%;">
                         </div>
                         <div class="text-holder">
-                            <h3><a href="#">Construction &<br> Engineering</a></h3>
-                            <p>Nunc aliquet nulla nec dapibus max imus. Nam aliquam neque.</p>
+                            <h3>Hospitality & <br> Commercial</h3>
+                            <p>Distribusi LPG 50 KG untuk hotel, restoran, katering, dan bisnis F&B dengan layanan cepat dan aman.</p>
                             <div class="count-box">2</div>
                         </div>
                     </div>
@@ -124,12 +122,11 @@
                 <div class="col-xl-4 col-lg-4">
                     <div class="single-service-style1">
                         <div class="icon-holder lazy-image">
-                            <img src="{{asset('vendor/landing')}}/assets/images/icon/services/service-icon-3.png"
-                                 alt="Icon">
+                            <img src="{{asset('vendor/landing')}}/assets/images/icon/services/gas-truck-icon.png" alt="Icon" width="50%;">
                         </div>
                         <div class="text-holder">
-                            <h3><a href="#">Interior Expert<br> Engineers</a></h3>
-                            <p>Nunc aliquet nulla nec dapibus max imus. Nam aliquam neque.</p>
+                            <h3>Automotive & <br> Logistics</h3>
+                            <p>Pasokan LPG bulk untuk industri otomotif dan logistik yang membutuhkan efisiensi energi dalam skala tinggi.</p>
                             <div class="count-box">3</div>
                         </div>
                     </div>
