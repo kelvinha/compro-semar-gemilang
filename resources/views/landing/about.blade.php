@@ -30,17 +30,13 @@
             <div class="row">
                 <div class="col-xl-5">
                     <div class="about-style1-image-box clearfix">
-                        <div class="shape zoom-fade"></div>
                         <div class="image-box1">
                             <img src="{{ asset('vendor/landing') }}/assets/images/about/about-11.jpg"
                                  alt="Awesome Image">
                         </div>
-                        <div class="image-box2">
-                            <img src="{{ asset('vendor/landing') }}/assets/images/about/about-10.jpg"
+                        <div class="image-box1" style="margin-top: 180px;">
+                            <img src="{{ asset('vendor/landing') }}/assets/images/about/about-9.jpg"
                                  alt="Awesome Image">
-                        </div>
-                        <div class="video-holder-box"
-                             style="background-image:url({{ asset('vendor/landing') }}/assets/images/about/about-9.jpg);">
                         </div>
                     </div>
                 </div>

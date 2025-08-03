@@ -15,7 +15,7 @@
         }
     @endphp
     <!--Start breadcrumb area-->
-    <section class="breadcrumb-area" style="background-image: url({{asset('vendor/landing')}}/assets/images/breadcrumb/breadcrumb-1.jpg);">
+    <section class="breadcrumb-area" style="background-image: url({{asset('vendor/landing')}}/assets/images/breadcrumb/breadcrumb-3.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">

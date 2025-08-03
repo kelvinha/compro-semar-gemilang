@@ -10,6 +10,7 @@ use App\Helpers\SettingsHelper;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\Client;
+use App\Models\Media;
 use App\Models\Product;
 use App\Models\Project;
 use App\Models\Testimonial;
@@ -56,7 +57,12 @@ class HomeController extends Controller
             ->orderBy('order', 'asc')
             ->get();
 
-        return view('landing.index', compact('featuredBlogs', 'featuredProjects', 'featuredProducts','testimonials','banners','clients'));
+        // Get Clients
+        $medias = Media::where('disk', 'public')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        return view('landing.index', compact('featuredBlogs', 'featuredProjects', 'featuredProducts','testimonials','banners','clients','medias'));
     }
 
     /**

@@ -211,69 +211,23 @@
                     <div class="rinbuild-carousel service-carousel owl-carousel owl-theme owl-nav-style-one"
                          data-options='{"loop":true, "margin":30, "autoheight":true, "nav":true, "dots":false, "autoplay":true, "autoplayTimeout":6000, "smartSpeed":500, "responsive":{ "0":{"items": "1"}, "768":{"items": "2"}, "1000":{"items": "3" }}}'>
                         <!--Start Single Service Style3-->
-                        <div class="single-service-style3">
-                            <div class="img-holder">
-                                <img class="lazy-image"
-                                     src="{{asset('vendor/landing')}}/assets/images/services/service-v2-1.jpg"
-                                     alt="Awesome Image">
-                                <div class="overlay-content">
-                                    <div class="icon-holder"><span class="flaticon-house"></span></div>
-                                    <div class="title-holder">
-                                        <p>Building Wood Arcitect</p>
-                                        <h3><a href="#">Just because you work hard<br> and successful.</a></h3>
-                                    </div>
+                        @foreach($medias as $media)
+                            <div class="single-service-style3">
+                                <div class="img-holder ">
+                                    <img class="lazy-image"
+                                         src="{{asset('storage/' . $media->path)}}"
+                                         alt="{{ $media->alt_text }}"
+                                         style="height: 500px; width: 100%; object-fit: cover; display: block;">
+{{--                                    <div class="overlay-content">--}}
+{{--                                        <div class="icon-holder"><span class="flaticon-house"></span></div>--}}
+{{--                                        <div class="title-holder">--}}
+{{--                                            <p>Building Wood Arcitect</p>--}}
+{{--                                            <p>{{ $media->caption  }}</p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </div>
                             </div>
-                        </div>
-                        <!--End Single Service Style3-->
-                        <!--Start Single Service Style3-->
-                        <div class="single-service-style3">
-                            <div class="img-holder">
-                                <img class="lazy-image"
-                                     src="{{asset('vendor/landing')}}/assets/images/services/service-v2-2.jpg"
-                                     alt="Awesome Image">
-                                <div class="overlay-content">
-                                    <div class="icon-holder"><span class="flaticon-house"></span></div>
-                                    <div class="title-holder">
-                                        <p>Building Wood Arcitect</p>
-                                        <h3><a href="#">Just because you work hard<br> and successful.</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Service Style3-->
-                        <!--Start Single Service Style3-->
-                        <div class="single-service-style3">
-                            <div class="img-holder">
-                                <img class="lazy-image"
-                                     src="{{asset('vendor/landing')}}/assets/images/services/service-v2-3.jpg"
-                                     alt="Awesome Image">
-                                <div class="overlay-content">
-                                    <div class="icon-holder"><span class="flaticon-house"></span></div>
-                                    <div class="title-holder">
-                                        <p>Building Wood Arcitect</p>
-                                        <h3><a href="#">Just because you work hard<br> and successful.</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Single Service Style3-->
-
-                        <!--Start Single Service Style3-->
-                        <div class="single-service-style3">
-                            <div class="img-holder">
-                                <img class="lazy-image"
-                                     src="{{asset('vendor/landing')}}/assets/images/services/service-v2-2.jpg"
-                                     alt="Awesome Image">
-                                <div class="overlay-content">
-                                    <div class="icon-holder"><span class="flaticon-house"></span></div>
-                                    <div class="title-holder">
-                                        <p>Building Wood Arcitect</p>
-                                        <h3><a href="#">Just because you work hard<br> and successful.</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                         <!--End Single Service Style3-->
                     </div>
                 </div>

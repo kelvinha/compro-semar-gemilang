@@ -45,7 +45,6 @@ class MediaController extends BaseController
             'name' => 'nullable|string|max:255',
             'alt_text' => 'nullable|string|max:255',
             'caption' => 'nullable|string',
-            'category' => 'nullable|string|in:' . implode(',', array_keys(Media::getCategories())),
         ]);
 
         $file = $request->file('file');
@@ -120,6 +119,7 @@ class MediaController extends BaseController
         ]);
 
         $media->name = $request->name;
+        $media->user_id = Auth::id();
         $media->alt_text = $request->alt_text;
         $media->caption = $request->caption;
         $media->save();
@@ -135,13 +135,13 @@ class MediaController extends BaseController
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Media $media)
+    public function destroy(Media $medium)
     {
         // Delete the file
-        Storage::delete('public/' . $media->path);
+        Storage::delete('public/' . $medium->path);
 
         // Delete the record
-        $media->delete();
+        $medium->delete();
 
         $this->success('Media deleted successfully');
 
