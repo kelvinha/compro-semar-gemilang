@@ -86,7 +86,7 @@
                 </div>
                 <div class="header-top-right">
                     <div class="header-menu">
-                        <ul>=
+                        <ul>
                             <li><a href="{{ route('home.products') }}">Terms of service</a></li>
                         </ul>
                     </div>
