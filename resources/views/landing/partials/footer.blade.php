@@ -55,25 +55,38 @@
                                 </a>
                             </div>
                             <div class="text">
-                                <p>PT. Semar Gemilang is a trusted Indonesian company specializing in LPG distribution since 2007. We deliver reliable and efficient energy solutions to support industries across the nation.</p>
+                                <p>PT. Semar Gemilang adalah perusahaan swasta Indonesia terpercaya yang memiliki spesialisasi di bidang LPG sejak tahun 2007. Kami menyediakan solusi energi yang andal dan efisien untuk mendukung berbagai industri di seluruh negeri.</p>
                             </div>
                             <div class="footer-social-links">
                                 <ul class="social-links-style1">
+                                    @if (!empty($data['social_facebook']))
+                                        <li>
+                                            <a href="{{ $data['social_facebook'] }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                    @endif
+
+                                    @if (!empty($data['social_twitter']))
+                                        <li>
+                                            <a href="{{ $data['social_twitter'] }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </li>
+                                    @endif
+
+                                    @if (!empty($data['social_linkedin']))
+                                        <li>
+                                            <a href="{{ $data['social_linkedin'] }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                        </li>
+                                    @endif
+
+                                    @if (!empty($data['social_instagram']))
+                                        <li>
+                                            <a href="{{ $data['social_instagram'] }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        </li>
+                                    @endif
+
                                     <li>
-                                        <a href="{{ $data['social_facebook'] }}"><i class="fa fa-facebook"
-                                                                                    aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ $data['social_twitter'] }}"><i class="fa fa-twitter"
-                                                                                   aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ $data['social_linkedin'] }}"><i class="fa fa-linkedin"
-                                                                                    aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ $data['social_instagram'] }}"><i class="fa fa-instagram"
-                                                                                     aria-hidden="true"></i></a>
+                                        <a href="https://wa.me/628119848904?text=Halo%21%20Saya%20menemukan%20kontak%20ini%20dari%20website%20dan%20tertarik%20dengan%20layanan%2Fproduk%20yang%20ditawarkan.%20Boleh%20minta%20informasi%20lebih%20lengkapnya%3F%20Terima%20kasih%20sebelumnya." target="_blank">
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

@@ -86,7 +86,7 @@
     <section class="service-style1-area pdtop75">
         <div class="container">
             <div class="title">
-                <h1>Energy solutions for every industry. <br> From sourcing to safe delivery — we power your operations reliably.<br> <a href="{{ route('home.contact') }}">#Request
+                <h1>Energy solutions for every industry. <br> From sourcing to safe delivery — Supporting your operations for every steps of yours.<br> <a href="{{ route('home.contact') }}">#Request
                         a quote.</a></h1>
             </div>
             <div class="row">
@@ -98,7 +98,7 @@
                         </div>
                         <div class="text-holder">
                             <h3>Industrial & <br> Manufacturing</h3>
-                            <p>Kami melayani kebutuhan LPG skala besar untuk sektor manufaktur, seperti pabrik makanan, keramik, dan tekstil.</p>
+                            <p>Kami melayani kebutuhan LPG skala besar untuk sektor manufaktur, seperti industri makanan, industri keramik, industri tekstil, dll.</p>
                             <div class="count-box">1</div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                         </div>
                         <div class="text-holder">
                             <h3>Hospitality & <br> Commercial</h3>
-                            <p>Distribusi LPG 50 KG untuk hotel, restoran, katering, dan bisnis F&B dengan layanan cepat dan aman.</p>
+                            <p>Kami melayani kebutuhan LPG 50 KG untuk perhotelan, restoran, bisnis F&B maupun peternakan dengan layanan cepat dan aman.</p>
                             <div class="count-box">2</div>
                         </div>
                     </div>
@@ -149,14 +149,13 @@
                 <div class="col-xl-7 col-lg-12">
                     <div class="about-style1-text-box style2">
                         <div class="title">
-                            <p>WELCOME</p>
                             @php
                                 $since = date('Y') - 2007;
                             @endphp
                             <h1>Our {{ $since }}<br> <b>years</b> working<br> experience.</h1>
                         </div>
                         <div class="inner-contant">
-                            <p>Since 2007, PT. Semar Gemilang has delivered reliable LPG solutions for industries nationwide — from manufacturing to hospitality. We are committed to safety, quality, and operational excellence.</p>
+                            <p>Sejak tahun 2007, PT. Semar Gemilang telah menyediakan solusi LPG yang andal untuk berbagai industri di seluruh Indonesia — mulai dari manufaktur industri, perhotelan hingga bisnis F&B. Kami berkomitmen terhadap pelayanan, keunggulan operasional dan after sales service.</p>
                             <div class="fact-box-style2">
                                 <ul>
                                     <li class="single-fact-counter text-center wow fadeInLeft" data-wow-delay="100ms"
@@ -176,26 +175,13 @@
                                         data-wow-duration="1500ms">
                                         <div class="count-box">
                                             <h1>
-                                                <span class="timer" data-from="1" data-to="25" data-speed="5000"
-                                                      data-refresh-interval="50">25</span>
-                                            </h1>
-                                            <div class="icon"><span class="flaticon-plus"></span></div>
-                                        </div>
-                                        <div class="title">
-                                            <h3>Winning Awards</h3>
-                                        </div>
-                                    </li>
-                                    <li class="single-fact-counter text-center wow fadeInLeft" data-wow-delay="100ms"
-                                        data-wow-duration="1500ms">
-                                        <div class="count-box">
-                                            <h1>
                                                 <span class="timer" data-from="1" data-to="99" data-speed="5000"
                                                       data-refresh-interval="50">99</span>
                                             </h1>
                                             <div class="icon"><span class="flaticon-plus"></span></div>
                                         </div>
                                         <div class="title">
-                                            <h3>Complet Project</h3>
+                                            <h3>Completed Project</h3>
                                         </div>
                                     </li>
                                 </ul>
@@ -216,8 +202,7 @@
     <section class="service-style3-area mt-5">
         <div class="container">
             <div class="sec-title">
-                <p>Provided Services</p>
-                <div class="big-title black-clr"><h1>Our Latest Services</h1></div>
+                <div class="big-title black-clr"><h1>Our Gallery</h1></div>
             </div>
         </div>
         <div class="auto-container">
@@ -298,38 +283,38 @@
     <!--End Service Style3 Area-->
 
     <!--Start Testimonial style2 Area-->
-    <section class="testimonial-style2-area">
-        <div class="container">
-            <div class="sec-title text-center">
-                <p>Testimonials</p>
-                <div class="big-title black-clr"><h1>What client says?</h1></div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="rinbuild-carousel testimonial-carousel owl-carousel owl-theme owl-dot-style1"
-                         data-options='{"loop":true, "margin":30, "autoheight":true, "nav":false, "dots":true, "autoplay":true, "autoplayTimeout":6000, "smartSpeed":500, "responsive":{ "0":{"items": "1"}, "768":{"items": "1"}, "1000":{"items": "2" }}}'>
-                        @foreach($testimonials as $testimonial)
-                            <div class="single-testimonial-style1">
-                                <div class="text">
-                                    <p>{{$testimonial->quote}}.</p>
-                                </div>
-                                <div class="client-info">
-                                    <div class="icon-box">
-                                        <span class="flaticon-engineer-1"></span>
-                                    </div>
-                                    <div class="title-box">
-                                        <h3>{{ $testimonial->name }}</h3>
-                                        <p>{{ $testimonial->company  }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
+{{--    <section class="testimonial-style2-area">--}}
+{{--        <div class="container">--}}
+{{--            <div class="sec-title text-center">--}}
+{{--                <p>Testimonials</p>--}}
+{{--                <div class="big-title black-clr"><h1>What client says?</h1></div>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-xl-12">--}}
+{{--                    <div class="rinbuild-carousel testimonial-carousel owl-carousel owl-theme owl-dot-style1"--}}
+{{--                         data-options='{"loop":true, "margin":30, "autoheight":true, "nav":false, "dots":true, "autoplay":true, "autoplayTimeout":6000, "smartSpeed":500, "responsive":{ "0":{"items": "1"}, "768":{"items": "1"}, "1000":{"items": "2" }}}'>--}}
+{{--                        @foreach($testimonials as $testimonial)--}}
+{{--                            <div class="single-testimonial-style1">--}}
+{{--                                <div class="text">--}}
+{{--                                    <p>{{$testimonial->quote}}.</p>--}}
+{{--                                </div>--}}
+{{--                                <div class="client-info">--}}
+{{--                                    <div class="icon-box">--}}
+{{--                                        <span class="flaticon-engineer-1"></span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="title-box">--}}
+{{--                                        <h3>{{ $testimonial->name }}</h3>--}}
+{{--                                        <p>{{ $testimonial->company  }}</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-            </div>
-        </div>
-    </section>
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!--End Testimonial Style2 Area-->
 
     <!--Start Faq Content Area-->
@@ -340,48 +325,71 @@
                     <div class="faq-content-box">
                         <div class="sec-title">
                             <p>Faq</p>
-                            <div class="big-title black-clr"><h1>FREQUENTLY ASKED QUESTIONS (PT. SEMAR GEMILANG)</h1></div>
+                            <div class="big-title black-clr"><h1>FREQUENTLY ASKED QUESTIONS</h1></div>
                         </div>
                         <div class="accordion-box">
                             <!--Start single accordion box-->
                             <div class="accordion accordion-block">
-                                <div class="accord-btn active"><h4>What industries do you serve?</h4></div>
+                                <div class="accord-btn active"><h4>Apa itu Semar Gemilang?</h4></div>
                                 <div class="accord-content collapsed">
-                                    <p>We serve a wide range of industries including manufacturing, hospitality, F&B (food & beverage), ceramics, and the automotive sector — providing both LPG cylinders and bulk supply solutions across Indonesia. .</p>
+                                    <p>Semar Gemilang merupakan perusahaan pemasok LPG swasta yang berkomitmen dalam memprioritaskan pada pelayanan pelanggan.</p>
                                 </div>
                             </div>
                             <!--End single accordion box-->
-                            <!--Start single accordion box-->
+
                             <div class="accordion accordion-block">
-                                <div class="accord-btn"><h4>What are your operating hours??</h4></div>
+                                <div class="accord-btn"><h4>Apa saja produk yang ditawarkan?</h4></div>
                                 <div class="accord-content">
-                                    <p>Our office and distribution services operate from Monday to Saturday, 08.00 – 17.00 WIB. For bulk delivery schedules, our team is ready to coordinate based on client needs.</p>
+                                    <p>Kami menawarkan LPG dalam bentuk:</p>
+                                    <ul>
+                                        <li>Tabung 50 kg</li>
+                                        <li>Curah</li>
+                                        <li>Mini bulk kapasitas 450 kg</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <!--End single accordion box-->
-                            <!--Start single accordion box-->
+
                             <div class="accordion accordion-block">
-                                <div class="accord-btn"><h4>What types of systems do you support?</h4></div>
+                                <div class="accord-btn"><h4>Bagaimana cara melakukan pembelian produk LPG?</h4></div>
                                 <div class="accord-content">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has when an unknown printer took a galley of type and scrambled it to
-                                        make.</p>
+                                    <p>Anda dapat melakukan pembelian dengan menghubungi nomor WhatsApp kami di <strong>0811-9848-904</strong>.</p>
                                 </div>
                             </div>
-                            <!--End single accordion box-->
-                            <!--Start single accordion box-->
+
+                            <div class="accordion accordion-block">
+                                <div class="accord-btn"><h4>Apakah Semar Gemilang melayani pengiriman luar kota?</h4></div>
+                                <div class="accord-content">
+                                    <p>Kami melayani pengiriman dengan jangkauan Pulau Jawa.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-block">
+                                <div class="accord-btn"><h4>Apakah Semar Gemilang membuka peluang kerja sama atau partnership?</h4></div>
+                                <div class="accord-content">
+                                    <p>Kami membuka peluang kerja sama atau partnership, silakan email ke <a href="mailto:marketing_ho@semargemilang.com">marketing_ho@semargemilang.com</a>.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-block">
+                                <div class="accord-btn"><h4>Bagaimana cara melamar kerja di Semar Gemilang?</h4></div>
+                                <div class="accord-content">
+                                    <p>Silakan email ke <a href="mailto:marketing_ho@semargemilang.com">marketing_ho@semargemilang.com</a>.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-block">
+                                <div class="accord-btn"><h4>Bagaimana jika saya mengalami masalah dengan produk atau layanan?</h4></div>
+                                <div class="accord-content">
+                                    <p>Silakan menghubungi kami pada WhatsApp di <strong>0811-9848-904</strong>.</p>
+                                </div>
+                            </div>
+
                             <div class="accordion accordion-block marginbottom0">
-                                <div class="accord-btn"><h4>What types of LPG products do you offer?</h4></div>
+                                <div class="accord-btn"><h4>Bagaimana saya bisa mendapatkan informasi terbaru tentang Semar Gemilang?</h4></div>
                                 <div class="accord-content">
-                                    <p>We offer: </p>
-                                        <ul>
-                                            <li>LPG 50 KG – Ideal for hotels, restaurants, and small-scale industries.</li>
-                                            <li>LPG Bulk (1,000–9,000 kg) – Suited for large-scale industrial needs like ceramics, automotive, and food production..</li>
-                                            <li>Mini Bulk – Upon request and project basis..</li>
-                                        </ul>
+                                    <p>Anda dapat membuka media sosial kami di Instagram: <a href="https://www.instagram.com/semargemilang_official/" target="_blank" style="color: #a0c239; text-decoration: none;">@semargemilang_official</a>.</p>
                                 </div>
                             </div>
-                            <!--End single accordion box-->
                         </div>
                     </div>
                 </div>
@@ -392,7 +400,6 @@
                              alt="Awesome Image">
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -408,7 +415,7 @@
                             <h1>Contact Us Now</h1>
                         </div>
                         <div class="quote-button">
-                            <a href="{{ route('home.index') }}">Get a Quote<span class="flaticon-next"></span></a>
+                            <a href="https://wa.me/628119848904?text=Halo%21%20Saya%20menemukan%20kontak%20ini%20dari%20website%20dan%20tertarik%20dengan%20layanan%2Fproduk%20yang%20ditawarkan.%20Boleh%20minta%20informasi%20lebih%20lengkapnya%3F%20Terima%20kasih%20sebelumnya." target="_blank" title="Get a Quote">Get a Quote<span class="flaticon-next"></span></a>
                         </div>
                     </div>
                 </div>

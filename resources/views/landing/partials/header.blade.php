@@ -52,29 +52,42 @@
                 <div class="header-top-middle">
                     <div class="header-social-links">
                         <ul class="social-links-style1">
-                            <li>
-                                <a href="{{ $data['social_facebook'] }}"><i class="fa fa-facebook"
-                                                                            aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{ $data['social_twitter'] }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{ $data['social_linkedin'] }}"><i class="fa fa-linkedin"
-                                                                            aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{ $data['social_instagram'] }}"><i class="fa fa-instagram"
-                                                                             aria-hidden="true"></i></a>
-                            </li>
+                            @if (!empty($data['social_facebook']))
+                                <li>
+                                    <a href="{{ $data['social_facebook'] }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                            @endif
+
+                            @if (!empty($data['social_twitter']))
+                                <li>
+                                    <a href="{{ $data['social_twitter'] }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                            @endif
+
+                            @if (!empty($data['social_linkedin']))
+                                <li>
+                                    <a href="{{ $data['social_linkedin'] }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                </li>
+                            @endif
+
+                            @if (!empty($data['social_instagram']))
+                                <li>
+                                    <a href="{{ $data['social_instagram'] }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                            @endif
+
+                                <li>
+                                    <a href="https://wa.me/628119848904?text=Halo%21%20Saya%20menemukan%20kontak%20ini%20dari%20website%20dan%20tertarik%20dengan%20layanan%2Fproduk%20yang%20ditawarkan.%20Boleh%20minta%20informasi%20lebih%20lengkapnya%3F%20Terima%20kasih%20sebelumnya." target="_blank">
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </li>
                         </ul>
                     </div>
                 </div>
                 <div class="header-top-right">
                     <div class="header-menu">
-                        <ul>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Terms of service</a></li>
+                        <ul>=
+                            <li><a href="{{ route('home.products') }}">Terms of service</a></li>
                         </ul>
                     </div>
                 </div>
@@ -154,11 +167,11 @@
                 <!--Logo-->
                 <div class="logo float-left">
                     @if($data['website_logo'])
-                        <a href="index.html" class="img-responsive"><img
+                        <a href="{{ route("home.index") }}" class="img-responsive"><img
                                 src="{{asset('storage/' . $data['website_logo'])}}" alt="Awesome Logo"
                                 title="Logo PT Semar Gemilang"></a>
                     @else
-                        <a href="index.html" class="img-responsive"><img
+                        <a href="{{ route("home.index") }}" class="img-responsive"><img
                                 src="{{asset('vendor/landing')}}/assets/images/resources/logo.png" alt="Awesome Logo"
                                 title=""></a>
                     @endif
@@ -180,19 +193,43 @@
         <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img
-                        src="{{asset('vendor/landing')}}/assets/images/footer/footer-logo.png" alt="" title=""></a>
+            <div class="nav-logo"><a href="{{ route("home.index") }}"><img src="{{asset('storage/' . $data['website_logo'])}}"
+                                                                           alt="Semar Gemilang Logo" title="Logo PT Semar Gemilang"></a>
             </div>
             <div class="menu-outer">
                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
             <!--Social Links-->
             <div class="social-links">
                 <ul class="clearfix">
-                    <li><a href="#"><span class="fab fa fa-facebook-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa fa-twitter-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa fa-pinterest-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa fa-google-plus-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa fa-youtube-square"></span></a></li>
+                    @if (!empty($data['social_facebook']))
+                        <li>
+                            <a href="{{ $data['social_facebook'] }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                    @endif
+
+                    @if (!empty($data['social_twitter']))
+                        <li>
+                            <a href="{{ $data['social_twitter'] }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                    @endif
+
+                    @if (!empty($data['social_linkedin']))
+                        <li>
+                            <a href="{{ $data['social_linkedin'] }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    @endif
+
+                    @if (!empty($data['social_instagram']))
+                        <li>
+                            <a href="{{ $data['social_instagram'] }}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                    @endif
+
+                    <li>
+                        <a href="https://wa.me/628119848904?text=Halo%21%20Saya%20menemukan%20kontak%20ini%20dari%20website%20dan%20tertarik%20dengan%20layanan%2Fproduk%20yang%20ditawarkan.%20Boleh%20minta%20informasi%20lebih%20lengkapnya%3F%20Terima%20kasih%20sebelumnya." target="_blank">
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

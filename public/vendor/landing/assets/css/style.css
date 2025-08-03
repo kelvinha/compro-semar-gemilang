@@ -4597,12 +4597,11 @@ select:focus {
     display: block;
     background: #ffffff;
     padding: 0px 0 120px;
+    margin-top: 120px;
 }
 .faq-image-box{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    position: relative;
+    margin-top: 20%;
 }
 
 

@@ -45,6 +45,7 @@ class MediaController extends BaseController
             'name' => 'nullable|string|max:255',
             'alt_text' => 'nullable|string|max:255',
             'caption' => 'nullable|string',
+            'category' => 'nullable|string|in:' . implode(',', array_keys(Media::getCategories())),
         ]);
 
         $file = $request->file('file');
@@ -85,8 +86,8 @@ class MediaController extends BaseController
      * @param  \App\Models\Media  $media
      * @return \Illuminate\View\View
      */
-    public function show(Media $media)
-    {
+    public function show(Media $medium) {
+        $media = Media::findOrFail($medium->id);
         return view('admin.media.show', compact('media'));
     }
 
@@ -96,8 +97,10 @@ class MediaController extends BaseController
      * @param  \App\Models\Media  $media
      * @return \Illuminate\View\View
      */
-    public function edit(Media $media)
+    public function edit(Media $medium)
     {
+        $media = Media::findOrFail($medium->id);
+
         return view('admin.media.edit', compact('media'));
     }
 
