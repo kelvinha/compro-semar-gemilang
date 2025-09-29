@@ -22,13 +22,14 @@
                     <div class="slide">
                         @if($banner->image)
                             <div class="image-layer lazy-image"
-                                 style="background-image:url({{asset('storage/' . $banner->image)}}"></div>
+{{--                                 style="background-image:url({{asset('storage/' . $banner->image)}}"></div>--}}
+                                 style="background-image:url(https://semar-gemilang.kelvinstudio.tech/storage/banners/banner_1754148369.jpg)"></div>
                             <div class="overlay"></div>
                         @else
                             <div class="image-layer lazy-image"
                                  style="background-image:url({{asset('vendor/landing')}}/assets/images/slides/slide-v2-1.jpg)"></div>
                         @endif
-                        <div class="auto-container">
+                        <div class="auto-container" align="right">
                             <div class="content">
                                 @php
                                     $words = array_filter(explode(" ", trim($banner->title)));
