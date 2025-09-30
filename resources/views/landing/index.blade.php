@@ -22,8 +22,7 @@
                     <div class="slide">
                         @if($banner->image)
                             <div class="image-layer lazy-image"
-{{--                                 style="background-image:url({{asset('storage/' . $banner->image)}}"></div>--}}
-                                 style="background-image:url(https://semar-gemilang.kelvinstudio.tech/storage/banners/banner_1754148369.jpg)"></div>
+                                 style="background-image:url({{asset('storage/' . $banner->image)}}"></div>
                             <div class="overlay"></div>
                         @else
                             <div class="image-layer lazy-image"
