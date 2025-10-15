@@ -32,6 +32,9 @@
             case 'contact_address':
                 $data['contact_address'] = $setting->value;
                 break;
+            case 'footer_text':
+                $data['footer_text'] = $setting->value;
+                break;
         }
     }
 @endphp
@@ -55,7 +58,7 @@
                                 </a>
                             </div>
                             <div class="text">
-                                <p>PT. Semar Gemilang adalah perusahaan swasta Indonesia terpercaya yang memiliki spesialisasi di bidang LPG sejak tahun 2007. Kami menyediakan solusi energi yang andal dan efisien untuk mendukung berbagai industri di seluruh negeri.</p>
+                                <p>{{$data['footer_text']}}</p>
                             </div>
                             <div class="footer-social-links">
                                 <ul class="social-links-style1">

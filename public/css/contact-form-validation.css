@@ -106,9 +106,9 @@
 
 /* Button styling improvements */
 .btn-one {
-    background: #4361ee !important;
+    background: var(--secondary-color) !important;
     color: #ffffff !important;
-    border: 2px solid #4361ee !important;
+    border: 2px solid var(--secondary-color) !important;
     font-weight: 600 !important;
     transition: all 0.3s ease !important;
     text-transform: uppercase;
@@ -117,8 +117,8 @@
 
 .btn-one:hover,
 .btn-one:focus {
-    background: #364f9a !important;
-    border-color: #364f9a !important;
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
     color: #ffffff !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
@@ -216,10 +216,6 @@ input[name="captcha"]::placeholder {
 }
 
 /* Form section styling for home page */
-.contact-form-area {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-}
-
 .contact-form-area .sec-title h2 {
     color: #333;
     margin-bottom: 40px;
