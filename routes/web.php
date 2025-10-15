@@ -171,15 +171,7 @@ Route::middleware(['auth', 'isAdmin'])->prefix('admin')->as('admin.')->group(fun
     ]);
 
     // Projects
-    Route::resource('projects', \App\Http\Controllers\Admin\ProjectController::class)->names([
-        'index' => 'projects.index',
-        'create' => 'projects.create',
-        'store' => 'projects.store',
-        'show' => 'projects.show',
-        'edit' => 'projects.edit',
-        'update' => 'projects.update',
-        'destroy' => 'projects.destroy',
-    ]);
+    Route::resource('projects', \App\Http\Controllers\Admin\ProjectController::class);
 
     // Banners
     Route::resource('banners', BannerController::class)->names([
@@ -203,11 +195,7 @@ Route::middleware(['auth', 'isAdmin'])->prefix('admin')->as('admin.')->group(fun
         'destroy' => 'clients.destroy',
     ]);
 
-    // Settings
-    Route::get('settings', [WebsiteSettingController::class, 'index'])->name('settings.index');
-    Route::post('settings', [WebsiteSettingController::class, 'update'])->name('settings.update');
-    Route::get('seo', [SeoController::class, 'index'])->name('seo.index');
-    Route::post('seo', [SeoController::class, 'update'])->name('seo.update');
+    // Settings moved to SuperAdmin section
 
     // Contact Messages
     Route::get('contact-messages', [\App\Http\Controllers\Admin\ContactMessageController::class, 'index'])->name('contact-messages.index');
@@ -227,18 +215,7 @@ Route::middleware(['auth', 'isAdmin'])->prefix('admin')->as('admin.')->group(fun
     ]);
     Route::get('newsletter-subscribers-export', [\App\Http\Controllers\Admin\NewsletterSubscriberController::class, 'export'])->name('newsletter-subscribers.export');
 
-    // Legacy routes
-    Route::resource('user', UserController::class)->names([
-        'index' => 'user.index',
-        'create' => 'user.create',
-        'store' => 'user.store',
-        'show' => 'user.show',
-        'edit' => 'user.edit',
-        'update' => 'user.update',
-        'destroy' => 'user.destroy',
-    ]);
-    Route::get('user/{user}/change-password', [UserController::class, 'changePassword'])->name('user.change-password');
-    Route::put('user/{user}/update-password', [UserController::class, 'updatePassword'])->name('user.update-password');
+    // Legacy routes - removed to avoid conflicts with SuperAdmin user management
     Route::resource('testimonials', \App\Http\Controllers\Admin\TestimonialController::class)->names([
         'index' => 'testimonials.index',
         'create' => 'testimonials.create',
@@ -255,8 +232,18 @@ Route::middleware(['auth', 'isAdmin'])->prefix('admin')->as('admin.')->group(fun
 Route::middleware(['auth', 'isSuperAdmin'])->prefix('admin')->as('admin.')->group(function () {
     // User Management
     Route::resource('users', UserController::class);
+    Route::get('users/{user}/change-password', [UserController::class, 'changePassword'])->name('users.change-password');
+    Route::put('users/{user}/update-password', [UserController::class, 'updatePassword'])->name('users.update-password');
+
+    // Role and Permission Management
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
+
+    // System Settings (SuperAdmin only)
+    Route::get('settings', [WebsiteSettingController::class, 'index'])->name('settings.index');
+    Route::post('settings', [WebsiteSettingController::class, 'update'])->name('settings.update');
+    Route::get('seo', [SeoController::class, 'index'])->name('seo.index');
+    Route::post('seo', [SeoController::class, 'update'])->name('seo.update');
 });
 
 // Employee routes
