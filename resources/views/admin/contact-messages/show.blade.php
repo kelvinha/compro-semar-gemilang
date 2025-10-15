@@ -33,14 +33,22 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Subject</label>
-                                <p class="form-control-static">{{ $message->subject }}</p>
+                                <label>Phone</label>
+                                <p class="form-control-static">{{ $message->phone ?: 'Not provided' }}</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
                                 <p class="form-control-static">{{ $message->created_at->format('M d, Y H:i') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <p class="form-control-static">{{ $message->subject }}</p>
                             </div>
                         </div>
                     </div>

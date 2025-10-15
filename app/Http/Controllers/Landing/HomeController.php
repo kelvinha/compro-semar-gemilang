@@ -27,6 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // Generate CAPTCHA numbers for the session (for home page contact form)
+        $this->generateCaptcha();
+
         // Get featured blogs
         $featuredBlogs = Blog::where('status', 'published')
             ->where('featured', true)
@@ -86,7 +89,20 @@ class HomeController extends Controller
         return view('landing.page', compact('page', 'sections'));
     }
 
+    /**
+     * Generate CAPTCHA numbers for the session.
+     *
+     * @return void
+     */
+    private function generateCaptcha()
+    {
+        $num1 = rand(1, 10);
+        $num2 = rand(1, 10);
 
-
-
+        session([
+            'captcha_num1' => $num1,
+            'captcha_num2' => $num2,
+            'captcha_answer' => $num1 + $num2
+        ]);
+    }
 }

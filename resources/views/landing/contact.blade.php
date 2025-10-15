@@ -88,19 +88,53 @@
                         <div class="title">
                             <h3>Leave Reply</h3>
                         </div>
+
+                        <!-- Display success/error messages -->
+                        @if(session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
+                        @if(session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
+                        @if($errors->any())
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <ul class="mb-0">
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
                         <div class="inner-box">
-                            <form id="contact-form" name="contact_form" class="default-form2" action="" method="post">
+                            <form id="contact-form-custom" name="contact_form" class="default-form2" action="{{ route('home.contact.store') }}" method="post" novalidate>
+                                @csrf
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="input-box">
                                             <p>Name:</p>
-                                            <input type="text" name="form_name" value="" placeholder="" required="">
+                                            <input type="text" name="name" value="{{ old('name') }}" placeholder="Your Full Name" required class="@error('name') is-invalid @enderror">
+                                            @error('name')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="input-box">
                                             <p>Email Address:</p>
-                                            <input type="email" name="form_email" value="" placeholder="" required="">
+                                            <input type="email" name="email" value="{{ old('email') }}" placeholder="Your Email Address" required class="@error('email') is-invalid @enderror">
+                                            @error('email')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -108,13 +142,19 @@
                                     <div class="col-xl-6">
                                         <div class="input-box">
                                             <p>Subject:</p>
-                                            <input type="text" name="form_subject" value="" placeholder="">
+                                            <input type="text" name="subject" value="{{ old('subject') }}" placeholder="Subject" required class="@error('subject') is-invalid @enderror">
+                                            @error('subject')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="input-box">
-                                            <p>Phone:</p>
-                                            <input type="text" name="form_phone" value="" placeholder="">
+                                            <p>Phone (Optional):</p>
+                                            <input type="tel" name="phone" value="{{ old('phone') }}" placeholder="Your Phone Number" class="@error('phone') is-invalid @enderror">
+                                            @error('phone')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -122,15 +162,31 @@
                                     <div class="col-xl-12">
                                         <div class="input-box">
                                             <p>Message:</p>
-                                            <textarea name="form_message" placeholder="" required=""></textarea>
+                                            <textarea name="message" placeholder="Your Message" required class="@error('message') is-invalid @enderror">{{ old('message') }}</textarea>
+                                            @error('message')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- CAPTCHA Field -->
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="input-box">
+                                            <p>Security Question:</p>
+                                            <input type="number" name="captcha" id="captcha" placeholder="What is {{ session('captcha_num1', rand(1, 10)) }} + {{ session('captcha_num2', rand(1, 10)) }}?" required class="@error('captcha') is-invalid @enderror">
+                                            @error('captcha')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="button-box">
-                                            <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                            <button class="btn-one" type="submit" data-loading-text="Please wait...">Submit</button>
+                                            <button class="btn-one" type="submit" id="submitBtn">Submit Message</button>
                                         </div>
                                     </div>
                                 </div>

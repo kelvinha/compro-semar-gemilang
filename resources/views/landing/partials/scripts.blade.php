@@ -26,3 +26,6 @@
 <script src="{{asset('vendor/landing')}}/assets/js/jQuery.style.switcher.min.js"></script>
 <!-- thm custom script -->
 <script src="{{asset('vendor/landing')}}/assets/js/custom.js"></script>
+
+<!-- Contact Form Validation Script -->
+<script src="{{asset('js/contact-form.js')}}?v={{time()}}"></script>

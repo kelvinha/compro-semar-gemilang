@@ -30,21 +30,41 @@ class TrackPageVisits
             // Get the IP address
             $ipAddress = $request->ip();
 
-            // Get location data
-            $locationData = Location::get($ipAddress);
+            // Get location data safely
+            $locationData = null;
+            try {
+                $locationData = Location::get($ipAddress);
+            } catch (\Exception $e) {
+                // Log location service error but continue
+                logger('Location service failed: ' . $e->getMessage());
+            }
 
-            // Create a new page visit record
-            PageVisit::create([
-                'page_url' => $request->fullUrl(),
-                'page_name' => $request->route() ? $request->route()->getName() : null,
-                'ip_address' => $ipAddress,
-                'user_agent' => $request->userAgent(),
-                'country' => $locationData ? $locationData->countryName : null,
-                'city' => $locationData ? $locationData->cityName : null,
-                'referrer' => $request->header('referer'),
-                'visited_at' => now(),
-                'user_id' => Auth::id(),
-            ]);
+            // Fix user_id foreign key constraint
+            $userId = null;
+            if (Auth::check()) {
+                $authUserId = Auth::id();
+                // Verify the user actually exists in the database
+                if ($authUserId && \App\Models\User::find($authUserId)) {
+                    $userId = $authUserId;
+                }
+            }
+
+            // Wrap in try-catch to prevent page load failures
+            try {
+                PageVisit::create([
+                    'page_url' => $request->fullUrl(),
+                    'page_name' => $request->route() ? $request->route()->getName() : null,
+                    'ip_address' => $ipAddress,
+                    'user_agent' => $request->userAgent(),
+                    'country' => $locationData ? $locationData->countryName : null,
+                    'city' => $locationData ? $locationData->cityName : null,
+                    'referrer' => $request->header('referer'),
+                    'visited_at' => now(),
+                    'user_id' => $userId,
+                ]);
+            } catch (\Exception $e) {
+                logger('Page visit tracking failed: ' . $e->getMessage());
+            }
         }
 
         return $response;

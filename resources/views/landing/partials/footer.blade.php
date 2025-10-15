@@ -46,10 +46,10 @@
                         <div class="our-company-info">
                             <div class="footer-logo">
                                 <a href="{{ route('home.index') }}">
-                                    @if($data['website_logo'])
-                                        <img src="{{ ('storage/' . $data['website_logo']) }}" alt="semar gemilang logo">
+                                    @if(isset($data['website_logo']) && $data['website_logo'])
+                                        <img src="{{ asset('storage/' . $data['website_logo']) }}" alt="semar gemilang logo">
                                     @else
-                                        <img src="assets/images/footer/footer-logo.png" alt="Awesome Footer Logo"
+                                        <img src="{{asset('vendor/landing')}}/assets/images/footer/footer-logo.png" alt="Awesome Footer Logo"
                                              title="Logo">
                                     @endif
                                 </a>

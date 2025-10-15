@@ -359,6 +359,125 @@
     </section>
     <!--End Faq Content Area-->
 
+    <!--Start Contact Form Section-->
+    <section class="contact-form-area" style="background-color: #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="sec-title text-center">
+                        <div class="sub-title">
+                            <h3>Get In Touch</h3>
+                        </div>
+                        <h2>Send Us a Message</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 offset-xl-2 offset-lg-2">
+                    <!-- Display success/error messages -->
+                    @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    @if(session('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ session('error') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <ul class="mb-0">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    <div class="contact-form">
+                        <form id="home-contact-form" name="home_contact_form" class="default-form2" action="{{ route('home.contact.store') }}" method="post" novalidate>
+                            @csrf
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="input-box">
+                                        <input type="text" name="name" value="{{ old('name') }}" placeholder="Your Full Name" required class="@error('name') is-invalid @enderror">
+                                        @error('name')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="input-box">
+                                        <input type="email" name="email" value="{{ old('email') }}" placeholder="Your Email Address" required class="@error('email') is-invalid @enderror">
+                                        @error('email')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="input-box">
+                                        <input type="text" name="subject" value="{{ old('subject') }}" placeholder="Subject" required class="@error('subject') is-invalid @enderror">
+                                        @error('subject')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="input-box">
+                                        <input type="tel" name="phone" value="{{ old('phone') }}" placeholder="Your Phone Number (Optional)" class="@error('phone') is-invalid @enderror">
+                                        @error('phone')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="input-box">
+                                        <textarea name="message" placeholder="Your Message" required class="@error('message') is-invalid @enderror">{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CAPTCHA Field -->
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="input-box">
+                                        <input type="number" name="captcha" id="home-captcha" placeholder="Security Question: What is {{ session('captcha_num1', rand(1, 10)) }} + {{ session('captcha_num2', rand(1, 10)) }}?" required class="@error('captcha') is-invalid @enderror">
+                                        @error('captcha')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="button-box text-center">
+                                        <button class="btn-one" type="submit" id="homeSubmitBtn">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Contact Form Section-->
+
     <!--Start Slogan Area-->
     <section class="slogan-area">
         <div class="container">

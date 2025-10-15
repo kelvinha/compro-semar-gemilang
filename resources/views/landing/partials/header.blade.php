@@ -101,7 +101,7 @@
             <div class="outer-box clearfix">
                 <div class="header-upper-left header-upper-left-style2 float-left clearfix">
                     <div class="logo">
-                        @if($data['website_logo'])
+                        @if(isset($data['website_logo']) && $data['website_logo'])
                             <a href="{{route('home.index')}}"><img src="{{asset('storage/' . $data['website_logo'])}}"
                                                       alt="Awesome Logo" title="Logo PT Semar Gemilang"></a>
                         @else
@@ -166,7 +166,7 @@
             <div class="clearfix">
                 <!--Logo-->
                 <div class="logo float-left">
-                    @if($data['website_logo'])
+                    @if(isset($data['website_logo']) && $data['website_logo'])
                         <a href="{{ route("home.index") }}" class="img-responsive"><img
                                 src="{{asset('storage/' . $data['website_logo'])}}" alt="Awesome Logo"
                                 title="Logo PT Semar Gemilang"></a>
@@ -193,8 +193,14 @@
         <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{{ route("home.index") }}"><img src="{{asset('storage/' . $data['website_logo'])}}"
-                                                                           alt="Semar Gemilang Logo" title="Logo PT Semar Gemilang"></a>
+            <div class="nav-logo">
+                <a href="{{ route("home.index") }}">
+                    @if(isset($data['website_logo']) && $data['website_logo'])
+                        <img src="{{asset('storage/' . $data['website_logo'])}}" alt="Semar Gemilang Logo" title="Logo PT Semar Gemilang">
+                    @else
+                        <img src="{{asset('vendor/landing')}}/assets/images/resources/logo.png" alt="Semar Gemilang Logo" title="Logo PT Semar Gemilang">
+                    @endif
+                </a>
             </div>
             <div class="menu-outer">
                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>

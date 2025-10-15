@@ -30,6 +30,7 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Phone</th>
                                     <th>Subject</th>
                                     <th>Status</th>
                                     <th>Date</th>
@@ -42,6 +43,7 @@
                                     <td>{{ $message->id }}</td>
                                     <td>{{ $message->name }}</td>
                                     <td>{{ $message->email }}</td>
+                                    <td>{{ $message->phone ?: '-' }}</td>
                                     <td>{{ $message->subject }}</td>
                                     <td>
                                         @if ($message->status == 'pending')
@@ -74,7 +76,7 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="7" class="text-center">No messages found.</td>
+                                    <td colspan="8" class="text-center">No messages found.</td>
                                 </tr>
                                 @endforelse
                             </tbody>

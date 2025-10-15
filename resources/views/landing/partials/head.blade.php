@@ -35,35 +35,40 @@
         // Load page content based on URL
         $activePage = null;
 
-        // Check for home page
-        if ($currentUrl === '/') {
-        $activePage = \App\Helpers\PageHelper::getHomePage();
-        }
-        // Check for about page
-        elseif ($currentUrl === '/about') {
-        $activePage = \App\Helpers\PageHelper::getAboutPage();
-        }
-        // Check for blog post
-        elseif (strpos($currentUrl, '/blog/') === 0) {
-        $slug = substr($currentUrl, 6); // Remove '/blog/' prefix
-        $activePage = \App\Models\Blog::where('slug', $slug)
-        ->where('status', 'published')
-        ->first();
+        // Add error handling for page loading
+        try {
+            // Check for home page
+            if ($currentUrl === '/') {
+                $activePage = \App\Helpers\PageHelper::getHomePage();
+            }
+            // Check for about page
+            elseif ($currentUrl === '/about') {
+                $activePage = \App\Helpers\PageHelper::getAboutPage();
+            }
+            // Check for blog post
+            elseif (strpos($currentUrl, '/blog/') === 0) {
+                $slug = substr($currentUrl, 6); // Remove '/blog/' prefix
+                $activePage = \App\Models\Blog::where('slug', $slug)
+                    ->where('status', 'published')
+                    ->first();
 
-        if ($activePage) {
-        $activePage->load('seo');
-        }
-        }
-        // Check for other pages
-        else {
-        // Try to find by URL first
-        $activePage = \App\Helpers\PageHelper::getByUrl($currentUrl);
+                if ($activePage) {
+                    $activePage->load('seo');
+                }
+            }
+            // Check for other pages
+            else {
+                // Try to find by URL first
+                $activePage = \App\Helpers\PageHelper::getByUrl($currentUrl);
 
-        // If not found, check if it's a submenu page
-        if (!$activePage && strpos($currentUrl, '/page/') === 0) {
-        $slug = substr($currentUrl, 6); // Remove '/page/' prefix
-        $activePage = \App\Helpers\PageHelper::getBySubmenuSlug($slug);
-        }
+                // If not found, check if it's a submenu page
+                if (!$activePage && strpos($currentUrl, '/page/') === 0) {
+                    $slug = substr($currentUrl, 6); // Remove '/page/' prefix
+                    $activePage = \App\Helpers\PageHelper::getBySubmenuSlug($slug);
+                }
+            }
+        } catch (\Exception $e) {
+            $activePage = null;
         }
 
         // Set default SEO values
@@ -75,13 +80,17 @@
         $pageOgImage = $ogImage ?: $websiteLogo;
 
         // If we have an active page with SEO settings, use them
-        if ($activePage && isset($activePage->seo)) {
-        $pageTitle = $activePage->seo->title;
-        $pageDescription = $activePage->seo->description ?: $metaDescription;
-        $pageKeywords = $activePage->seo->keywords ?: $metaKeywords;
-        $pageOgTitle = $activePage->seo->og_title ?: $activePage->seo->title;
-        $pageOgDescription = $activePage->seo->og_description ?: $activePage->seo->description;
-        $pageOgImage = $activePage->seo->og_image ?: ($ogImage ?: $websiteLogo);
+        try {
+            if ($activePage && isset($activePage->seo) && $activePage->seo) {
+                $pageTitle = $activePage->seo->title ?: $pageTitle;
+                $pageDescription = $activePage->seo->description ?: $metaDescription;
+                $pageKeywords = $activePage->seo->keywords ?: $metaKeywords;
+                $pageOgTitle = $activePage->seo->og_title ?: $activePage->seo->title;
+                $pageOgDescription = $activePage->seo->og_description ?: $activePage->seo->description;
+                $pageOgImage = $activePage->seo->og_image ?: ($ogImage ?: $websiteLogo);
+            }
+        } catch (\Exception $e) {
+            // Use default values if SEO data loading fails
         }
     @endphp
     <!-- SEO Meta Tags -->
@@ -186,6 +195,9 @@
     <link href="{{asset('vendor/landing')}}/assets/css/color/theme-color.css" id="jssDefault" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/style.css">
     <link rel="stylesheet" href="{{asset('vendor/landing')}}/assets/css/responsive.css">
+
+    <!-- Contact Form Validation CSS -->
+    <link rel="stylesheet" href="{{asset('css/contact-form-validation.css')}}">
 
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="{{asset('vendor/landing')}}/assets/js/html5shiv.js"></script>

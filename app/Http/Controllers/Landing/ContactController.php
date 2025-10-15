@@ -19,6 +19,9 @@ class ContactController extends Controller
      */
     public function index()
     {
+        // Generate CAPTCHA numbers for the session
+        $this->generateCaptcha();
+
         // Get contact page from CMS
         $contactPage = PageHelper::getContactPage();
 
@@ -57,21 +60,31 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+        // Validate CAPTCHA first
+        if (!$this->validateCaptcha($request->captcha)) {
+            return redirect()->back()
+                ->with('error', 'CAPTCHA verification failed. Please try again.')
+                ->withInput();
+        }
+
         // Validate the request
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
             'subject' => 'required|string|max:255',
             'message' => 'required|string',
+            'captcha' => 'required|numeric',
         ]);
 
         try {
             // Create the contact message
             $contactMessage = ContactMessage::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'subject' => $request->subject,
-                'message' => $request->message,
+                'name' => $validated['name'],
+                'email' => $validated['email'],
+                'phone' => $validated['phone'],
+                'subject' => $validated['subject'],
+                'message' => $validated['message'],
                 'status' => 'pending'
             ]);
 
@@ -87,12 +100,22 @@ class ContactController extends Controller
                 }
             }
 
+            // Generate new CAPTCHA for next submission
+            $this->generateCaptcha();
+
+            \Log::info('Contact form submission successful', [
+                'message_id' => $contactMessage->id
+            ]);
+
             // Flash success message to the session
             return redirect()->route('home.contact')
                 ->with('success', 'Your message has been sent successfully. We will get back to you soon!');
         } catch (\Exception $e) {
             // Log the error
             \Log::error('Failed to save contact message: ' . $e->getMessage());
+
+            // Generate new CAPTCHA for retry
+            $this->generateCaptcha();
 
             // Flash error message to the session
             return redirect()->route('home.contact')
@@ -101,5 +124,32 @@ class ContactController extends Controller
         }
     }
 
+    /**
+     * Generate CAPTCHA numbers for the session.
+     *
+     * @return void
+     */
+    private function generateCaptcha()
+    {
+        $num1 = rand(1, 10);
+        $num2 = rand(1, 10);
 
+        session([
+            'captcha_num1' => $num1,
+            'captcha_num2' => $num2,
+            'captcha_answer' => $num1 + $num2
+        ]);
+    }
+
+    /**
+     * Validate CAPTCHA answer.
+     *
+     * @param  mixed  $userAnswer
+     * @return bool
+     */
+    private function validateCaptcha($userAnswer)
+    {
+        $correctAnswer = session('captcha_answer');
+        return $correctAnswer && (int)$userAnswer === (int)$correctAnswer;
+    }
 }
